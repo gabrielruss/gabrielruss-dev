@@ -8,7 +8,9 @@ export const theme = {
   colors: {
     white: '#fafafa',
     black: '#2d2d2d',
+    transparent_black: '#2d2d2d4D',
     teal: '#17B890',
+    transparent_teal: '#17B8904D',
   },
 };
 

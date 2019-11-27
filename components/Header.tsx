@@ -3,24 +3,25 @@ import { styled } from './';
 const StyledNav = styled.nav`
   display: grid;
 
-  padding-right: 5rem;
+  padding: 0 5rem;
   justify-content: flex-end;
-  border-bottom: 1px solid ${props => props.theme.colors.teal};
+  border-bottom: 1px solid ${props => props.theme.colors.transparent_teal};
 
   ul {
     display: grid;
-    gap: 10rem;
+    gap: 5rem;
     margin: 0;
     padding: 0;
     grid-auto-flow: column;
     li {
-      font-size: 3rem;
-      padding: 2rem;
+      font-size: 2rem;
+      padding: 2rem 0.5rem 1rem;
       list-style: none;
       cursor: pointer;
 
       :hover {
-        background: red;
+        transition: 0.2s box-shadow ease;
+        box-shadow: 0 2px ${props => props.theme.colors.teal};
       }
     }
   }
