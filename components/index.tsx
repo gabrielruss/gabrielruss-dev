@@ -5,6 +5,7 @@ import baseStyled, {
 
 export const theme = {
   breakpoint: '1366px',
+  m_breakpoint: '500px',
   colors: {
     white: '#fafafa',
     black: '#2d2d2d',
@@ -43,5 +44,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     background-color: ${theme.colors.white};
     color: ${theme.colors.black};
+    overflow: hidden;
   }
 `;

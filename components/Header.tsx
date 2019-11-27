@@ -15,7 +15,7 @@ const StyledNav = styled.nav`
     grid-auto-flow: column;
     li {
       font-size: 2rem;
-      padding: 2rem 0.5rem 1rem;
+      padding: 2rem 0.5rem 0.5rem;
       list-style: none;
       cursor: pointer;
 
@@ -29,6 +29,10 @@ const StyledNav = styled.nav`
   @media (max-width: ${props => props.theme.breakpoint}) {
     justify-content: center;
     transition: 1s ease all;
+  }
+
+  @media only screen and (max-width: ${props => props.theme.m_breakpoint}) {
+    padding: 0 1rem;
   }
 `;
 

@@ -1,12 +1,11 @@
 import Header from '../components/Header';
+import Page from '../components/Page';
 import { GlobalStyle } from '../components';
 
-const Page = () => (
+export default () => (
   <>
     <GlobalStyle />
     <Header />
-    <>Page</>
+    <Page />
   </>
 );
-
-export default Page;
