@@ -2,10 +2,12 @@ import { styled } from './';
 
 const StyledTitleCard = styled.div`
   text-align: center;
+  width: 100%;
 
   h1 {
     color: ${props => props.theme.colors.black};
     font-size: 15rem;
+    margin-top: 30rem;
     margin-bottom: 1rem;
   }
 
