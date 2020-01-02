@@ -1,48 +1,30 @@
-import { styled } from './';
+import styled from 'styled-components';
+import { FunctionComponent } from 'react';
 
-const StyledNav = styled.nav`
-  display: grid;
-
-  padding: 0 5rem;
-  justify-content: flex-end;
-  border-bottom: 1px solid ${props => props.theme.colors.transparent_teal};
-
-  ul {
-    display: grid;
-    gap: 5rem;
-    margin: 0;
-    padding: 0;
-    grid-auto-flow: column;
-    li {
-      font-size: 2rem;
-      padding: 2rem 0.5rem 0.5rem;
-      list-style: none;
-      cursor: pointer;
-
-      :hover {
-        transition: 0.2s box-shadow ease;
-        box-shadow: 0 2px ${props => props.theme.colors.teal};
-      }
-    }
+const getTypeFontSize = (type: HeaderTypes) => {
+  switch (type) {
+    case 'h1':
+      return `15rem`;
+    default:
+      break;
   }
+};
 
-  @media (max-width: ${props => props.theme.breakpoint}) {
-    justify-content: center;
-    transition: 1s ease all;
-  }
-
-  @media only screen and (max-width: ${props => props.theme.m_breakpoint}) {
-    padding: 0 1rem;
-  }
+const StyledHeader = styled.div<IHeaderProps>`
+  font-size: ${props => getTypeFontSize(props.type)};
+  color: ${props => props.theme.colors.black};
+  font-family: ${props => props.theme.fonts.overpass_regular};
+  font-weight: 700;
 `;
 
-const Header = () => (
-  <StyledNav>
-    <ul>
-      <li>about me</li>
-      <li>projects</li>
-    </ul>
-  </StyledNav>
+type HeaderTypes = 'h1' | 'h2' | 'h3';
+
+interface IHeaderProps {
+  type: HeaderTypes;
+}
+
+const Header: FunctionComponent<IHeaderProps> = ({ type, children }) => (
+  <StyledHeader type={type}>{children}</StyledHeader>
 );
 
 export default Header;

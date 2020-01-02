@@ -4,14 +4,28 @@ import baseStyled, {
 } from 'styled-components';
 
 export const theme = {
-  breakpoint: '1366px',
-  m_breakpoint: '500px',
+  /**
+   * 1366px
+   */
+  break_large: '1366px',
+  /**
+   * 900px
+   */
+  break_medium: '900px',
+  /**
+   * 500px
+   */
+  break_small: '500px',
   colors: {
     white: '#fafafa',
+    trans_white: '#fafafae6',
     black: '#2d2d2d',
-    transparent_black: '#2d2d2d4D',
+    trans_black: '#2d2d2d4D',
     teal: '#17B890',
-    transparent_teal: '#17B8904D',
+    trans_teal: '#17B8904D',
+  },
+  fonts: {
+    overpass_regular: 'overpass-regular',
   },
 };
 

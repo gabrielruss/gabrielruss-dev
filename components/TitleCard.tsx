@@ -1,13 +1,14 @@
 import { styled } from './';
+import Container from './Container';
+import Header from './Header';
 
 const StyledTitleCard = styled.div`
-  text-align: center;
-  width: 100%;
+  margin-top: 20rem;
+  height: 100vh;
 
   h1 {
     color: ${props => props.theme.colors.black};
     font-size: 15rem;
-    margin-top: 30rem;
     margin-bottom: 1rem;
   }
 
@@ -15,7 +16,7 @@ const StyledTitleCard = styled.div`
     font-size: 1.5rem;
   }
 
-  @media only screen and (max-width: ${props => props.theme.m_breakpoint}) {
+  @media only screen and (max-width: ${props => props.theme.break_small}) {
     h1 {
       font-size: 20vw;
     }
@@ -26,9 +27,13 @@ const StyledTitleCard = styled.div`
 `;
 
 const TitleCard = () => (
+  // TODO put a box around the name
   <StyledTitleCard>
-    <h1>gabriel russ</h1>
-    <h3>i’m just a guy who’s a web developer for fun</h3>
+    <Container>
+      {/* <h1>Gabriel Russ</h1> */}
+      <Header type="h1">Gabriel Russ</Header>
+      <h3>i’m just a guy who’s a web developer for fun</h3>
+    </Container>
   </StyledTitleCard>
 );
 

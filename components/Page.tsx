@@ -3,13 +3,10 @@ import TitleCard from './TitleCard';
 import Section from './Section';
 import WhatIAmGoodAt from './WhatIAmGoodAt';
 
-const StyledPage = styled.div`
+const StyledPage = styled.main`
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  overflow: auto;
+  text-align: center;
 `;
 
 const Page = () => (
