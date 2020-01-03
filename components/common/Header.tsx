@@ -5,8 +5,10 @@ const getTypeFontSize = (type: HeaderTypes) => {
   switch (type) {
     case 'h1':
       return `15rem`;
-    default:
-      break;
+    case 'h2':
+      return `7rem`;
+    case 'h3':
+      return `3rem`;
   }
 };
 
@@ -20,10 +22,14 @@ const StyledHeader = styled.div<IHeaderProps>`
 type HeaderTypes = 'h1' | 'h2' | 'h3';
 
 interface IHeaderProps {
-  type: HeaderTypes;
+  type?: HeaderTypes;
 }
 
-const Header: FunctionComponent<IHeaderProps> = ({ type, children }) => (
+/**
+ *
+ * @param type - defaults to h1
+ */
+const Header: FunctionComponent<IHeaderProps> = ({ type = 'h1', children }) => (
   <StyledHeader type={type}>{children}</StyledHeader>
 );
 

@@ -1,8 +1,11 @@
 import { styled } from './';
-import Container from './Container';
-import Header from './Header';
+import Container from './common/Container';
+import Header from './common/Header';
 
 const StyledTitleCard = styled.div`
+  display: flex;
+  flex-flow: column;
+  text-align: center;
   margin-top: 20rem;
   height: 100vh;
 
@@ -27,11 +30,9 @@ const StyledTitleCard = styled.div`
 `;
 
 const TitleCard = () => (
-  // TODO put a box around the name
   <StyledTitleCard>
     <Container>
-      {/* <h1>Gabriel Russ</h1> */}
-      <Header type="h1">Gabriel Russ</Header>
+      <Header>Gabriel Russ</Header>
       <h3>i’m just a guy who’s a web developer for fun</h3>
     </Container>
   </StyledTitleCard>
