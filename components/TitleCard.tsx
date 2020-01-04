@@ -6,7 +6,7 @@ const StyledTitleCard = styled.div`
   display: flex;
   flex-flow: column;
   text-align: center;
-  margin-top: 20rem;
+  margin-top: 30rem;
   height: 100vh;
 
   h1 {

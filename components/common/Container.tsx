@@ -5,8 +5,7 @@ const StyledContainer = styled.div`
   flex-flow: column;
   text-align: center;
   height: 100vh;
-  /* TODO fix this container thing... */
-  max-width: 1300px;
+  max-width: ${props => props.theme.break_large};
   margin-right: auto;
   margin-left: auto;
 `;
