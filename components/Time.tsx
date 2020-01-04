@@ -1,9 +1,8 @@
 // import { styled } from '.';
 import Header from './common/Header';
-import Grid from './common/Grid';
 import Container from './common/Container';
 
-// const StyledSkills = styled.div`
+// const StyledTime = styled.div`
 //   display: flex;
 //   flex-flow: column;
 //   text-align: center;
@@ -14,11 +13,11 @@ import Container from './common/Container';
 //   margin-left: auto;
 // `;
 
-const Skills = ({ header, children }) => (
+const Time = () => (
   <Container>
-    <Header type="h2">{header}</Header>
-    <Grid>{children}</Grid>
+    <Header type="h2">I have been a developer for give or take...</Header>
+    <p>2 years</p>
   </Container>
 );
 
-export default Skills;
+export default Time;

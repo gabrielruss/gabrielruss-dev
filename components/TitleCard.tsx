@@ -1,5 +1,5 @@
 import { styled } from './';
-import Container from './common/Container';
+import TitleContainer from './TitleContainer';
 import Header from './common/Header';
 
 const StyledTitleCard = styled.div`
@@ -31,10 +31,10 @@ const StyledTitleCard = styled.div`
 
 const TitleCard = () => (
   <StyledTitleCard>
-    <Container>
+    <TitleContainer>
       <Header>Gabriel Russ</Header>
       <h3>i’m just a guy who’s a web developer for fun</h3>
-    </Container>
+    </TitleContainer>
   </StyledTitleCard>
 );
 

@@ -1,11 +1,14 @@
 import { styled } from '../';
 
 const StyledContainer = styled.div`
-  max-width: ${props => props.theme.break_large};
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  height: 100vh;
+  /* TODO fix this container thing... */
+  max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-  padding: 2rem;
-  border: 3px solid ${props => props.theme.colors.black};
 `;
 
 const Container = ({ children }) => (
