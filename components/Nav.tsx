@@ -2,10 +2,10 @@ import { styled } from '.';
 
 const StyledNav = styled.nav`
   display: grid;
-
   padding: 0 5rem;
   justify-content: flex-end;
   border-bottom: 3px solid ${props => props.theme.colors.trans_teal};
+  margin-left: -17px;
 
   ul {
     display: grid;

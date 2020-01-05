@@ -3,7 +3,9 @@ import { styled } from '../';
 
 const StyledGrid = styled.div<IGridProps>`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  justify-items: center;
 `;
 
 interface IGridProps {
