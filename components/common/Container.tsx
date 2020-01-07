@@ -1,6 +1,6 @@
 import { styled } from '../';
 
-const StyledContainer = styled.div`
+export const StyledContainer = styled.div`
   display: flex;
   flex-flow: column;
   text-align: center;
