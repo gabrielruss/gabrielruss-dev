@@ -1,13 +1,20 @@
-import Header from './common/Header';
+import Header, { StyledHeader } from './common/Header';
 import Grid from './common/Grid';
 import Container from './common/Container';
+import { styled } from '.';
 
-// TODO put some padding after the ${StyledContainer} > Header
+const StyledSkills = styled.div`
+  > ${StyledHeader} {
+    margin-bottom: 3rem;
+  }
+`;
 
 const Skills = ({ header, children }) => (
   <Container>
-    <Header type="h2">{header}</Header>
-    <Grid>{children}</Grid>
+    <StyledSkills>
+      <Header type="h2">{header}</Header>
+      <Grid>{children}</Grid>
+    </StyledSkills>
   </Container>
 );
 

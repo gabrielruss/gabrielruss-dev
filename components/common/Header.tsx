@@ -12,7 +12,7 @@ const getTypeFontSize = (type: HeaderTypes) => {
   }
 };
 
-const StyledHeader = styled.div<IHeaderProps>`
+export const StyledHeader = styled.div<IHeaderProps>`
   font-size: ${props => getTypeFontSize(props.type)};
   color: ${props => props.theme.colors.black};
   font-family: ${props => props.theme.fonts.overpass_regular};

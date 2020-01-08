@@ -21,14 +21,22 @@ interface IIconProps {
 
 const StyledIcon = styled.img`
   width: 10rem;
+  margin: 1rem 0;
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const Icon: FunctionComponent<IIconProps> = ({ iconType, header, footer }) => (
-  <div>
+  <IconWrapper>
     <Header type="h3">{header}</Header>
     <StyledIcon src={`./icons/${iconType}.png`} />
     <Header type="h3">{footer}</Header>
-  </div>
+  </IconWrapper>
 );
 
 export default Icon;
