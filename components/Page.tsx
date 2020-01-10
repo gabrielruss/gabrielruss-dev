@@ -15,7 +15,7 @@ const Page = () => (
       <Icon iconType="css" header="CSS" />
       <Icon iconType="sass" header="SASS" />
     </Skills>
-    <Skills header="what I'm interested in">
+    <Skills header="what I'm learning">
       <Icon iconType="python" footer="Python" />
       <Icon iconType="graphql" footer="GraphQL" />
       <Icon iconType="styled-components" footer="Styled Components" />
@@ -27,7 +27,7 @@ const Page = () => (
         </p>
       </span>
       <span style={{ display: 'none' }}>
-        To be clear, the centering thing is a joke :)
+        To be clear, the centering thing is a joke...maybe :)
       </span>
     </Skills>
     <Time />

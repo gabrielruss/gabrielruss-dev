@@ -9,11 +9,12 @@ const StyledGrid = styled.div<IGridProps>`
 `;
 
 interface IGridProps {
-  columns?: number;
+  // TODO: trying to add in a number to replace 10 rem up there
+  breakpoint?: number;
 }
 
-const Grid: FunctionComponent<IGridProps> = ({ columns, children }) => (
-  <StyledGrid columns={columns}>{children}</StyledGrid>
+const Grid: FunctionComponent<IGridProps> = ({ breakpoint, children }) => (
+  <StyledGrid breakpoint={breakpoint}>{children}</StyledGrid>
 );
 
 export default Grid;
