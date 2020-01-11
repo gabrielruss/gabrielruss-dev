@@ -8,6 +8,7 @@ const StyledContainer = styled.div`
   max-width: ${props => props.theme.break_large};
   margin-right: auto;
   margin-left: auto;
+  margin-top: 50%;
 `;
 
 const Container = ({ children }) => (

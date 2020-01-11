@@ -1,4 +1,4 @@
-import { styled } from '.';
+import { styled } from '..';
 
 const StyledTitleContainer = styled.div`
   max-width: ${props => props.theme.break_large};

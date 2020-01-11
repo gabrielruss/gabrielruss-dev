@@ -1,6 +1,6 @@
-import { styled } from './';
-import TitleContainer from './TitleContainer';
-import Header from './common/Header';
+import { styled } from '..';
+import TitleContainer from '../common/BorderContainer';
+import Header from '../common/Header';
 
 const StyledTitleCard = styled.div`
   display: flex;

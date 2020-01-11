@@ -1,7 +1,7 @@
-import Header from './common/Header';
-import Container from './common/Container';
-import TimeSince from './common/TimeSince';
-import Grid from './common/Grid';
+import Header from '../common/Header';
+import Container from '../common/Container';
+import TimeSince from '../common/TimeSince';
+import Grid from '../common/Grid';
 
 const Time = () => (
   <Container>

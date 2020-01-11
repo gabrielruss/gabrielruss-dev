@@ -1,7 +1,7 @@
-import Header, { StyledHeader } from './common/Header';
-import Grid from './common/Grid';
-import Container from './common/Container';
-import { styled } from '.';
+import Header, { StyledHeader } from '../common/Header';
+import Grid from '../common/Grid';
+import Container from '../common/Container';
+import { styled } from '..';
 
 const StyledSkills = styled.div`
   > ${StyledHeader} {
