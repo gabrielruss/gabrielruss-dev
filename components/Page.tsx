@@ -24,11 +24,11 @@ const Page = () => (
       <Icon iconType="graphql" footer="GraphQL" />
       <Icon iconType="styled-components" footer="Styled Components" />
       <span>
-        <Header type="h3">¯\_(ツ)_/¯</Header>
         <p>
           centering things in CSS without getting frustrated and 'display: flex'
           -ing
         </p>
+        <Header type="h3">¯\_(ツ)_/¯</Header>
       </span>
       <span style={{ display: 'none' }}>
         To be clear, the centering thing is a joke...maybe :)

@@ -1,7 +1,6 @@
 import { styled } from '..';
 import Container from '../common/Container';
 import Header from '../common/Header';
-import Grid from '../common/Grid';
 
 const ImportantToMeWrapper = styled.div`
   padding-top: 2rem;

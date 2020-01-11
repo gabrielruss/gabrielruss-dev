@@ -1,14 +1,17 @@
 import { styled } from '../';
 
 const StyledContainer = styled.div`
-  display: flex;
-  flex-flow: column;
-  text-align: center;
   height: 100vh;
-  max-width: ${props => props.theme.break_large};
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-flow: column; */
+  /* max-width: ${props => props.theme.break_large}; */
+  /* margin-right: auto;
+  margin-left: auto; */
+  /* TODO: this is not working as a way to give our containers height */
+  /* margin-top: 50%; */
 `;
 
 const Container = ({ children }) => (
