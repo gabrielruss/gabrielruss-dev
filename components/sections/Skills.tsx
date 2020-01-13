@@ -13,7 +13,9 @@ const SkillsGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 5rem;
   max-width: ${props => props.theme.break_large};
-  width: 100vw;
+  /* width: 100vw; */
+  /* TODO: figure out why i need to do this */
+  width: calc(100vw - 33px);
   padding: 0 2rem;
 `;
 

@@ -47,6 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 10px;
     margin-left: calc(100vw - 100%);
+    overflow-x: hidden;
   }
 
   *, *:before, *:after {
