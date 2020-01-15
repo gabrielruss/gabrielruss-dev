@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import { styled } from '.';
+import ActiveLink from './utilities/ActiveLink';
 
 const StyledNav = styled.nav`
   display: grid;
@@ -13,17 +15,23 @@ const StyledNav = styled.nav`
     margin: 0;
     padding: 0;
     grid-auto-flow: column;
-    li {
+    a {
+      text-decoration: none;
       font-size: 2rem;
       font-weight: 700;
       padding: 2rem 0.5rem 0.5rem;
       list-style: none;
       cursor: pointer;
+      color: ${props => props.theme.colors.black};
 
       :hover {
         transition: 0.2s box-shadow ease;
         box-shadow: 0 3px ${props => props.theme.colors.teal};
       }
+
+      /* &.selected {
+        box-shadow: 0 3px ${props => props.theme.colors.teal};
+      } */
     }
   }
 
@@ -40,8 +48,10 @@ const StyledNav = styled.nav`
 const Nav = () => (
   <StyledNav>
     <ul>
-      <li>about me</li>
-      <li>projects</li>
+      <ActiveLink href="/">
+        <a>home</a>
+      </ActiveLink>
+      <a href="https://github.com/gabrielruss?tab=repositories">projects</a>
     </ul>
   </StyledNav>
 );
