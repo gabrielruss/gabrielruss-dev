@@ -10,7 +10,7 @@ const TimeSinceWrapper = styled.div`
   grid-auto-flow: column;
   gap: 7rem;
 
-  p {
+  div {
     display: flex;
     align-items: center;
   }
@@ -28,14 +28,14 @@ const TimeSince: FunctionComponent<ITimeSinceProps> = ({ startDate }) => {
 
   return (
     <TimeSinceWrapper>
-      <p>
+      <div>
         <Header>{years}</Header>
         <p>years</p>
-      </p>
-      <p>
+      </div>
+      <div>
         <Header type="h2">{remainingMonths}</Header>
         <p>months</p>
-      </p>
+      </div>
     </TimeSinceWrapper>
   );
 };
