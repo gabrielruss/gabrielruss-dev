@@ -3,7 +3,8 @@ import Container from '../common/Container';
 import Header from '../common/Header';
 
 const ImportantToMeWrapper = styled.div`
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
+  padding: 10rem 3rem;
 
   ul {
     display: grid;

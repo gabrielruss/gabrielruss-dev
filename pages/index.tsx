@@ -1,11 +1,5 @@
-import Nav from '../components/Nav';
-import Page from '../components/Page';
 import { GlobalStyle } from '../components';
+import Nav from '../components/Nav';
+import Home from '../components/Home';
 
-export default () => (
-  <>
-    <GlobalStyle />
-    <Nav />
-    <Page />
-  </>
-);
+export default () => <Home />;

@@ -51,7 +51,12 @@ const Nav = () => (
       <ActiveLink href="/">
         <a>home</a>
       </ActiveLink>
-      <a href="https://github.com/gabrielruss?tab=repositories">projects</a>
+      <a href="https://github.com/gabrielruss?tab=repositories" target="_blank">
+        github
+      </a>
+      <ActiveLink href="/resume">
+        <a>resume</a>
+      </ActiveLink>
     </ul>
   </StyledNav>
 );
