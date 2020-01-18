@@ -1,7 +1,3 @@
-const Resume = () => (
-  <>
-    <h1>Resume Page</h1>
-  </>
-);
+import Resume from '../components/Resume';
 
-export default Resume;
+export default () => <Resume />;
