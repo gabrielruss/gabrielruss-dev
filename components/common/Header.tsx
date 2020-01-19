@@ -9,6 +9,8 @@ const getTypeFontSize = (type: HeaderTypes) => {
       return `7rem`;
     case 'h3':
       return `3rem`;
+    case 'h4':
+      return `1.5rem`;
   }
 };
 
@@ -19,7 +21,7 @@ export const StyledHeader = styled.div<IHeaderProps>`
   font-weight: 700;
 `;
 
-type HeaderTypes = 'h1' | 'h2' | 'h3';
+type HeaderTypes = 'h1' | 'h2' | 'h3' | 'h4';
 
 interface IHeaderProps {
   type?: HeaderTypes;
