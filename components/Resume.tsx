@@ -44,6 +44,12 @@ const years = differenceInYears(new Date(), new Date(2014, 8));
 
 const Resume = () => (
   <>
+    <a
+      href="https://drive.google.com/uc?export=download&id=1WmeZf40DwZc09pkHzL33SkC9uRqZ782R"
+      style={{ position: 'absolute', right: '50px', color: '#15A883' }}
+    >
+      Click to download PDF
+    </a>
     <ResumeContainer>
       <Header type="h2">{`<Resume>`}</Header>
       <ResumeSection>
@@ -130,33 +136,41 @@ const Resume = () => (
           <b>Abel Solutions</b>
           <p>Developer</p>
           <p>August 2014 - August 2017</p>
-          <br />
-          <p>
-            Specialized in front-end development. Worked closely with clients to
-            understand requirements and develop solutions that leveraged a wide
-            range of front-end development tools. Focused on writing clean and
-            reusable code to maximize efficiency and readability.
-          </p>
+          {/* <br /> */}
           <ul>
             <li>
-              Led the Front-End Development team on an agile, large-scale EMR
-              solution using React, Redux, react-router, and
-              react-testing-library
+              Within Microsoft ecosystem, built custom forms using React,
+              TypeScript, and Office UI Fabric (UI framework)
             </li>
             <li>
-              Worked with the UX team to translate wireframes and business
-              requirements into working solutions
+              Developed and maintained custom solutions in C# to meet required
+              business logic
             </li>
-            <li>
-              Worked with the Back-End team to ensure custom APIs meet
-              acceptance criteria
-            </li>
-            <li>Developed custom Web APIs in .NET Core (C#)</li>
-            <li>
-              Developed and consumed a SignalR websocket to provide real time
-              updates to the UI
-            </li>
+            <li>Built out a development infrastructure within Azure</li>
           </ul>
+        </ResumeSubSection>
+      </ResumeSection>
+      <ResumeSection>
+        <Header type="h3">Before I Became a Full Time Developer</Header>
+        <ResumeSubSection>
+          <b>McKesson Corporation</b>
+          <p>SharePoint Engineer</p>
+          <p>November 2012 - June 2014</p>
+        </ResumeSubSection>
+        <br />
+        <ResumeSubSection>
+          <b>The Coca-Cola Company</b>
+          <p>Customer Data Analyst</p>
+          <p>January 2012 - November 2012</p>
+          <br />
+          <p>Customer Data Analyst Intern</p>
+          <p>May 2011 - August 2011</p>
+        </ResumeSubSection>
+        <br />
+        <ResumeSubSection>
+          <b>Georgia Southern University</b>
+          <p>SharePoint Engineer Intern</p>
+          <p>February 2011 - December 2011</p>
         </ResumeSubSection>
       </ResumeSection>
       <Header type="h2">{`</Resume>`}</Header>

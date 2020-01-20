@@ -22,6 +22,8 @@ export const theme = {
     black: '#2d2d2d',
     trans_black: '#2d2d2d4D',
     teal: '#17B890',
+    aa_teal: '#15A883',
+    aaa_teal: '#108467',
     trans_teal: '#17B8904D',
   },
   fonts: {

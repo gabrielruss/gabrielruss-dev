@@ -10,7 +10,7 @@ const StyledTitleCard = styled.div`
   height: 100vh;
 
   h1 {
-    color: ${props => props.theme.colors.black};
+    color: ${props => props.theme.colors.aaa_teal};
     font-size: 15rem;
     margin-bottom: 1rem;
   }
