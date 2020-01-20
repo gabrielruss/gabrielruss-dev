@@ -26,8 +26,8 @@ const TimeContent = styled.div`
 const Time = () => (
   <TimeWrapper>
     <TimeHeader>
-      <Header type="h2">🤓 I have been a developer for give or take...</Header>
-      <TimeSince startDate={new Date(2014, 8)} />
+      <Header type="h2">🤓 i have been a developer for give or take...</Header>
+      <TimeSince startDate={new Date(2014, 7)} />
     </TimeHeader>
     <TimeContent>
       <div>
@@ -41,7 +41,7 @@ const Time = () => (
     </TimeContent>
     <span>By the way...that isn't an error in months...</span>
     <span>
-      Major events just seem to happen in August in my life for some reason
+      Major events just seem to happen around August in my life for some reason
     </span>
   </TimeWrapper>
 );
