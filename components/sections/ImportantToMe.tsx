@@ -11,8 +11,9 @@ const ImportantToMeWrapper = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     justify-items: center;
     gap: 3rem;
-    width: 100vw;
+    width: 90vw;
     max-width: ${props => props.theme.break_large};
+    align-items: center;
 
     li {
       width: 50rem;

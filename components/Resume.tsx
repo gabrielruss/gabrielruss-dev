@@ -1,7 +1,7 @@
 import { styled } from '.';
 import Header, { StyledHeader } from './common/Header';
 import { differenceInYears } from 'date-fns';
-import { RESUME_DL_LINK } from './utilities/_constants';
+import { RESUME_VIEW_LINK } from './utilities/_constants';
 import StyledLink from './common/StyledLink';
 
 const ResumeWrapper = styled.span`
@@ -53,7 +53,10 @@ const years = differenceInYears(new Date(), new Date(2014, 8));
 
 const Resume = () => (
   <ResumeWrapper>
-    <StyledLink href={RESUME_DL_LINK}>Click to download PDF</StyledLink>
+    <StyledLink href={RESUME_VIEW_LINK} target="_blank">
+      Google Drive Download
+      {/* Click to download PDF */}
+    </StyledLink>
     <ResumeContainer>
       <Header type="h2">{`<Resume>`}</Header>
       <ResumeSection>
@@ -99,7 +102,7 @@ const Resume = () => (
               ticket organization.
             </li>
             <li>
-              Coordinted with dev-ops to set up CI for running, testing, and
+              Coordinated with dev-ops to set up CI for running, testing, and
               deploying each branch of the code.
             </li>
           </ul>

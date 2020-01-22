@@ -29,9 +29,9 @@ const StyledNav = styled.nav`
         box-shadow: 0 3px ${props => props.theme.colors.teal};
       }
 
-      /* &.selected {
+      &.selected {
         box-shadow: 0 3px ${props => props.theme.colors.teal};
-      } */
+      }
     }
   }
 

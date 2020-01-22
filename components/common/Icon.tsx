@@ -20,7 +20,7 @@ interface IIconProps {
 }
 
 const StyledIcon = styled.img`
-  width: 10rem;
+  width: 8rem;
   margin: 1rem 0;
 `;
 
