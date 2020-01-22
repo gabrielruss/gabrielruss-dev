@@ -39,6 +39,28 @@ const ImportantToMe = () => (
       <Header type="h2">what coding practices are important to me?</Header>
       <ul>
         <li>
+          <ListItemHeader>Build with empathy</ListItemHeader>
+          <ListItemContent>
+            Understand your audience and try to put yourself in their shoes.
+            Would YOU enjoy using the thing you are building all day every day.
+          </ListItemContent>
+        </li>
+        <li>
+          <ListItemHeader>Movement towards accessibility</ListItemHeader>
+          <ListItemContent>
+            Accessibility will always be on my mind when designing a website.
+            Things should looks nice, to as many users as possible.
+          </ListItemContent>
+        </li>
+        <li>
+          <ListItemHeader>UX before all</ListItemHeader>
+          <ListItemContent>
+            The user experience should be top priority. Making things easy is
+            hard. As UX/UI, our job is made difficult by making our user's lives
+            easier. That gives me purpose and I love it.
+          </ListItemContent>
+        </li>
+        <li>
           <ListItemHeader>Pure, Single Purpose Functions</ListItemHeader>
           <ListItemContent>
             Break complex tasks down into the smallest chunks possible until you
@@ -58,7 +80,7 @@ const ImportantToMe = () => (
             starting point.
           </ListItemContent>
         </li>
-        <li>
+        {/* <li>
           <ListItemHeader>
             Could someone new to programming understand?
           </ListItemHeader>
@@ -70,7 +92,7 @@ const ImportantToMe = () => (
             it makes sense, create a controller method that has the order of
             operations for your business logic.
           </ListItemContent>
-        </li>
+        </li> */}
         <li>
           <ListItemHeader>Comment your code</ListItemHeader>
           <ListItemContent>
@@ -84,6 +106,7 @@ const ImportantToMe = () => (
             out their birth date."
           </ListItemContent>
         </li>
+
         <li>
           <ListItemHeader>Use descriptive naming</ListItemHeader>
           <ListItemContent>

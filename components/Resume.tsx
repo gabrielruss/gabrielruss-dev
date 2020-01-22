@@ -1,6 +1,15 @@
 import { styled } from '.';
 import Header, { StyledHeader } from './common/Header';
 import { differenceInYears } from 'date-fns';
+import { RESUME_DL_LINK } from './utilities/_constants';
+import StyledLink from './common/StyledLink';
+
+const ResumeWrapper = styled.span`
+  ${StyledLink} {
+    position: absolute;
+    right: 5rem;
+  }
+`;
 
 const ResumeContainer = styled.div`
   display: flex;
@@ -43,13 +52,8 @@ const ResumeSubSection = styled.div`
 const years = differenceInYears(new Date(), new Date(2014, 8));
 
 const Resume = () => (
-  <>
-    <a
-      href="https://drive.google.com/uc?export=download&id=1WmeZf40DwZc09pkHzL33SkC9uRqZ782R"
-      style={{ position: 'absolute', right: '50px', color: '#15A883' }}
-    >
-      Click to download PDF
-    </a>
+  <ResumeWrapper>
+    <StyledLink href={RESUME_DL_LINK}>Click to download PDF</StyledLink>
     <ResumeContainer>
       <Header type="h2">{`<Resume>`}</Header>
       <ResumeSection>
@@ -175,7 +179,7 @@ const Resume = () => (
       </ResumeSection>
       <Header type="h2">{`</Resume>`}</Header>
     </ResumeContainer>
-  </>
+  </ResumeWrapper>
 );
 
 export default Resume;
