@@ -14,13 +14,12 @@ const StyledTitleCard = styled.div`
   @media (max-width: ${props => props.theme.break_large}) {
     margin-top: 20vh;
 
-    ${StyledHeader}:first-of-type {
-      /* font-size: 8rem; */
+    /* ${StyledHeader}:first-of-type {
       font-size: calc(
-        80px + (150 - 80) *
-          ((100vw - ${props => props.theme.break_small}) / (1366 - 500))
+        7rem + (150 - 70) *
+          ((100vw - ${props => props.theme.break_small}) / (1920 - 500))
       );
-    }
+    } */
   }
 `;
 
@@ -28,7 +27,7 @@ const TitleCard = () => (
   <StyledTitleCard>
     <BorderContainer>
       <Header>Gabriel Russ</Header>
-      <Header type="h4">i’m just a guy who’s a web developer for fun</Header>
+      <p>i’m just a guy who’s a web developer for fun</p>
     </BorderContainer>
   </StyledTitleCard>
 );

@@ -33,9 +33,9 @@ const IconWrapper = styled.div`
 
 const Icon: FunctionComponent<IIconProps> = ({ iconType, header, footer }) => (
   <IconWrapper>
-    <Header type="h3">{header}</Header>
+    <Header size="small">{header}</Header>
     <StyledIcon src={`./icons/${iconType}.png`} />
-    <Header type="h3">{footer}</Header>
+    <Header size="small">{footer}</Header>
   </IconWrapper>
 );
 

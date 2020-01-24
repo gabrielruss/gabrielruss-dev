@@ -58,9 +58,9 @@ const Resume = () => (
       {/* Click to download PDF */}
     </StyledLink>
     <ResumeContainer>
-      <Header type="h2">{`<Resume>`}</Header>
+      <Header size="medium">{`<Resume>`}</Header>
       <ResumeSection>
-        <Header type="h3">Specialties</Header>
+        <Header size="small">Specialties</Header>
         <ResumeSubSection>
           <ul>
             <li>{years} years of experience with JavaScript</li>
@@ -71,7 +71,7 @@ const Resume = () => (
         </ResumeSubSection>
       </ResumeSection>
       <ResumeSection>
-        <Header type="h3">Education</Header>
+        <Header size="small">Education</Header>
         <ResumeSubSection>
           <b>Georgia Southern University</b>
           <p>BBA in Information Systems</p>
@@ -80,7 +80,7 @@ const Resume = () => (
         </ResumeSubSection>
       </ResumeSection>
       <ResumeSection>
-        <Header type="h3">Work Experience</Header>
+        <Header size="small">Work Experience</Header>
         <ResumeSubSection>
           <b>LeaseQuery</b>
           <p>UI Engineer</p>
@@ -158,7 +158,7 @@ const Resume = () => (
         </ResumeSubSection>
       </ResumeSection>
       <ResumeSection>
-        <Header type="h3">Before I Became a Full Time Developer</Header>
+        <Header size="small">Before I Became a Full Time Developer</Header>
         <ResumeSubSection>
           <b>McKesson Corporation</b>
           <p>SharePoint Engineer</p>
@@ -180,7 +180,7 @@ const Resume = () => (
           <p>February 2011 - December 2011</p>
         </ResumeSubSection>
       </ResumeSection>
-      <Header type="h2">{`</Resume>`}</Header>
+      <Header size="medium">{`</Resume>`}</Header>
     </ResumeContainer>
   </ResumeWrapper>
 );

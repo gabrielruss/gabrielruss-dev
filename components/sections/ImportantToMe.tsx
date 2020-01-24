@@ -37,7 +37,7 @@ const ListItemContent = styled.p`
 const ImportantToMe = () => (
   <Container>
     <ImportantToMeWrapper>
-      <Header type="h2">what coding practices are important to me?</Header>
+      <Header size="medium">what coding practices are important to me?</Header>
       <ul>
         <li>
           <ListItemHeader>Build with empathy</ListItemHeader>

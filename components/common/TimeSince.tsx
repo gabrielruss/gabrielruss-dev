@@ -33,7 +33,7 @@ const TimeSince: FunctionComponent<ITimeSinceProps> = ({ startDate }) => {
         <p>years</p>
       </div>
       <div>
-        <Header type="h2">{remainingMonths}</Header>
+        <Header size="medium">{remainingMonths}</Header>
         <p>months</p>
       </div>
     </TimeSinceWrapper>

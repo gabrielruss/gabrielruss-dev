@@ -26,16 +26,18 @@ const TimeContent = styled.div`
 const Time = () => (
   <TimeWrapper>
     <TimeHeader>
-      <Header type="h2">🤓 i have been a developer for give or take...</Header>
+      <Header size="medium">
+        🤓 i have been a developer for give or take...
+      </Header>
       <TimeSince startDate={new Date(2014, 7)} />
     </TimeHeader>
     <TimeContent>
       <div>
-        <Header type="h2">👶 father for </Header>
+        <Header size="medium">👶 father for </Header>
         <TimeSince startDate={new Date(2013, 8)} />
       </div>
       <div>
-        <Header type="h2">💍 married for </Header>
+        <Header size="medium">💍 married for </Header>
         <TimeSince startDate={new Date(2011, 8)} />
       </div>
     </TimeContent>

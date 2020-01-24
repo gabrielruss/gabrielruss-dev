@@ -20,7 +20,7 @@ const SkillsGrid = styled.div`
 const Skills = ({ header, children }) => (
   <Container>
     <StyledSkills>
-      <Header type="h2">{header}</Header>
+      <Header size="medium">{header}</Header>
       <SkillsGrid>{children}</SkillsGrid>
     </StyledSkills>
   </Container>
