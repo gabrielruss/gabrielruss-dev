@@ -48,7 +48,9 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 10px;
-    margin-left: calc(100vw - 100%);
+    /* TODO: this seems to cause a weird issue when resizing the screen */
+    /* makes about 17px of blank space on left side of screen */
+    /* margin-left: calc(100vw - 100%); */
     overflow-x: hidden;
   }
 

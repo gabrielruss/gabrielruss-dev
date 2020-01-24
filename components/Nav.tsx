@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { styled } from '.';
 import ActiveLink from './utilities/ActiveLink';
 
@@ -11,7 +10,7 @@ const StyledNav = styled.nav`
 
   ul {
     display: grid;
-    gap: 5rem;
+    gap: 4rem;
     margin: 0;
     padding: 0;
     grid-auto-flow: column;
@@ -36,12 +35,10 @@ const StyledNav = styled.nav`
   }
 
   @media (max-width: ${props => props.theme.break_large}) {
-    justify-content: center;
-    transition: 1s ease all;
-  }
-
-  @media only screen and (max-width: ${props => props.theme.break_small}) {
-    padding: 0 1rem;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+    /* transition: 1s ease all; */
   }
 `;
 
