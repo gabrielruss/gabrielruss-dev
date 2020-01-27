@@ -8,21 +8,21 @@ const getTypeFontSize = (size: HeaderSizes) => {
       // between 80px and 150px
       return `calc(
         80px + (150 - 80) *
-          ((100vw - 500px) / (1920 - 500))
+          ((100vw - 360px) / (1920 - 360))
       );`;
     case 'medium':
       // return `7rem`;
       // between 40px and 70px
       return `calc(
         40px + (70 - 40) *
-          ((100vw - 500px) / (1920 - 500))
+          ((100vw - 360px) / (1920 - 360))
       );`;
     case 'small':
       // return `3rem`;
       // between 20px and 30px
       return `calc(
         20px + (30 - 20) *
-          ((100vw - 500px) / (1920 - 500))
+          ((100vw - 360px) / (1920 - 360))
       );`;
   }
 };

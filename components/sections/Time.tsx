@@ -9,12 +9,6 @@ const TimeWrapper = styled.div`
   text-align: center;
   min-height: 100vh;
   gap: 2rem;
-  /* padding: 10rem 3rem; */
-  /* box-shadow: 0px 5px 5px ${props => props.theme.colors.trans_black} */
-    /* 0px -5px 5px ${props => props.theme.colors.trans_black}; */
-
- 
-  
 `;
 
 const TimeHeader = styled.div`

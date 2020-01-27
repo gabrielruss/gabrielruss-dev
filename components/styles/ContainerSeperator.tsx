@@ -9,5 +9,4 @@ export const ContainerSeperator = styled.hr`
     rgba(0, 0, 0, 0.75),
     rgba(0, 0, 0, 0)
   );
-  /* margin-bottom: 20rem; */
 `;

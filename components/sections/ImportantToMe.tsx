@@ -3,30 +3,35 @@ import Container from '../common/Container';
 import Header from '../common/Header';
 
 const ImportantToMeWrapper = styled.div`
-  /* padding-top: 2rem; */
   padding: 10rem 3rem;
 
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     justify-items: center;
     gap: 3rem;
     width: 90vw;
     max-width: ${props => props.theme.break_large};
     align-items: center;
+    padding: 2rem;
 
     li {
-      width: 50rem;
+      width: 40rem;
       list-style: none;
       text-align: left;
     }
   }
-`;
 
-const ListItemHeader = styled.div`
-  font-size: 4rem;
-  font-weight: 400;
-  text-align: center;
+  @media (max-width: ${props => props.theme.break_small}) {
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      padding: 2rem;
+
+      li {
+        width: auto;
+      }
+    }
+  }
 `;
 
 const ListItemContent = styled.p`
@@ -40,21 +45,21 @@ const ImportantToMe = () => (
       <Header size="medium">what coding practices are important to me?</Header>
       <ul>
         <li>
-          <ListItemHeader>Build with empathy</ListItemHeader>
+          <Header size="small">Build with empathy</Header>
           <ListItemContent>
             Understand your audience and try to put yourself in their shoes.
             Would YOU enjoy using the thing you are building all day every day.
           </ListItemContent>
         </li>
         <li>
-          <ListItemHeader>Movement towards accessibility</ListItemHeader>
+          <Header size="small">Movement towards accessibility</Header>
           <ListItemContent>
             Accessibility will always be on my mind when designing a website.
             Things should looks nice, to as many users as possible.
           </ListItemContent>
         </li>
         <li>
-          <ListItemHeader>UX before all</ListItemHeader>
+          <Header size="small">UX before all</Header>
           <ListItemContent>
             The user experience should be top priority. Making things easy is
             hard. As UX/UI, our job is made difficult by making our user's lives
@@ -62,7 +67,7 @@ const ImportantToMe = () => (
           </ListItemContent>
         </li>
         <li>
-          <ListItemHeader>Pure, Single Purpose Functions</ListItemHeader>
+          <Header size="small">Pure, Single Purpose Functions</Header>
           <ListItemContent>
             Break complex tasks down into the smallest chunks possible until you
             can write individual methods for each task.
@@ -73,7 +78,7 @@ const ImportantToMe = () => (
           </ListItemContent>
         </li>
         <li>
-          <ListItemHeader>Don't repeat yourself</ListItemHeader>
+          <Header size="small">Don't repeat yourself</Header>
           <ListItemContent>
             This is always more of an art than a science. How many times do you
             write a piece of code before you abstract it out into a separate
@@ -82,9 +87,9 @@ const ImportantToMe = () => (
           </ListItemContent>
         </li>
         {/* <li>
-          <ListItemHeader>
+          <Header size="small">
             Could someone new to programming understand?
-          </ListItemHeader>
+          </Header>
           <ListItemContent>
             A lot of times complex business logic can cause spaghetti code.
           </ListItemContent>
@@ -95,7 +100,7 @@ const ImportantToMe = () => (
           </ListItemContent>
         </li> */}
         <li>
-          <ListItemHeader>Comment your code</ListItemHeader>
+          <Header size="small">Comment your code</Header>
           <ListItemContent>
             When you or someone else reads your code years from now, will they
             understand WHY you did that? If the answer is maybe, you should
@@ -109,7 +114,7 @@ const ImportantToMe = () => (
         </li>
 
         <li>
-          <ListItemHeader>Use descriptive naming</ListItemHeader>
+          <Header size="small">Use descriptive naming</Header>
           <ListItemContent>
             Try not to use single letter variables. You may remember that "u"
             means "user", but someone else may not.
@@ -120,7 +125,7 @@ const ImportantToMe = () => (
           </ListItemContent>
         </li>
         <li>
-          <ListItemHeader>Use some sort of typing</ListItemHeader>
+          <Header size="small">Use some sort of typing</Header>
           <ListItemContent>
             I personally like TypeScript a lot. I feel naked when I don't use it
             now. Other options are great as well such as Flow or using PropTypes

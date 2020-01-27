@@ -13,13 +13,10 @@ const StyledTitleCard = styled.div`
 
   @media (max-width: ${props => props.theme.break_large}) {
     margin-top: 20vh;
+  }
 
-    /* ${StyledHeader}:first-of-type {
-      font-size: calc(
-        7rem + (150 - 70) *
-          ((100vw - ${props => props.theme.break_small}) / (1920 - 500))
-      );
-    } */
+  @media (max-width: ${props => props.theme.break_medium}) {
+    margin-top: 15vh;
   }
 `;
 
