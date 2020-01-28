@@ -1,5 +1,5 @@
 import { styled } from '..';
-import Container from '../common/Container';
+import StyledContainer from '../styles/StyledContainer';
 import Header from '../common/Header';
 
 const ImportantToMeWrapper = styled.div`
@@ -40,7 +40,7 @@ const ListItemContent = styled.p`
 `;
 
 const ImportantToMe = () => (
-  <Container>
+  <StyledContainer>
     <ImportantToMeWrapper>
       <Header size="medium">what coding practices are important to me?</Header>
       <ul>
@@ -134,7 +134,7 @@ const ImportantToMe = () => (
         </li>
       </ul>
     </ImportantToMeWrapper>
-  </Container>
+  </StyledContainer>
 );
 
 export default ImportantToMe;

@@ -1,6 +1,6 @@
 import { styled } from '..';
-import BorderContainer from '../common/BorderContainer';
-import Header, { StyledHeader } from '../common/Header';
+import StyledBorderContainer from '../styles/StyledBorderContainer';
+import Header from '../common/Header';
 
 const StyledTitleCard = styled.div`
   display: flex;
@@ -22,10 +22,10 @@ const StyledTitleCard = styled.div`
 
 const TitleCard = () => (
   <StyledTitleCard>
-    <BorderContainer>
+    <StyledBorderContainer>
       <Header>Gabriel Russ</Header>
       <p>i’m just a guy who’s a web developer for fun</p>
-    </BorderContainer>
+    </StyledBorderContainer>
   </StyledTitleCard>
 );
 

@@ -1,5 +1,5 @@
 import { styled } from '.';
-import ActiveLink from './utilities/ActiveLink';
+import ActiveLink from './common/ActiveLink';
 
 const StyledNav = styled.nav`
   display: grid;
@@ -38,7 +38,6 @@ const StyledNav = styled.nav`
     padding: 0;
     margin: 0;
     justify-content: space-around;
-    /* transition: 1s ease all; */
   }
 `;
 

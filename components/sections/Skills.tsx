@@ -1,5 +1,5 @@
 import Header, { StyledHeader } from '../common/Header';
-import Container from '../common/Container';
+import StyledContainer from '../styles/StyledContainer';
 import { styled } from '..';
 
 const StyledSkills = styled.div`
@@ -18,12 +18,12 @@ const SkillsGrid = styled.div`
 `;
 
 const Skills = ({ header, children }) => (
-  <Container>
+  <StyledContainer>
     <StyledSkills>
       <Header size="medium">{header}</Header>
       <SkillsGrid>{children}</SkillsGrid>
     </StyledSkills>
-  </Container>
+  </StyledContainer>
 );
 
 export default Skills;
