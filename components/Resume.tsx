@@ -13,8 +13,13 @@ const ResumeWrapper = styled.span`
 
   ${StyledButton} {
     position: absolute;
-    /* right: 5rem; */
     left: 5rem;
+
+    @media (max-width: ${props => props.theme.break_large}) {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
   }
 `;
 
@@ -40,6 +45,14 @@ const ResumeSection = styled.div`
 
   > ${StyledHeader} {
     margin-bottom: 2rem;
+  }
+
+  @media (max-width: ${props => props.theme.break_medium}) {
+    margin-left: 5rem;
+  }
+
+  @media (max-width: ${props => props.theme.break_small}) {
+    margin: auto;
   }
 `;
 
