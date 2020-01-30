@@ -5,6 +5,7 @@ const StyledBorderContainer = styled.div`
   margin: 0 auto;
   padding: 2rem;
   border: 3px solid ${props => props.theme.colors.black};
+  background-color: ${props => props.theme.colors.white};
 `;
 
 export default StyledBorderContainer;

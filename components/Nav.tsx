@@ -5,7 +5,11 @@ const StyledNav = styled.nav`
   display: grid;
   padding: 0 5rem;
   justify-content: flex-end;
-  border-bottom: 3px solid ${props => props.theme.colors.trans_teal};
+  /* border-bottom: 3px solid ${props => props.theme.colors.trans_teal}; */
+  /* small shadow */
+  /* box-shadow: 0 0 5rem 5rem ${props => props.theme.colors.trans_teal}; */
+  /* this one is great big shadow */
+  /* box-shadow: 0 0 20rem 35rem ${props => props.theme.colors.trans_teal}; */
   margin-left: -17px;
 
   ul {
@@ -25,11 +29,11 @@ const StyledNav = styled.nav`
 
       :hover {
         transition: 0.2s box-shadow ease;
-        box-shadow: 0 3px ${props => props.theme.colors.teal};
+        box-shadow: 0 3px ${props => props.theme.colors.aa_teal};
       }
 
       &.selected {
-        box-shadow: 0 3px ${props => props.theme.colors.teal};
+        box-shadow: 0 3px ${props => props.theme.colors.aa_teal};
       }
     }
   }
