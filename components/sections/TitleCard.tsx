@@ -1,12 +1,13 @@
 import { styled } from '..';
 import StyledBorderContainer from '../styles/StyledBorderContainer';
-import Header from '../common/Header';
+import Header, { StyledHeader } from '../common/Header';
 
-const StyledTitleCard = styled.div`
+export const StyledTitleCard = styled.div`
+  position: relative;
+
   display: flex;
   flex-flow: column;
   text-align: center;
-  /* todo: height is weird sometimes  */
   transition: margin-top 0.2s ease;
   margin-top: 25vh;
   height: 100vh;
@@ -17,6 +18,21 @@ const StyledTitleCard = styled.div`
 
   @media (max-width: ${props => props.theme.break_medium}) {
     margin-top: 15vh;
+  }
+
+  /* WIP */
+  ${StyledBorderContainer} {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 25vh;
+
+    @media (max-width: ${props => props.theme.break_large}) {
+      top: 20vh;
+    }
+
+    @media (max-width: ${props => props.theme.break_medium}) {
+      top: 15vh;
+    }
   }
 `;
 
