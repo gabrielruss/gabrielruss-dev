@@ -1,10 +1,8 @@
 import { styled } from '..';
 import StyledBorderContainer from '../styles/StyledBorderContainer';
-import Header, { StyledHeader } from '../common/Header';
+import Header from '../common/Header';
 
 export const StyledTitleCard = styled.div`
-  position: relative;
-
   display: flex;
   flex-flow: column;
   text-align: center;
@@ -20,20 +18,20 @@ export const StyledTitleCard = styled.div`
     margin-top: 15vh;
   }
 
-  /* WIP */
   ${StyledBorderContainer} {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 25vh;
-
-    @media (max-width: ${props => props.theme.break_large}) {
-      top: 20vh;
-    }
-
-    @media (max-width: ${props => props.theme.break_medium}) {
-      top: 15vh;
-    }
+    position: relative;
+    z-index: 9999;
   }
+`;
+
+const LongSquare = styled.div`
+  z-index: 0;
+  position: absolute;
+  top: 35rem;
+  right: 40rem;
+  height: 30rem;
+  width: 92rem;
+  background-color: ${props => props.theme.colors.teal};
 `;
 
 const TitleCard = () => (
@@ -42,6 +40,7 @@ const TitleCard = () => (
       <Header>Gabriel Russ</Header>
       <p>i’m just a guy who’s a web developer for fun</p>
     </StyledBorderContainer>
+    <LongSquare />
   </StyledTitleCard>
 );
 
