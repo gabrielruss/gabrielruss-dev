@@ -2,6 +2,7 @@ import { GlobalStyle, styled } from '.';
 import Nav from './Nav';
 
 const StyledPage = styled.div`
+  z-index: 1;
   background: white;
   color: ${props => props.theme.colors.black};
 `;

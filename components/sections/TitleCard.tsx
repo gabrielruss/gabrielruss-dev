@@ -20,18 +20,25 @@ export const StyledTitleCard = styled.div`
 
   ${StyledBorderContainer} {
     position: relative;
-    z-index: 9999;
+    z-index: 1;
   }
 `;
 
 const LongSquare = styled.div`
   z-index: 0;
-  position: absolute;
-  top: 35rem;
-  right: 40rem;
-  height: 30rem;
-  width: 92rem;
+  position: relative;
+  /* height: 30rem;
+  width: 92rem; */
+  height: calc(150px + (350 - 150) * ((100vw - 360px) / (1920 - 360)));
+  width: calc(300px + (950 - 300) * ((100vw - 360px) / (1920 - 360)));
+  margin-left: 35rem;
+  margin-top: -25rem;
   background-color: ${props => props.theme.colors.teal};
+
+  /* calc(
+        80px + (150 - 80) *
+          ((100vw - 360px) / (1920 - 360))
+      ); */
 `;
 
 const TitleCard = () => (
