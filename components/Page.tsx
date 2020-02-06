@@ -13,12 +13,20 @@ const Inner = styled.div`
   padding: 2rem;
 `;
 
+const TriangleOverlay = styled.div`
+  z-index: 1000;
+`;
+
+// TODO: spawn a triangle somewhere within the TiangleOverlay
+
 const Page = ({ children }) => (
   <>
     <GlobalStyle />
     <StyledPage>
       <Nav />
-      <Inner>{children}</Inner>
+      <TriangleOverlay>
+        <Inner>{children}</Inner>
+      </TriangleOverlay>
     </StyledPage>
   </>
 );
