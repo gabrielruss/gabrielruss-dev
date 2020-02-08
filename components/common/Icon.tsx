@@ -1,4 +1,3 @@
-import { FunctionComponent } from 'react';
 import { styled } from '..';
 import Header from './Header';
 
@@ -31,12 +30,14 @@ const IconWrapper = styled.div`
   align-items: center;
 `;
 
-const Icon: FunctionComponent<IIconProps> = ({ iconType, header, footer }) => (
-  <IconWrapper>
-    <Header size="small">{header}</Header>
-    <StyledIcon src={`./icons/${iconType}.png`} />
-    <Header size="small">{footer}</Header>
-  </IconWrapper>
-);
+function Icon({ iconType, header, footer }: IIconProps) {
+  return (
+    <IconWrapper>
+      <Header size="small">{header}</Header>
+      <StyledIcon src={`./icons/${iconType}.png`} />
+      <Header size="small">{footer}</Header>
+    </IconWrapper>
+  );
+}
 
 export default Icon;

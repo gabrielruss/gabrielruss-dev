@@ -69,17 +69,19 @@ export const StyledTitleCard = styled.div`
   }
 `;
 
-const TitleCard = () => (
-  <StyledTitleCard>
-    <LongSquareContainer>
-      <StyledBorderContainer>
-        <Header>Gabriel Russ</Header>
-        <p>i’m just a guy who’s a web developer for fun</p>
-      </StyledBorderContainer>
-      <LongSquare />
-      {/* <LongSquare /> */}
-    </LongSquareContainer>
-  </StyledTitleCard>
-);
+function TitleCard() {
+  return (
+    <StyledTitleCard>
+      <LongSquareContainer>
+        <StyledBorderContainer>
+          <Header>Gabriel Russ</Header>
+          <p>i’m just a guy who’s a web developer for fun</p>
+        </StyledBorderContainer>
+        <LongSquare />
+        {/* <LongSquare /> */}
+      </LongSquareContainer>
+    </StyledTitleCard>
+  );
+}
 
 export default TitleCard;

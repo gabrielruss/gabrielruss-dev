@@ -17,13 +17,19 @@ const SkillsGrid = styled.div`
   padding: 0 2rem;
 `;
 
-const Skills = ({ header, children }) => (
-  <StyledContainer>
-    <StyledSkills>
-      <Header size="medium">{header}</Header>
-      <SkillsGrid>{children}</SkillsGrid>
-    </StyledSkills>
-  </StyledContainer>
-);
+interface ISkillsProps {
+  header: string | JSX.Element;
+}
+
+function Skills({ header, children }: React.PropsWithChildren<ISkillsProps>) {
+  return (
+    <StyledContainer>
+      <StyledSkills>
+        <Header size="medium">{header}</Header>
+        <SkillsGrid>{children}</SkillsGrid>
+      </StyledSkills>
+    </StyledContainer>
+  );
+}
 
 export default Skills;

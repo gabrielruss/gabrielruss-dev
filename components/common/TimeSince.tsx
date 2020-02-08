@@ -1,5 +1,4 @@
 import { styled } from '..';
-import { FunctionComponent } from 'react';
 import { differenceInMonths } from 'date-fns';
 
 import Header from './Header';
@@ -20,7 +19,7 @@ interface ITimeSinceProps {
   startDate: Date;
 }
 
-const TimeSince: FunctionComponent<ITimeSinceProps> = ({ startDate }) => {
+function TimeSince({ startDate }: ITimeSinceProps) {
   const months = differenceInMonths(new Date(), startDate);
   const years = Math.floor(months / 12);
 
@@ -38,6 +37,6 @@ const TimeSince: FunctionComponent<ITimeSinceProps> = ({ startDate }) => {
       </div>
     </TimeSinceWrapper>
   );
-};
+}
 
 export default TimeSince;

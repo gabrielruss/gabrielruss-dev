@@ -23,37 +23,39 @@ const TimeContent = styled.div`
   gap: 2rem;
 `;
 
-const Time = () => (
-  <TimeWrapper>
-    <TimeHeader>
-      <Header size="medium">
-        🤓
-        <br /> i have been a developer for give or take...
-      </Header>
-      <TimeSince startDate={new Date(2014, 7)} />
-    </TimeHeader>
-    <TimeContent>
-      <div>
+function Time() {
+  return (
+    <TimeWrapper>
+      <TimeHeader>
         <Header size="medium">
-          👶
-          <br /> father for{' '}
+          🤓
+          <br /> i have been a developer for give or take...
         </Header>
-        <TimeSince startDate={new Date(2013, 8)} />
-      </div>
-      <div>
-        <Header size="medium">
-          💍
-          <br /> married for{' '}
-        </Header>
-        <TimeSince startDate={new Date(2011, 8)} />
-      </div>
-    </TimeContent>
-    {/* <p>
+        <TimeSince startDate={new Date(2014, 7)} />
+      </TimeHeader>
+      <TimeContent>
+        <div>
+          <Header size="medium">
+            👶
+            <br /> father for{' '}
+          </Header>
+          <TimeSince startDate={new Date(2013, 8)} />
+        </div>
+        <div>
+          <Header size="medium">
+            💍
+            <br /> married for{' '}
+          </Header>
+          <TimeSince startDate={new Date(2011, 8)} />
+        </div>
+      </TimeContent>
+      {/* <p>
       By the way...that isn't an error in months...
       <br />
       Major events just seem to happen around August in my life for some reason
     </p> */}
-  </TimeWrapper>
-);
+    </TimeWrapper>
+  );
+}
 
 export default Time;

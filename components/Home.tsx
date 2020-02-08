@@ -5,11 +5,9 @@ import Icon from './common/Icon';
 import Header from './common/Header';
 import ImportantToMe from './sections/ImportantToMe';
 import { ContainerSeperator } from './styles/ContainerSeperator';
-// import Triangle from './styles/Triangle';
 
 const Home = () => (
   <main>
-    {/* <Triangle /> */}
     <TitleCard />
     <ContainerSeperator />
     <Skills header="what I'm good at">

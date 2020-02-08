@@ -1,8 +1,7 @@
 import { GlobalStyle, styled } from '.';
 import Nav from './Nav';
-
-const randomNumberPlease = (max: number, min: number) =>
-  Math.floor(Math.random() * (max - min)) + min;
+import Triangle from './styles/Triangle';
+import { randomNumberPlease } from './utilities/_helpers';
 
 const StyledPage = styled.div`
   z-index: 1;
@@ -20,55 +19,39 @@ const TriangleOverlay = styled.div`
   z-index: 1000;
 `;
 
-const Triangle = styled.div`
-  position: absolute;
-  background: url('/space.jpg');
-
-  top: 20rem;
-  right: 30rem;
-
-  width: ${randomNumberPlease(105, 85)}px;
-  height: ${randomNumberPlease(75, 55)}px;
-
-  opacity: ${randomNumberPlease(0.85, 0.65)};
-
-  clip-path: polygon(50% 0, 0 100%, 100% 100%);
-
-  -webkit-animation: spin 150s linear infinite;
-  -moz-animation: spin 150s linear infinite;
-  animation: spin 150s linear infinite;
-
-  @-moz-keyframes spin {
-    100% {
-      -moz-transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes spin {
-    100% {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  @keyframes spin {
-    100% {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-`;
-
 // TODO: spawn a triangle somewhere within the TiangleOverlay
 
-const Page = ({ children }) => (
-  <>
-    <GlobalStyle />
-    <StyledPage>
-      <Nav />
-      <TriangleOverlay>
-        <Triangle />
-        <Inner>{children}</Inner>
-      </TriangleOverlay>
-    </StyledPage>
-  </>
-);
+function spawnTriangles() {
+  const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  // TODO: spawn them in after 1 second
+  // spawn them out after 10 seconds
+  // maximum of 20
+
+  // ? make them clickable and when clicked they dissapear?
+
+  return testArray.map(_ => (
+    <Triangle
+      top={randomNumberPlease(100, 5)}
+      right={randomNumberPlease(90, 0)}
+      direction={Math.random() < 0.5}
+    />
+  ));
+}
+
+function Page({ children }) {
+  return (
+    <>
+      <GlobalStyle />
+      <StyledPage>
+        <Nav />
+        <TriangleOverlay>
+          {spawnTriangles()}
+          <Inner>{children}</Inner>
+        </TriangleOverlay>
+      </StyledPage>
+    </>
+  );
+}
 
 export default Page;
