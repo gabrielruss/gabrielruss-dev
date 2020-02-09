@@ -1,10 +1,9 @@
 import { styled } from '..';
-import { randomNumberPlease } from '../utilities/_helpers';
 
 interface ITrangleProps {
   top: number;
   right: number;
-  direction: boolean;
+  rotation: '' | 'reverse';
   opacity: number;
   height: number;
   width: number;
@@ -13,9 +12,7 @@ interface ITrangleProps {
 /**
  * Random width, height, and opacity
  */
-// const Triangle = styled.div`
 const Triangle = styled.div<ITrangleProps>`
-  /* TODO: maybe do fixed and put an transparent background on all sections */
   position: fixed;
   background: url('/space.jpg');
 
@@ -31,8 +28,7 @@ const Triangle = styled.div<ITrangleProps>`
 
   -webkit-animation: spin 150s linear infinite;
   -moz-animation: spin 150s linear infinite;
-  animation: spin 150s linear infinite
-    ${props => (props.direction ? 'reverse' : '')};
+  animation: spin 150s linear infinite ${props => props.rotation};
 
   @-moz-keyframes spin {
     100% {

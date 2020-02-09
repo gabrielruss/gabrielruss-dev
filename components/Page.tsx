@@ -19,8 +19,6 @@ const TriangleOverlay = styled.div`
   z-index: 1000;
 `;
 
-// TODO: spawn a triangle somewhere within the TiangleOverlay
-
 function spawnTriangles() {
   const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -30,14 +28,15 @@ function spawnTriangles() {
 
   // ? make them clickable and when clicked they dissapear?
 
-  return testArray.map(_ => (
+  return testArray.map((_, i) => (
     <Triangle
       top={randomNumberPlease(100, 5)}
       right={randomNumberPlease(90, 0)}
-      direction={Math.random() < 0.5}
+      rotation={Math.random() < 0.5 ? '' : 'reverse'}
       width={randomNumberPlease(105, 85)}
       height={randomNumberPlease(75, 55)}
       opacity={randomNumberPlease(65, 35) / 100}
+      key={i}
     />
   ));
 }
