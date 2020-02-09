@@ -35,6 +35,9 @@ function spawnTriangles() {
       top={randomNumberPlease(100, 5)}
       right={randomNumberPlease(90, 0)}
       direction={Math.random() < 0.5}
+      width={randomNumberPlease(105, 85)}
+      height={randomNumberPlease(75, 55)}
+      opacity={randomNumberPlease(65, 35) / 100}
     />
   ));
 }

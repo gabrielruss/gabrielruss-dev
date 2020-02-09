@@ -5,6 +5,9 @@ interface ITrangleProps {
   top: number;
   right: number;
   direction: boolean;
+  opacity: number;
+  height: number;
+  width: number;
 }
 
 /**
@@ -12,16 +15,17 @@ interface ITrangleProps {
  */
 // const Triangle = styled.div`
 const Triangle = styled.div<ITrangleProps>`
+  /* TODO: maybe do fixed and put an transparent background on all sections */
   position: fixed;
   background: url('/space.jpg');
 
   top: ${props => props.top}rem;
   right: ${props => props.right}vw;
 
-  width: ${randomNumberPlease(105, 85)}px;
-  height: ${randomNumberPlease(75, 55)}px;
+  width: ${props => props.width}px;
+  height: ${props => props.height}px;
 
-  opacity: ${randomNumberPlease(0.85, 0.65)};
+  opacity: ${props => props.opacity};
 
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
 
