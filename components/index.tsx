@@ -25,6 +25,9 @@ export const theme = {
     aa_teal: '#15A883',
     aaa_teal: '#108467',
     trans_teal: '#17B8904D',
+    flamingo: '#fb9f89',
+    purple: '#7a82ab',
+    yellow: '#e6e18f',
   },
   fonts: {
     overpass_regular: 'overpass-regular',

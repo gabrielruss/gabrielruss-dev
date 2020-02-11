@@ -1,5 +1,12 @@
 import { styled } from '..';
 
+export type TriangleColors =
+  | 'teal'
+  | 'purple'
+  | 'flamingo'
+  | 'yellow'
+  | 'black';
+
 interface ITrangleProps {
   top: number;
   right: number;
@@ -7,6 +14,7 @@ interface ITrangleProps {
   opacity: number;
   height: number;
   width: number;
+  color: TriangleColors;
 }
 
 /**
@@ -14,7 +22,7 @@ interface ITrangleProps {
  */
 const Triangle = styled.div<ITrangleProps>`
   position: fixed;
-  background: url('/space.jpg');
+  background-color: ${props => props.theme.colors[props.color]};
 
   top: ${props => props.top}rem;
   right: ${props => props.right}vw;

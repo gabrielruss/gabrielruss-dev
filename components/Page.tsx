@@ -1,6 +1,6 @@
 import { GlobalStyle, styled } from '.';
 import Nav from './Nav';
-import Triangle from './styles/Triangle';
+import Triangle, { TriangleColors } from './styles/Triangle';
 import { randomNumberPlease } from './utilities/_helpers';
 
 const StyledPage = styled.div`
@@ -28,6 +28,14 @@ function spawnTriangles() {
 
   // ? make them clickable and when clicked they dissapear?
 
+  const triangleColors: TriangleColors[] = [
+    'purple',
+    'flamingo',
+    'teal',
+    'yellow',
+    'black',
+  ];
+
   return testArray.map((_, i) => (
     <Triangle
       top={randomNumberPlease(100, 5)}
@@ -36,6 +44,7 @@ function spawnTriangles() {
       width={randomNumberPlease(105, 85)}
       height={randomNumberPlease(75, 55)}
       opacity={randomNumberPlease(65, 35) / 100}
+      color={triangleColors[randomNumberPlease(5, 0)]}
       key={i}
     />
   ));
