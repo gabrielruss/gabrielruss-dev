@@ -1,7 +1,6 @@
 import { GlobalStyle, styled } from '.';
 import Nav from './Nav';
-import Triangle, { TriangleColors } from './styles/Triangle';
-import { randomNumberPlease } from './utilities/_helpers';
+import { TriangleOverlay } from './sections/TriangleOverlay';
 
 const StyledPage = styled.div`
   z-index: 1;
@@ -15,41 +14,6 @@ const Inner = styled.div`
   padding: 2rem;
 `;
 
-const TriangleOverlay = styled.div`
-  z-index: 1000;
-`;
-
-function spawnTriangles() {
-  const testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-  // TODO: spawn them in after 1 second
-  // spawn them out after 10 seconds
-  // maximum of 20
-
-  // ? make them clickable and when clicked they dissapear?
-
-  const triangleColors: TriangleColors[] = [
-    'purple',
-    'flamingo',
-    'teal',
-    'yellow',
-    'black',
-  ];
-
-  return testArray.map((_, i) => (
-    <Triangle
-      top={randomNumberPlease(100, 5)}
-      right={randomNumberPlease(90, 0)}
-      rotation={Math.random() < 0.5 ? '' : 'reverse'}
-      width={randomNumberPlease(105, 85)}
-      height={randomNumberPlease(75, 55)}
-      opacity={randomNumberPlease(65, 35) / 100}
-      color={triangleColors[randomNumberPlease(5, 0)]}
-      key={i}
-    />
-  ));
-}
-
 function Page({ children }) {
   return (
     <>
@@ -57,7 +21,6 @@ function Page({ children }) {
       <StyledPage>
         <Nav />
         <TriangleOverlay>
-          {spawnTriangles()}
           <Inner>{children}</Inner>
         </TriangleOverlay>
       </StyledPage>

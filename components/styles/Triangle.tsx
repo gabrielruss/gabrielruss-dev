@@ -20,7 +20,7 @@ interface ITrangleProps {
 /**
  * Random width, height, and opacity
  */
-const Triangle = styled.div<ITrangleProps>`
+const RandomTriangle = styled.div<ITrangleProps>`
   position: fixed;
   background-color: ${props => props.theme.colors[props.color]};
 
@@ -56,4 +56,4 @@ const Triangle = styled.div<ITrangleProps>`
   }
 `;
 
-export default Triangle;
+export default RandomTriangle;
