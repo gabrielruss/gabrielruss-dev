@@ -1,10 +1,26 @@
 import { useState, useEffect } from 'react';
 import { styled } from '..';
-import RandomTriangle, { TriangleColors } from '../styles/Triangle';
+import RandomTriangle, { TriangleColors } from '../styles/RandomTriangle';
 import { randomNumberPlease } from '../utilities/_helpers';
 
-const StyledTriangleOverlay = styled.div`
+interface IStyledTriangleOverlay {
+  triangles: number;
+}
+
+const StyledTriangleOverlay = styled.div<IStyledTriangleOverlay>`
   z-index: 1000;
+
+  ${RandomTriangle} {
+    transition: 1s all ease;
+  }
+
+  ${RandomTriangle}:first-of-type {
+    visibility: hidden;
+  }
+
+  ${RandomTriangle}:nth-of-type(${props => props.triangles + 1}) {
+    visibility: hidden;
+  }
 `;
 
 const TriangleColorArray: TriangleColors[] = [
@@ -59,6 +75,8 @@ export function TriangleOverlay({
     getInitialTriangles(baseTriangles)
   );
 
+  let count = baseTriangles;
+
   // TODO: this works, but i need it to transition out
   // I think i need to transition triangles out in 2 steps
   // 1. set triangle[0] to be opacity 0 which will show the transition out
@@ -67,6 +85,11 @@ export function TriangleOverlay({
   // 4. set triangle[max] to opacity 1
   const triangleInterchange = () => {
     if (triangles) {
+      count = count + 1;
+
+      // todo: figure out how to remove 0, and add in the last
+      // something is making it only add the last.
+      // try not spreading in a new array?
       const newTriangles = [...triangles];
       // remove one from front
       newTriangles.shift();
@@ -80,7 +103,7 @@ export function TriangleOverlay({
           height={randomNumberPlease(75, 55)}
           opacity={randomNumberPlease(65, 35) / 100}
           color={TriangleColorArray[randomNumberPlease(5, 0)]}
-          key={newTriangles.length + 1}
+          key={count}
         />
       );
       setTriangles(newTriangles);
@@ -95,7 +118,7 @@ export function TriangleOverlay({
   }, []);
 
   return (
-    <StyledTriangleOverlay>
+    <StyledTriangleOverlay triangles={baseTriangles}>
       {triangles}
       {children}
     </StyledTriangleOverlay>
