@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { styled } from '..';
-import RandomTriangle, { TriangleColors } from '../styles/RandomTriangle';
+import RandomTriangle, {
+  TriangleColors,
+  ITrangleProps,
+} from '../styles/RandomTriangle';
 import { randomNumberPlease } from '../utilities/_helpers';
 import useInterval from '../hooks/useInterval';
 
@@ -14,14 +17,6 @@ const StyledTriangleOverlay = styled.div<IStyledTriangleOverlay>`
   ${RandomTriangle} {
     transition: 1s all ease;
   }
-
-  /* ${RandomTriangle}:first-of-type {
-    opacity: 0;
-  }
-
-  ${RandomTriangle}:nth-of-type(${props => props.triangles + 1}) {
-    opacity: 0;
-  } */
 `;
 
 const TriangleColorArray: TriangleColors[] = [
@@ -34,126 +29,48 @@ const TriangleColorArray: TriangleColors[] = [
 
 export function TriangleOverlay({
   children,
-  speed = 1000,
-  baseTriangles = 10,
+  speed = 10000,
+  baseTriangles = 15,
 }) {
-  // const [count, setCount] = useState(baseTriangles + 1);
+  const getRandomProps = (): ITrangleProps => {
+    return {
+      top: randomNumberPlease(100, 5),
+      right: randomNumberPlease(90, 0),
+      rotation: Math.random() < 0.5 ? '' : 'reverse',
+      width: randomNumberPlease(105, 85),
+      height: randomNumberPlease(75, 55),
+      opacity: randomNumberPlease(65, 35) / 100,
+      color: TriangleColorArray[randomNumberPlease(5, 0)],
+    };
+  };
 
-  // const [triangles, setTriangles] = useState(() =>
-  //   getInitialTriangles(baseTriangles)
-  // );
-
-  const [triangleIds, setTriangleIds] = useState<number[]>(() => {
-    const initialTriangleIds = [];
+  const [triangleProps, setTriangleProps] = useState<{
+    [key: number]: ITrangleProps;
+  }>(() => {
+    let initialTriangleProps: {
+      [key: number]: ITrangleProps;
+    } = {};
 
     for (let i = 0; i <= baseTriangles; i++) {
-      initialTriangleIds.push(i);
+      initialTriangleProps[i] = { ...getRandomProps() };
     }
 
-    return initialTriangleIds;
+    return initialTriangleProps;
   });
 
-  const [transparentTriangle, setTransparentTriangle] = useState();
+  useInterval(() => {
+    const trianglePick = randomNumberPlease(0, baseTriangles + 1);
 
-  // useInterval(() => {
-  //   const trianglePick = randomNumberPlease(0, baseTriangles + 1);
-  //   setTransparentTriangle(trianglePick);
-  // }, speed);
-  // useInterval(() => {
-  //   setCount(count + 1);
-
-  //   setTriangles(prevTriangles => {
-  //     let newTriangles: JSX.Element[] = [...prevTriangles];
-
-  //     if (count % 2 !== 0) {
-  //       // first run
-  //       console.log('adding triangle');
-  //       newTriangles.push(
-  //         <RandomTriangle
-  //           top={randomNumberPlease(100, 5)}
-  //           right={randomNumberPlease(90, 0)}
-  //           rotation={Math.random() < 0.5 ? '' : 'reverse'}
-  //           width={randomNumberPlease(105, 85)}
-  //           height={randomNumberPlease(75, 55)}
-  //           opacity={randomNumberPlease(65, 35) / 100}
-  //           color={TriangleColorArray[randomNumberPlease(5, 0)]}
-  //           key={count}
-  //         />
-  //       );
-  //     } else {
-  //       // second run
-  //       console.log('removing triangle');
-  //       newTriangles = prevTriangles.slice(1);
-  //     }
-
-  //     return newTriangles;
-  //   });
-  // }, speed);
-
-  // /**
-  //  *
-  //  * @param baseNumber max of 50
-  //  */
-  // function getInitialTriangles(baseNumber: number) {
-  //   if (baseNumber > 50) {
-  //     baseNumber = 50;
-  //   }
-
-  //   const triangleArray: Array<JSX.Element> = [];
-
-  //   for (let i = 0; i <= baseNumber; i++) {
-  //     triangleArray.push(
-  //       <RandomTriangle
-  //         top={randomNumberPlease(100, 5)}
-  //         right={randomNumberPlease(90, 0)}
-  //         rotation={Math.random() < 0.5 ? '' : 'reverse'}
-  //         width={randomNumberPlease(105, 85)}
-  //         height={randomNumberPlease(75, 55)}
-  //         opacity={randomNumberPlease(65, 35) / 100}
-  //         color={TriangleColorArray[randomNumberPlease(5, 0)]}
-  //         key={i}
-  //       />
-  //     );
-  //   }
-
-  //   return triangleArray;
-  // }
-
-  // a list of triangle ids or keys
-  // triangleIds = [0, 1, 2, 3, 4]
-  // transparent = null
-  // every 5 seconds, pick 1 random number from the list of triangles and set to state
-  // transparent = 1
-  // on each triangle opacity={key === toDelete ? 0 : randomNumberPlease(65, 35) / 100}
-  // this will fade out the triangle
-  // 5 seconds pass
-  // check to see if there is a number in transparent, if so, remove it from list of triangles
-  // reset transparent
-  // transparent = null
-
-  // 5 seconds pass
-  // loops through all again
-  // pick 1 random number from the list of triangles and set to state
-  // transparent = 4
+    setTriangleProps({
+      ...triangleProps,
+      [trianglePick]: { ...getRandomProps() },
+    });
+  }, speed);
 
   return (
     <StyledTriangleOverlay triangles={baseTriangles}>
-      <>{transparentTriangle}</>
-      {triangleIds.map(t => (
-        <RandomTriangle
-          top={randomNumberPlease(100, 5)}
-          right={randomNumberPlease(90, 0)}
-          rotation={Math.random() < 0.5 ? '' : 'reverse'}
-          width={randomNumberPlease(105, 85)}
-          height={randomNumberPlease(75, 55)}
-          opacity={
-            randomNumberPlease(0, baseTriangles + 1) === t
-              ? 0
-              : randomNumberPlease(65, 35) / 100
-          }
-          color={TriangleColorArray[randomNumberPlease(5, 0)]}
-          key={t}
-        />
+      {Object.entries(triangleProps).map(([key, value]) => (
+        <RandomTriangle {...value} key={key} />
       ))}
       {children}
     </StyledTriangleOverlay>

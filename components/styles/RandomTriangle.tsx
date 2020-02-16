@@ -7,7 +7,7 @@ export type TriangleColors =
   | 'yellow'
   | 'black';
 
-interface ITrangleProps {
+export interface ITrangleProps {
   top: number;
   right: number;
   rotation: '' | 'reverse';
