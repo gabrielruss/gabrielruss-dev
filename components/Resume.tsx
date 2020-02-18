@@ -1,26 +1,20 @@
 import { styled } from '.';
 import Header, { StyledHeader } from './common/Header';
 import { differenceInYears } from 'date-fns';
-// import { RESUME_VIEW_LINK } from './utilities/_constants';
-import StyledLink from './styles/StyledLink';
 import StyledButton from './styles/StyledButton';
 import FrostedGlass from './common/FrostedGlass';
+import { RESUME_VIEW_LINK } from './utilities/_constants';
 
 const ResumeWrapper = styled.span`
-  /* ${StyledLink} {
-    position: absolute;
-    right: 5rem;
-  } */
-
   ${StyledButton} {
     position: absolute;
     left: 5rem;
 
     @media (max-width: ${props => props.theme.break_large}) {
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-  }
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
   }
 `;
 
@@ -74,10 +68,9 @@ const years = differenceInYears(new Date(), new Date(2014, 8));
 
 const Resume = () => (
   <ResumeWrapper>
-    {/* <StyledLink href={RESUME_VIEW_LINK} target="_blank">
-      Google Drive Download
-    </StyledLink> */}
-    <StyledButton>Google Drive Link</StyledButton>
+    <StyledButton onClick={() => window.open(RESUME_VIEW_LINK, '_blank')}>
+      Google Drive Link
+    </StyledButton>
     <FrostedGlass>
       <ResumeContainer>
         <Header size="medium">{`<Resume>`}</Header>

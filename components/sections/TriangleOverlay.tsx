@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { styled } from '..';
 import RandomTriangle, {
   TriangleColors,
@@ -44,9 +44,7 @@ export function TriangleOverlay({
     };
   };
 
-  const [triangleProps, setTriangleProps] = useState<{
-    [key: number]: ITrangleProps;
-  }>(() => {
+  const getInitialTriangles = () => {
     let initialTriangleProps: {
       [key: number]: ITrangleProps;
     } = {};
@@ -56,7 +54,15 @@ export function TriangleOverlay({
     }
 
     return initialTriangleProps;
-  });
+  };
+
+  const getMemoizedInitialTriangles = useMemo(() => getInitialTriangles(), [
+    baseTriangles,
+  ]);
+
+  const [triangleProps, setTriangleProps] = useState<{
+    [key: number]: ITrangleProps;
+  }>(getMemoizedInitialTriangles);
 
   useInterval(() => {
     const trianglePick = randomNumberPlease(0, baseTriangles + 1);
