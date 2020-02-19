@@ -29,7 +29,7 @@ const TriangleColorArray: TriangleColors[] = [
 
 export function TriangleOverlay({
   children,
-  speed = 10000,
+  speed = 5000,
   baseTriangles = 15,
 }) {
   const getRandomProps = (): ITrangleProps => {
@@ -64,6 +64,10 @@ export function TriangleOverlay({
     [key: number]: ITrangleProps;
   }>(getMemoizedInitialTriangles);
 
+  const memoProps = useMemo(() => {
+    return triangleProps;
+  }, [triangleProps]);
+
   useInterval(() => {
     const trianglePick = randomNumberPlease(0, baseTriangles + 1);
 
@@ -75,9 +79,10 @@ export function TriangleOverlay({
 
   return (
     <StyledTriangleOverlay triangles={baseTriangles}>
-      {Object.entries(triangleProps).map(([key, value]) => (
-        <RandomTriangle {...value} key={key} />
-      ))}
+      {Object.entries(memoProps).map(([key, value]) => {
+        console.log('return <RandomTriangle');
+        return <RandomTriangle {...value} key={key} />;
+      })}
       {children}
     </StyledTriangleOverlay>
   );
