@@ -1,4 +1,4 @@
-import { useState, useMemo, memo } from 'react';
+import { useState, useMemo, memo, useCallback } from 'react';
 import { styled } from '..';
 import RandomTriangle, {
   TriangleColors,
@@ -44,46 +44,78 @@ export function TriangleOverlay({
     };
   };
 
+  // const getInitialTriangles = () => {
+  //   let initialTriangleProps: {
+  //     [key: number]: ITrangleProps;
+  //   } = {};
+
+  //   for (let i = 0; i <= baseTriangles; i++) {
+  //     initialTriangleProps[i] = { ...getRandomProps() };
+  //   }
+
+  //   return initialTriangleProps;
+  // };
+
   const getInitialTriangles = () => {
-    let initialTriangleProps: {
-      [key: number]: ITrangleProps;
-    } = {};
+    let initialTriangleProps: ITrangleProps[] = [];
 
     for (let i = 0; i <= baseTriangles; i++) {
-      initialTriangleProps[i] = { ...getRandomProps() };
+      initialTriangleProps.push({ ...getRandomProps() });
     }
 
     return initialTriangleProps;
   };
 
-  const getMemoizedInitialTriangles = useMemo(() => getInitialTriangles(), [
-    baseTriangles,
-  ]);
+  // const getMemoizedInitialTriangles = useMemo(() => getInitialTriangles(), [
+  //   baseTriangles,
+  // ]);
 
-  const [triangleProps, setTriangleProps] = useState<{
-    [key: number]: ITrangleProps;
-  }>(getMemoizedInitialTriangles);
+  const [triangleProps, setTriangleProps] = useState<ITrangleProps[]>(
+    getInitialTriangles
+  );
 
-  const memoProps = useMemo(() => {
-    return triangleProps;
-  }, [triangleProps]);
+  // const memoProps = useMemo(() => {
+  //   return triangleProps;
+  // }, [triangleProps]);
+
+  const handlePropsReplace = useCallback((trianglePick: number) => {
+    // setTriangleProps(prevProps => {
+    //   prevProps[trianglePick] = { ...getRandomProps() };
+    //   return prevProps;
+    // });
+
+    setTriangleProps(prevProps => {
+      const newProps = getRandomProps();
+
+      prevProps.splice(trianglePick, 1, newProps);
+
+      return prevProps;
+    });
+  }, []);
 
   useInterval(() => {
     const trianglePick = randomNumberPlease(0, baseTriangles + 1);
 
-    setTriangleProps({
-      ...triangleProps,
-      [trianglePick]: { ...getRandomProps() },
-    });
+    handlePropsReplace(trianglePick);
+    // setTriangleProps({
+    //   ...triangleProps,
+    //   [trianglePick]: { ...getRandomProps() },
+    // });
   }, speed);
 
-  // const RandomTriangleMemo = memo() => <RandomTriangle {...value} key={key} />)
+  const RandomTriangleMemo = memo((props: ITrangleProps) => {
+    console.log('RandomTriangleMemo');
+    return <RandomTriangle {...props} />;
+  });
 
   return (
     <StyledTriangleOverlay triangles={baseTriangles}>
-      {Object.entries(triangleProps).map(([key, value]) => {
-        console.log('looped');
-        return <RandomTriangle {...value} key={key} />;
+      {/* {Object.entries(triangleProps).map(([key, value]) => {
+        console.log('Object.entries');
+        return <RandomTriangleMemo {...value} key={key} />;
+      })} */}
+      {triangleProps.map((p, i) => {
+        return <RandomTriangleMemo {...p} key={i} />;
       })}
       {children}
     </StyledTriangleOverlay>
