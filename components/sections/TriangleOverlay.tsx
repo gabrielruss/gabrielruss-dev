@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, memo } from 'react';
 import { styled } from '..';
 import RandomTriangle, {
   TriangleColors,
@@ -29,7 +29,7 @@ const TriangleColorArray: TriangleColors[] = [
 
 export function TriangleOverlay({
   children,
-  speed = 10000,
+  speed = 1000,
   baseTriangles = 15,
 }) {
   const getRandomProps = (): ITrangleProps => {
@@ -73,11 +73,14 @@ export function TriangleOverlay({
     });
   }, speed);
 
+  // const RandomTriangleMemo = memo() => <RandomTriangle {...value} key={key} />)
+
   return (
     <StyledTriangleOverlay triangles={baseTriangles}>
-      {Object.entries(triangleProps).map(([key, value]) => (
-        <RandomTriangle {...value} key={key} />
-      ))}
+      {Object.entries(triangleProps).map(([key, value]) => {
+        console.log('looped');
+        return <RandomTriangle {...value} key={key} />;
+      })}
       {children}
     </StyledTriangleOverlay>
   );
