@@ -8,6 +8,7 @@ export type TriangleColors =
   | 'black';
 
 export interface ITrangleProps {
+  uniqueId: number;
   top: number;
   right: number;
   rotation: '' | 'reverse';
