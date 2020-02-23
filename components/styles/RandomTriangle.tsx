@@ -1,4 +1,7 @@
 import { styled } from '..';
+import { useState, useEffect } from 'react';
+import { randomNumberPlease } from '../utilities/_helpers';
+import useInterval from '../hooks/useInterval';
 
 export type TriangleColors =
   | 'teal'
@@ -20,7 +23,7 @@ export interface ITrangleProps {
 /**
  * Random width, height, and opacity
  */
-const RandomTriangle = styled.div<ITrangleProps>`
+const RandomTriangleStyle = styled.div<ITrangleProps>`
   position: fixed;
   background-color: ${props => props.theme.colors[props.color]};
 
@@ -31,6 +34,8 @@ const RandomTriangle = styled.div<ITrangleProps>`
   height: ${props => props.height}px;
 
   opacity: ${props => props.opacity};
+
+  transition: 1s all ease;
 
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
 
@@ -55,5 +60,42 @@ const RandomTriangle = styled.div<ITrangleProps>`
     }
   }
 `;
+
+const TriangleColorArray: TriangleColors[] = [
+  'purple',
+  'flamingo',
+  'teal',
+  'yellow',
+  'black',
+];
+
+const RandomTriangle = ({ speed }: { speed: number }) => {
+  const getRandomProps = (): ITrangleProps => {
+    return {
+      top: randomNumberPlease(100, 5),
+      right: randomNumberPlease(90, 0),
+      rotation: Math.random() < 0.5 ? '' : 'reverse',
+      width: randomNumberPlease(105, 85),
+      height: randomNumberPlease(75, 55),
+      opacity: randomNumberPlease(65, 35) / 100,
+      color: TriangleColorArray[randomNumberPlease(5, 0)],
+    };
+  };
+
+  const [randomProps, setRandomProps] = useState<ITrangleProps>(
+    getRandomProps()
+  );
+
+  useInterval(() => {
+    const trianglePick1 = randomNumberPlease(50, 1);
+    const trianglePick2 = randomNumberPlease(50, 1);
+
+    if (trianglePick1 === trianglePick2) {
+      setRandomProps(getRandomProps());
+    }
+  }, speed);
+
+  return <RandomTriangleStyle {...randomProps} />;
+};
 
 export default RandomTriangle;
