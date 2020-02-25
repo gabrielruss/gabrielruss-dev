@@ -1,14 +1,20 @@
 import { styled } from '..';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { randomNumberPlease } from '../utilities/_helpers';
 import useInterval from '../hooks/useInterval';
 
-export type TriangleColors =
-  | 'teal'
-  | 'purple'
-  | 'flamingo'
-  | 'yellow'
-  | 'black';
+export enum TriangleColors {
+  TEAL = 'teal',
+  PURPLE = 'purple',
+  FLAMINGO = 'flamingo',
+  YELLO = 'yellow',
+  BLACK = 'black',
+}
+
+const TriangleColorKeys: string[] = Object.keys(TriangleColors);
+const TriangleColorValues: TriangleColors[] = TriangleColorKeys.map(
+  k => TriangleColors[k as any]
+).map(v => v as TriangleColors);
 
 export interface ITrangleProps {
   top: number;
@@ -20,9 +26,6 @@ export interface ITrangleProps {
   color: TriangleColors;
 }
 
-/**
- * Random width, height, and opacity
- */
 const RandomTriangleStyle = styled.div<ITrangleProps>`
   position: fixed;
   background-color: ${props => props.theme.colors[props.color]};
@@ -61,14 +64,6 @@ const RandomTriangleStyle = styled.div<ITrangleProps>`
   }
 `;
 
-const TriangleColorArray: TriangleColors[] = [
-  'purple',
-  'flamingo',
-  'teal',
-  'yellow',
-  'black',
-];
-
 const RandomTriangle = ({ speed }: { speed: number }) => {
   const getRandomProps = (): ITrangleProps => {
     return {
@@ -78,7 +73,7 @@ const RandomTriangle = ({ speed }: { speed: number }) => {
       width: randomNumberPlease(105, 85),
       height: randomNumberPlease(75, 55),
       opacity: randomNumberPlease(65, 35) / 100,
-      color: TriangleColorArray[randomNumberPlease(5, 0)],
+      color: TriangleColorValues[randomNumberPlease(5, 0)],
     };
   };
 

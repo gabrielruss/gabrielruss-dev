@@ -1,11 +1,5 @@
-import { useState, useMemo, memo, useCallback } from 'react';
 import { styled } from '..';
-import RandomTriangle, {
-  TriangleColors,
-  ITrangleProps,
-} from '../styles/RandomTriangle';
-import { randomNumberPlease } from '../utilities/_helpers';
-import useInterval from '../hooks/useInterval';
+import RandomTriangle from '../styles/RandomTriangle';
 
 interface IStyledTriangleOverlay {
   triangles: number;
@@ -24,7 +18,7 @@ export function TriangleOverlay({
     const triangles = [];
 
     for (let i = 0; i <= baseTriangles; i++) {
-      triangles.push(<RandomTriangle speed={speed} />);
+      triangles.push(<RandomTriangle speed={speed} key={i} />);
     }
 
     return triangles;
