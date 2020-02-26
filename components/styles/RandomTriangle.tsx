@@ -82,8 +82,8 @@ const RandomTriangle = ({ speed }: { speed: number }) => {
   );
 
   useInterval(() => {
-    const trianglePick1 = randomNumberPlease(10, 1);
-    const trianglePick2 = randomNumberPlease(10, 1);
+    const trianglePick1 = randomNumberPlease(15, 1);
+    const trianglePick2 = randomNumberPlease(15, 1);
 
     if (trianglePick1 === trianglePick2) {
       setRandomProps(getRandomProps());
