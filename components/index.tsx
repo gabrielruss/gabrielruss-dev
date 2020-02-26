@@ -28,6 +28,7 @@ export const theme = {
     flamingo: '#fb9f89',
     purple: '#7a82ab',
     yellow: '#e6e18f',
+    blue: '#145C9E',
   },
   fonts: {
     overpass_regular: 'overpass-regular',
