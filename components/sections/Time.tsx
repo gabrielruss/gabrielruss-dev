@@ -1,15 +1,15 @@
-import Header, { StyledHeader } from '../common/Header';
+import Header from '../common/Header';
 import TimeSince from '../common/TimeSince';
 import { styled } from '..';
 import FrostedGlass from '../common/FrostedGlass';
 
 const TimeWrapper = styled.div`
-  display: grid;
+  /* display: grid;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   text-align: center;
   min-height: 100vh;
-  gap: 2rem;
+  /* gap: 2rem; */
 `;
 
 const TimeHeader = styled.div`
@@ -31,7 +31,7 @@ function Time() {
         <TimeHeader>
           <Header size="medium">
             🤓
-            <br /> i have been a developer for give or take...
+            <br /> i've been a developer for
           </Header>
           <TimeSince startDate={new Date(2014, 7)} />
         </TimeHeader>

@@ -10,7 +10,7 @@ const Home = () => (
   <main>
     <TitleCard />
     <ContainerSeperator />
-    <Skills header="what I'm good at">
+    <Skills header="what i'm good at">
       <Icon iconType="javascript" header="JavaScript" />
       <Icon iconType="react" header="React" />
       <Icon iconType="typescript" header="TypeScript" />
@@ -19,7 +19,7 @@ const Home = () => (
       <Icon iconType="sass" header="SASS" />
     </Skills>
     <ContainerSeperator />
-    <Skills header="what I'm learning">
+    <Skills header="what i'm learning">
       <Icon iconType="python" footer="Python" />
       <Icon iconType="graphql" footer="GraphQL" />
       <Icon iconType="styled-components" footer="Styled Components" />
