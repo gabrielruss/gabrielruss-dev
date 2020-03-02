@@ -81,14 +81,14 @@ const RandomTriangle = ({ speed }: { speed: number }) => {
     getRandomProps()
   );
 
-  useInterval(() => {
-    const trianglePick1 = randomNumberPlease(15, 1);
-    const trianglePick2 = randomNumberPlease(15, 1);
+  // useInterval(() => {
+  //   const trianglePick1 = randomNumberPlease(15, 1);
+  //   const trianglePick2 = randomNumberPlease(15, 1);
 
-    if (trianglePick1 === trianglePick2) {
-      setRandomProps(getRandomProps());
-    }
-  }, speed);
+  //   if (trianglePick1 === trianglePick2) {
+  //     setRandomProps(getRandomProps());
+  //   }
+  // }, speed);
 
   return <RandomTriangleStyle {...randomProps} />;
 };

@@ -8,7 +8,7 @@ const ImportantToMeWrapper = styled.div`
 
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
     justify-items: center;
     gap: 3rem;
     width: 90vw;
@@ -116,8 +116,8 @@ function ImportantToMe() {
               </ListItemContent>
             </li> */}
 
-            <li>
-              <Header size="small">Use descriptive naming</Header>
+            {/* <li>
+              <Header size="small">use descriptive naming</Header>
               <ListItemContent>
                 Try not to use single letter variables. You may remember that
                 "u" means "user", but someone else may not.
@@ -126,7 +126,7 @@ function ImportantToMe() {
                 "disableSubmitButton" is always better than simply "disable". Be
                 as brief as possible while still describing what it does.
               </ListItemContent>
-            </li>
+            </li> */}
             {/* <li>
               <Header size="small">Use some sort of typing</Header>
               <ListItemContent>

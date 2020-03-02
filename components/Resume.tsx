@@ -80,8 +80,11 @@ const Resume = () => (
             <ul>
               <li>{years} years of experience with JavaScript</li>
               <li>{years} years of experience with React</li>
-              <li>Proficient in TypeScript, HTML, and CSS</li>
-              <li>Familiar with GraphQL, Apollo Client, Angular, C#, Java</li>
+              <li>Proficient in TypeScript, HTML, CSS, and SASS</li>
+              <li>
+                Played around with GraphQL, Apollo Client, Angular, C#, Java,
+                and Python
+              </li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
@@ -102,23 +105,24 @@ const Resume = () => (
             <p>May 2019 - Present</p>
             <br />
             <p>
-              Led the Front-End Development effort to create a new SAAS product
+              Led the front-end development effort to create a new SAAS product
               for lease accounting using React (16.8), TypeScript, Redux,
-              react-router, react-testing-library, and formik.
+              react-router, react-testing-library, and Formik. Worked on
+              integrating 3rd party products, such as QuickBooks Online.
             </p>
             <ul>
               <li>
-                Worked closely with back-end developer, product owner, UX
-                designer, QA engineer, and junior developers.
+                Worked closely with Back-End Developer, Product Owner, UX
+                Designer, QA Engineer, and Junior Developers
               </li>
-              <li>Ensured code quality by conducting code reviews.</li>
+              <li>Ensured code quality by conducting code reviews</li>
               <li>
-                Set up and maintained branching strategies and pull request/jira
-                ticket organization.
+                Set up and maintained branching and pull request strategies as
+                well as backlog organization
               </li>
               <li>
-                Coordinated with dev-ops to set up CI for running, testing, and
-                deploying each branch of the code.
+                Coordinated with Dev-Ops to set up CI for running, testing, and
+                deploying each branch of the code
               </li>
             </ul>
           </ResumeSubSection>
@@ -135,7 +139,7 @@ const Resume = () => (
             </p>
             <ul>
               <li>
-                Led the Front-End Development team on an agile, large-scale EMR
+                Led the front-end development team on an agile, large-scale EMR
                 solution using React, Redux, react-router, and
                 react-testing-library
               </li>
@@ -144,13 +148,13 @@ const Resume = () => (
                 requirements into working solutions
               </li>
               <li>
-                Worked with the Back-End team to ensure custom APIs meet
+                Worked with the Back-End team to ensure custom APIs met
                 acceptance criteria
               </li>
               <li>Developed custom Web APIs in .NET Core (C#)</li>
               <li>
-                Developed and consumed a SignalR websocket to provide real time
-                updates to the UI
+                Developed a SignalR websocket to provide real time updates to
+                the UI
               </li>
             </ul>
           </ResumeSubSection>
@@ -164,11 +168,8 @@ const Resume = () => (
                 Within Microsoft ecosystem, built custom forms using React,
                 TypeScript, and Office UI Fabric (UI framework)
               </li>
-              <li>
-                Developed and maintained custom solutions in C# to meet required
-                business logic
-              </li>
-              <li>Built out a development infrastructure within Azure</li>
+              <li>Developed and maintained custom solutions in C#</li>
+              <li>Built a development infrastructure within Azure</li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
