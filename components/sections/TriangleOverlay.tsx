@@ -1,5 +1,5 @@
 import { styled } from '..';
-import RandomTriangle from '../styles/RandomTriangle';
+import RandomTriangle from '../common/RandomTriangle';
 
 interface IStyledTriangleOverlay {
   triangles: number;
