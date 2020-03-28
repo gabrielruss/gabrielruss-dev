@@ -1,7 +1,7 @@
 import Header, { StyledHeader } from '../common/Header';
 import StyledContainer from '../styles/StyledContainer';
 import { styled } from '..';
-import FrostedGlass from '../common/FrostedGlass';
+import FrostedGlass from '../styles/FrostedGlass';
 
 const StyledSkills = styled.div`
   > ${StyledHeader} {

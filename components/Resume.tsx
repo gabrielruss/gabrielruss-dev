@@ -2,7 +2,7 @@ import { styled } from '.';
 import Header, { StyledHeader } from './common/Header';
 import { differenceInYears } from 'date-fns';
 import StyledButton from './styles/StyledButton';
-import FrostedGlass from './common/FrostedGlass';
+import FrostedGlass from './styles/FrostedGlass';
 import { RESUME_VIEW_LINK } from './utilities/_constants';
 
 const ResumeWrapper = styled.span`

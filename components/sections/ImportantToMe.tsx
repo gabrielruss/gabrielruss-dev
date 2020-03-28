@@ -1,7 +1,7 @@
 import { styled } from '..';
 import StyledContainer from '../styles/StyledContainer';
 import Header from '../common/Header';
-import FrostedGlass from '../common/FrostedGlass';
+import FrostedGlass from '../styles/FrostedGlass';
 
 const ImportantToMeWrapper = styled.div`
   padding: 10rem 3rem;

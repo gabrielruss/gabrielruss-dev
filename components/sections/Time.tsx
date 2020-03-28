@@ -1,7 +1,7 @@
 import Header from '../common/Header';
 import TimeSince from '../common/TimeSince';
 import { styled } from '..';
-import FrostedGlass from '../common/FrostedGlass';
+import FrostedGlass from '../styles/FrostedGlass';
 
 const TimeWrapper = styled.div`
   text-align: center;
