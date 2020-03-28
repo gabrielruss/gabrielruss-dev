@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FunctionComponent } from 'react';
 
 const getTypeFontSize = (size: HeaderSizes) => {
   switch (size) {
@@ -41,9 +40,11 @@ interface IHeaderProps {
  *
  * @param type - defaults to large (80px min / 150px max)
  */
-const Header: FunctionComponent<IHeaderProps> = ({
+function Header({
   size = 'large',
   children,
-}) => <StyledHeader size={size}>{children}</StyledHeader>;
+}: React.PropsWithChildren<IHeaderProps>) {
+  return <StyledHeader size={size}>{children}</StyledHeader>;
+}
 
 export default Header;
