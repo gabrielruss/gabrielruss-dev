@@ -24,9 +24,7 @@ const LongSquare = styled.div`
     top: 3%;
     left: 17%;
     height: calc(220px + (300 - 220) * ((100vw - 360px) / (1920 - 360)));
-    /* height: 50vh; */
     width: 80vw;
-    /* width: calc(600px + (750 - 600) * ((100vw - 360px) / (1920 - 360))); */
   }
 
   @media (max-width: ${props => props.theme.break_small}) {
@@ -34,7 +32,6 @@ const LongSquare = styled.div`
     left: 20%;
     height: calc(350px + (400 - 350) * ((100vw - 360px) / (1920 - 360)));
     width: 75vw;
-    /* width: calc(600px + (750 - 600) * ((100vw - 360px) / (1920 - 360))); */
   }
 `;
 
@@ -78,7 +75,6 @@ function TitleCard() {
           <p>i’m just a guy who’s a web developer for fun</p>
         </StyledBorderContainer>
         <LongSquare />
-        {/* <LongSquare /> */}
       </LongSquareContainer>
     </StyledTitleCard>
   );

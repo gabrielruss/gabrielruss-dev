@@ -9,11 +9,16 @@ const StyledTriangleOverlay = styled.div<IStyledTriangleOverlay>`
   z-index: 1000;
 `;
 
+interface ITriangleOverlay {
+  speed?: number;
+  baseTriangles?: number;
+}
+
 export function TriangleOverlay({
-  children,
   speed = 5000,
   baseTriangles = 15,
-}) {
+  children,
+}: React.PropsWithChildren<ITriangleOverlay>) {
   const getInitialTriangles = () => {
     const triangles = [];
 

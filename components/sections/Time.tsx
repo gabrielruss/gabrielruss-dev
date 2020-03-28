@@ -4,12 +4,8 @@ import { styled } from '..';
 import FrostedGlass from '../common/FrostedGlass';
 
 const TimeWrapper = styled.div`
-  /* display: grid;
-  align-items: center;
-  justify-content: center; */
   text-align: center;
   min-height: 100vh;
-  /* gap: 2rem; */
 `;
 
 const TimeHeader = styled.div`
@@ -51,11 +47,6 @@ function Time() {
             <TimeSince startDate={new Date(2011, 8)} />
           </div>
         </TimeContent>
-        {/* <p>
-      By the way...that isn't an error in months...
-      <br />
-      Major events just seem to happen around August in my life for some reason
-    </p> */}
       </FrostedGlass>
     </TimeWrapper>
   );
