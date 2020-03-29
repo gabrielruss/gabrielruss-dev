@@ -16,7 +16,7 @@ const TriangleColorValues: TriangleColors[] = Object.values(TriangleColors).map(
   (t: TriangleColors) => t
 );
 
-export interface ITrangleProps {
+export interface IStyledRandomTriangle {
   top: number;
   right: number;
   rotation: '' | 'reverse';
@@ -26,7 +26,7 @@ export interface ITrangleProps {
   color: TriangleColors;
 }
 
-const RandomTriangleStyle = styled.div<ITrangleProps>`
+const RandomTriangleStyle = styled.div<IStyledRandomTriangle>`
   position: fixed;
   background-color: ${props => props.theme.colors[props.color]};
 
@@ -64,8 +64,12 @@ const RandomTriangleStyle = styled.div<ITrangleProps>`
   }
 `;
 
-const RandomTriangle = ({ speed }: { speed: number }) => {
-  const getRandomProps = (): ITrangleProps => {
+interface IRandomTriangle {
+  speed: number;
+}
+
+function RandomTriangle({ speed }: IRandomTriangle) {
+  const getRandomProps = (): IStyledRandomTriangle => {
     return {
       top: randomNumberPlease(100, 10),
       right: randomNumberPlease(90, 0),
@@ -77,7 +81,7 @@ const RandomTriangle = ({ speed }: { speed: number }) => {
     };
   };
 
-  const [randomProps, setRandomProps] = useState<ITrangleProps>(
+  const [randomProps, setRandomProps] = useState<IStyledRandomTriangle>(
     getRandomProps()
   );
 
@@ -91,6 +95,6 @@ const RandomTriangle = ({ speed }: { speed: number }) => {
   }, speed);
 
   return <RandomTriangleStyle {...randomProps} />;
-};
+}
 
 export default RandomTriangle;

@@ -54,13 +54,6 @@ function ImportantToMe() {
                 shoes. Would I want to use the application I'm building?
               </ListItemContent>
             </li>
-            {/* <li>
-              <Header size="small">accessibility</Header>
-              <ListItemContent>
-                It's important to consider accessibility when designing a
-                website and I try to incorporate it when posiible.
-              </ListItemContent>
-            </li> */}
             <li>
               <Header size="small">UX before all</Header>
               <ListItemContent>
@@ -73,11 +66,8 @@ function ImportantToMe() {
               <Header size="small">pure, single purpose functions</Header>
               <ListItemContent>
                 I try to break complex tasks down into the smallest chunks
-                possible until individual methods can be written for each task.
-              </ListItemContent>
-              <ListItemContent>
-                If I ensure that given X input, the output will always be Y,
-                then I have the perfect opportunity to write a test!
+                possible until individual pure functions can be written for each
+                task.
               </ListItemContent>
             </li>
             <li>
@@ -89,52 +79,22 @@ function ImportantToMe() {
                 good starting point.
               </ListItemContent>
             </li>
-            {/* <li>
-          <Header size="small">
-          Could someone new to programming understand?
-          </Header>
-          <ListItemContent>
-          A lot of times complex business logic can cause spaghetti code.
-          </ListItemContent>
-          <ListItemContent>
-          Try placing your functions in the order in which they get called. If
-          it makes sense, create a controller method that has the order of
-          operations for your business logic.
-          </ListItemContent>
-        </li> */}
-            {/* <li>
-              <Header size="small">Comment your code</Header>
+            <li>
+              <Header size="small">code comments</Header>
               <ListItemContent>
-                When you or someone else reads your code years from now, will
-                they understand WHY you did that? If the answer is maybe, you
-                should probably write a comment.
+                If I am writing some code that isn't super obvious or is based
+                on complex business logic, I always try and write a comment
+                explaining why that code is there.
               </ListItemContent>
+            </li>
+            <li>
+              <Header size="small">use TypeScript</Header>
               <ListItemContent>
-                If it is business logic, write the comment similar to a user
-                story. "The user should not be able to click Submit if they have
-                not filled out their birth date."
+                I have fully jumped aboard the TypeScript train. I have caught
+                numerous coding issues pre-deployment because of strongly typing
+                my code.
               </ListItemContent>
-            </li> */}
-
-            {/* <li>
-              <Header size="small">use descriptive naming</Header>
-              <ListItemContent>
-                Try not to use single letter variables. You may remember that
-                "u" means "user", but someone else may not.
-              </ListItemContent>
-              <ListItemContent>
-                "disableSubmitButton" is always better than simply "disable". Be
-                as brief as possible while still describing what it does.
-              </ListItemContent>
-            </li> */}
-            {/* <li>
-              <Header size="small">Use some sort of typing</Header>
-              <ListItemContent>
-                I personally like TypeScript a lot. I feel naked when I don't
-                use it now. Other options are great as well such as Flow or
-                using PropTypes for your React components.
-              </ListItemContent>
-            </li> */}
+            </li>
           </ul>
         </FrostedGlass>
       </ImportantToMeWrapper>
