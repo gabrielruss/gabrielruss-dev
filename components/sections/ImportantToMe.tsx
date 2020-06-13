@@ -12,7 +12,7 @@ const ImportantToMeWrapper = styled.div`
     justify-items: center;
     gap: 3rem;
     width: 90vw;
-    max-width: ${props => props.theme.break_large};
+    max-width: ${(props) => props.theme.break_large};
     align-items: center;
     padding: 2rem;
 
@@ -23,7 +23,7 @@ const ImportantToMeWrapper = styled.div`
     }
   }
 
-  @media (max-width: ${props => props.theme.break_small}) {
+  @media (max-width: ${(props) => props.theme.break_small}) {
     ul {
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
       padding: 2rem;
@@ -58,25 +58,23 @@ function ImportantToMe() {
               <Header size="small">UX before all</Header>
               <ListItemContent>
                 The user experience is my top priority. Making things easy is
-                hard. As a UI developer, my job isn't complete until I've made
-                the users' jobs easier.
+                hard to do. As a UI developer, my job is to make the users' jobs
+                easier.
               </ListItemContent>
             </li>
             <li>
               <Header size="small">pure, single purpose functions</Header>
               <ListItemContent>
                 I try to break complex tasks down into the smallest chunks
-                possible until individual pure functions can be written for each
-                task.
+                possible until single purpose, pure functions can be written for
+                each task.
               </ListItemContent>
             </li>
             <li>
-              <Header size="small">don't repeat yourself</Header>
+              <Header size="small">keep things simple</Header>
               <ListItemContent>
-                This is always more of an art than a science. How many times do
-                you write a piece of code before you abstract it out into a
-                separate file and make it reusable? I usually say 2-3 times is a
-                good starting point.
+                Does my solution elegantly solve the problem? Can other senior
+                and junior developers easily understand and use it?
               </ListItemContent>
             </li>
             <li>

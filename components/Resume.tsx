@@ -10,7 +10,7 @@ const ResumeWrapper = styled.span`
     position: absolute;
     left: 5rem;
 
-    @media (max-width: ${props => props.theme.break_large}) {
+    @media (max-width: ${(props) => props.theme.break_large}) {
       margin: 0 auto;
       left: 0;
       right: 0;
@@ -23,7 +23,7 @@ const ResumeContainer = styled.div`
   flex-flow: column;
   text-align: left;
   margin: 10rem auto 0;
-  max-width: ${props => props.theme.break_medium};
+  max-width: ${(props) => props.theme.break_medium};
 
   > :first-child {
     margin-bottom: 5rem;
@@ -42,11 +42,11 @@ const ResumeSection = styled.div`
     margin-bottom: 2rem;
   }
 
-  @media (max-width: ${props => props.theme.break_medium}) {
+  @media (max-width: ${(props) => props.theme.break_medium}) {
     margin-left: 5rem;
   }
 
-  @media (max-width: ${props => props.theme.break_small}) {
+  @media (max-width: ${(props) => props.theme.break_small}) {
     margin: auto;
   }
 `;
@@ -80,40 +80,30 @@ const Resume = () => (
             <ul>
               <li>{years} years of experience with JavaScript</li>
               <li>{years} years of experience with React</li>
-              <li>Proficient in TypeScript, HTML, CSS, and SASS</li>
-              <li>
-                Played around with GraphQL, Apollo Client, Angular, C#, Java,
-                and Python
-              </li>
+              <li>Proficient in TypeScript, SASS, and Styled-Components</li>
+              <li>Played around with GraphQL, C#, Java, and Python</li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
-        <ResumeSection>
-          <Header size="small">Education</Header>
-          <ResumeSubSection>
-            <b>Georgia Southern University</b>
-            <p>BBA in Information Systems</p>
-            <p>December 2011</p>
-            <p>Dean’s List: Fall 2010, Spring 2011, Fall 2011</p>
-          </ResumeSubSection>
-        </ResumeSection>
+
         <ResumeSection>
           <Header size="small">Work Experience</Header>
           <ResumeSubSection>
             <b>LeaseQuery</b>
-            <p>UI Engineer</p>
+            <p>Lead UI Engineer</p>
             <p>May 2019 - Present</p>
             <br />
             <p>
-              Led the front-end development effort to create a new SAAS product
-              for lease accounting using React (16.8), TypeScript, Redux,
-              react-router, react-testing-library, and Formik. Worked on
-              integrating 3rd party products, such as QuickBooks Online.
+              Led the front-end development effort to create a multiple new SAAS
+              products for lease accounting using React (16.8+), TypeScript,
+              Redux, react-router, react-testing-library, Formik, NextJS,
+              styled-components. Worked on integrating 3rd party products into
+              our tools, such as QuickBooks Online.
             </p>
             <ul>
               <li>
-                Worked closely with Back-End Developer, Product Owner, UX
-                Designer, QA Engineer, and Junior Developers
+                Worked closely with Back-End Developers, Product Owners, UX
+                Designers, QA Engineers, and Junior Developers
               </li>
               <li>Ensured code quality by conducting code reviews</li>
               <li>
@@ -194,6 +184,15 @@ const Resume = () => (
             <b>Georgia Southern University</b>
             <p>SharePoint Engineer Intern</p>
             <p>February 2011 - December 2011</p>
+          </ResumeSubSection>
+        </ResumeSection>
+        <ResumeSection>
+          <Header size="small">Education</Header>
+          <ResumeSubSection>
+            <b>Georgia Southern University</b>
+            <p>BBA in Information Systems</p>
+            <p>December 2011</p>
+            <p>Dean’s List: Fall 2010, Spring 2011, Fall 2011</p>
           </ResumeSubSection>
         </ResumeSection>
         <Header size="medium">{`</Resume>`}</Header>
