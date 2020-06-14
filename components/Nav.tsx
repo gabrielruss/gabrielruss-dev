@@ -1,16 +1,20 @@
 import { styled } from '.';
 import ActiveLink from './common/ActiveLink';
+import FrostedGlass from './styles/FrostedGlass';
 
 const StyledNav = styled.nav`
   display: grid;
   padding: 0 5rem;
   justify-content: flex-end;
-  /* border-bottom: 3px solid ${props => props.theme.colors.trans_teal}; */
+  /* border-bottom: 3px solid ${(props) => props.theme.colors.trans_teal}; */
   /* small shadow */
-  /* box-shadow: 0 0 5rem 5rem ${props => props.theme.colors.trans_teal}; */
+  /* box-shadow: 0 0 5rem 5rem ${(props) => props.theme.colors.trans_teal}; */
   /* this one is great big shadow */
-  /* box-shadow: 0 0 20rem 35rem ${props => props.theme.colors.trans_teal}; */
+  /* box-shadow: 0 0 20rem 35rem ${(props) => props.theme.colors.trans_teal}; */
   margin-left: -17px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 
   ul {
     display: grid;
@@ -25,20 +29,20 @@ const StyledNav = styled.nav`
       padding: 2rem 0.5rem 0.5rem;
       list-style: none;
       cursor: pointer;
-      color: ${props => props.theme.colors.black};
+      color: ${(props) => props.theme.colors.black};
 
       :hover {
         transition: 0.2s box-shadow ease;
-        box-shadow: 0 3px ${props => props.theme.colors.aa_teal};
+        box-shadow: 0 3px ${(props) => props.theme.colors.aa_teal};
       }
 
       &.selected {
-        box-shadow: 0 3px ${props => props.theme.colors.aa_teal};
+        box-shadow: 0 3px ${(props) => props.theme.colors.aa_teal};
       }
     }
   }
 
-  @media (max-width: ${props => props.theme.break_large}) {
+  @media (max-width: ${(props) => props.theme.break_large}) {
     padding: 0;
     margin: 0;
     justify-content: space-around;
@@ -47,17 +51,22 @@ const StyledNav = styled.nav`
 
 const Nav = () => (
   <StyledNav>
-    <ul>
-      <ActiveLink href="/">
-        <a>home</a>
-      </ActiveLink>
-      <ActiveLink href="/resume">
-        <a>resume</a>
-      </ActiveLink>
-      <a href="https://github.com/gabrielruss?tab=repositories" target="_blank">
-        github
-      </a>
-    </ul>
+    <FrostedGlass>
+      <ul>
+        <ActiveLink href="/">
+          <a>home</a>
+        </ActiveLink>
+        <ActiveLink href="/resume">
+          <a>resume</a>
+        </ActiveLink>
+        <a
+          href="https://github.com/gabrielruss?tab=repositories"
+          target="_blank"
+        >
+          github
+        </a>
+      </ul>
+    </FrostedGlass>
   </StyledNav>
 );
 
