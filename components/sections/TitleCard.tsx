@@ -1,7 +1,13 @@
 import { styled } from '..';
 import StyledBorderContainer from '../styles/StyledBorderContainer';
 import Header from '../common/Header';
-import { useRef, useEffect, MutableRefObject } from 'react';
+import {
+  useRef,
+  useEffect,
+  MutableRefObject,
+  useState,
+  useCallback,
+} from 'react';
 import { debounce, throttle } from '../util/_helpers';
 
 // FYI long square is an inside joke between my wife and I
@@ -71,20 +77,35 @@ export const StyledTitleCard = styled.div`
 `;
 
 function TitleCard() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLParagraphElement>(null);
+  let throttleAmount = 50;
 
-  const handleTopCheck = (element) => {
+  const handleTopCheck = (element: HTMLParagraphElement) => {
     if (element) {
       const { top } = element.getBoundingClientRect();
+
       if (top <= 50) {
-        console.log('below');
+        console.log('show name');
       } else {
-        console.log('above');
+        console.log('hide name');
       }
     }
   };
 
-  const handleScroll = throttle(() => handleTopCheck(ref.current), 1000);
+  const handleScroll = throttle(
+    () => handleTopCheck(ref.current),
+    throttleAmount
+  );
+
+  // just in case someone scrolls to the top like a crazy
+  useEffect(() => {
+    const handleTimerCheck = setInterval(
+      () => handleTopCheck(ref.current),
+      2000
+    );
+
+    return () => clearInterval(handleTimerCheck);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
