@@ -77,48 +77,48 @@ export const StyledTitleCard = styled.div`
 `;
 
 function TitleCard() {
-  const ref = useRef<HTMLParagraphElement>(null);
-  let throttleAmount = 50;
+  // const ref = useRef<HTMLParagraphElement>(null);
+  // let throttleAmount = 50;
 
-  const handleTopCheck = (element: HTMLParagraphElement) => {
-    if (element) {
-      const { top } = element.getBoundingClientRect();
+  // const handleTopCheck = (element: HTMLParagraphElement) => {
+  //   if (element) {
+  //     const { top } = element.getBoundingClientRect();
 
-      if (top <= 50) {
-        console.log('show name');
-      } else {
-        console.log('hide name');
-      }
-    }
-  };
+  //     if (top <= 50) {
+  //       console.log('show name');
+  //     } else {
+  //       console.log('hide name');
+  //     }
+  //   }
+  // };
 
-  const handleScroll = throttle(
-    () => handleTopCheck(ref.current),
-    throttleAmount
-  );
+  // const handleScroll = throttle(
+  //   () => handleTopCheck(ref.current),
+  //   throttleAmount
+  // );
 
-  // just in case someone scrolls to the top like a crazy
-  useEffect(() => {
-    const handleTimerCheck = setInterval(
-      () => handleTopCheck(ref.current),
-      2000
-    );
+  // // just in case someone scrolls to the top like a crazy
+  // useEffect(() => {
+  //   const handleTimerCheck = setInterval(
+  //     () => handleTopCheck(ref.current),
+  //     2000
+  //   );
 
-    return () => clearInterval(handleTimerCheck);
-  }, []);
+  //   return () => clearInterval(handleTimerCheck);
+  // }, []);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   return (
     <StyledTitleCard>
       <LongSquareContainer>
         <StyledBorderContainer>
           <Header>Gabriel Russ</Header>
-          <p ref={ref}>i’m just a guy who’s a web developer for fun</p>
+          <p>i’m just a guy who’s a web developer for fun</p>
         </StyledBorderContainer>
         <LongSquare />
       </LongSquareContainer>

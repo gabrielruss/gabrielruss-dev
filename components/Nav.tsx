@@ -1,6 +1,8 @@
 import { styled } from '.';
 import ActiveLink from './common/ActiveLink';
+import Link from 'next/link';
 import FrostedGlass from './styles/FrostedGlass';
+import { useEffect, useState } from 'react';
 
 const StyledNav = styled.nav`
   display: grid;
@@ -49,25 +51,45 @@ const StyledNav = styled.nav`
   }
 `;
 
-const Nav = () => (
-  <StyledNav>
-    <FrostedGlass>
-      <ul>
-        <ActiveLink href="/">
-          <a>home</a>
-        </ActiveLink>
-        <ActiveLink href="/resume">
-          <a>resume</a>
-        </ActiveLink>
-        <a
-          href="https://github.com/gabrielruss?tab=repositories"
-          target="_blank"
-        >
-          github
-        </a>
-      </ul>
-    </FrostedGlass>
-  </StyledNav>
-);
+function Nav() {
+  const [showNavName, setShowNavName] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const nameOffScreen = window.innerHeight / 2 - window.scrollY + 150 < 0;
+
+      if (nameOffScreen && !showNavName) {
+        setShowNavName(true);
+      } else if (!nameOffScreen && showNavName) {
+        setShowNavName(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [showNavName]);
+
+  return (
+    <StyledNav>
+      <FrostedGlass>
+        <ul>
+          <ActiveLink href="/">
+            <a>gabriel russ</a>
+          </ActiveLink>
+          <ActiveLink href="/resume">
+            <a>resume</a>
+          </ActiveLink>
+          <a
+            href="https://github.com/gabrielruss?tab=repositories"
+            target="_blank"
+          >
+            github
+          </a>
+        </ul>
+      </FrostedGlass>
+    </StyledNav>
+  );
+}
 
 export default Nav;
