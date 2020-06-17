@@ -4,6 +4,20 @@ import Link from 'next/link';
 import FrostedGlass from './styles/FrostedGlass';
 import { useEffect, useState } from 'react';
 
+interface ShowyHideyLinkyProps {
+  showNavName: boolean;
+}
+
+const ShowyHideyLinky = styled(ActiveLink)`
+  background: red;
+`;
+
+// const SubTitle1 = styled(Custom).attrs(({ customProperty }) => ({
+//   customProperty,
+// }))`
+//   font-style: italic;
+// `;
+
 const StyledNav = styled.nav`
   display: grid;
   padding: 0 5rem;
@@ -24,6 +38,7 @@ const StyledNav = styled.nav`
     margin: 0;
     padding: 0;
     grid-auto-flow: column;
+
     a {
       text-decoration: none;
       font-size: 2rem;
@@ -32,14 +47,19 @@ const StyledNav = styled.nav`
       list-style: none;
       cursor: pointer;
       color: ${(props) => props.theme.colors.black};
+      opacity: 1;
+      transition: 0.6s opacity ease-in-out;
 
       :hover {
         transition: 0.2s box-shadow ease;
         box-shadow: 0 3px ${(props) => props.theme.colors.aa_teal};
       }
-
       &.selected {
         box-shadow: 0 3px ${(props) => props.theme.colors.aa_teal};
+      }
+
+      &.hide-me {
+        opacity: 0;
       }
     }
   }
@@ -54,9 +74,12 @@ const StyledNav = styled.nav`
 function Nav() {
   const [showNavName, setShowNavName] = useState(false);
 
+  const isNameOffScreen = () =>
+    window.innerHeight / 2 - window.scrollY + 150 < 0;
+
   useEffect(() => {
     const handleScroll = () => {
-      const nameOffScreen = window.innerHeight / 2 - window.scrollY + 150 < 0;
+      const nameOffScreen = isNameOffScreen();
 
       if (nameOffScreen && !showNavName) {
         setShowNavName(true);
@@ -70,13 +93,24 @@ function Nav() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [showNavName]);
 
+  useEffect(() => {
+    const nameOffScreen = isNameOffScreen();
+    if (nameOffScreen && !showNavName) {
+      setShowNavName(true);
+    } else if (!nameOffScreen && showNavName) {
+      setShowNavName(false);
+    }
+  }, []);
+
   return (
     <StyledNav>
       <FrostedGlass>
         <ul>
+          {/* <ShowyHideyLinky > */}
           <ActiveLink href="/">
-            <a>gabriel russ</a>
+            <a className={!showNavName && 'hide-me'}>gabriel russ</a>
           </ActiveLink>
+          {/* </ShowyHideyLinky> */}
           <ActiveLink href="/resume">
             <a>resume</a>
           </ActiveLink>
