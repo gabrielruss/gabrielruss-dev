@@ -1,16 +1,8 @@
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { styled } from '.';
 import ActiveLink from './common/ActiveLink';
-import Link from 'next/link';
 import FrostedGlass from './styles/FrostedGlass';
-import { useEffect, useState } from 'react';
-
-interface ShowyHideyLinkyProps {
-  showNavName: boolean;
-}
-
-const ShowyHideyLinky = styled(ActiveLink)`
-  background: red;
-`;
 
 // const SubTitle1 = styled(Custom).attrs(({ customProperty }) => ({
 //   customProperty,
@@ -19,14 +11,7 @@ const ShowyHideyLinky = styled(ActiveLink)`
 // `;
 
 const StyledNav = styled.nav`
-  display: grid;
   padding: 0 5rem;
-  justify-content: flex-end;
-  /* border-bottom: 3px solid ${(props) => props.theme.colors.trans_teal}; */
-  /* small shadow */
-  /* box-shadow: 0 0 5rem 5rem ${(props) => props.theme.colors.trans_teal}; */
-  /* this one is great big shadow */
-  /* box-shadow: 0 0 20rem 35rem ${(props) => props.theme.colors.trans_teal}; */
   margin-left: -17px;
   position: sticky;
   top: 0;
@@ -38,6 +23,7 @@ const StyledNav = styled.nav`
     margin: 0;
     padding: 0;
     grid-auto-flow: column;
+    justify-content: flex-end;
 
     a {
       text-decoration: none;
@@ -49,6 +35,11 @@ const StyledNav = styled.nav`
       color: ${(props) => props.theme.colors.black};
       opacity: 1;
       transition: 0.6s opacity ease-in-out;
+
+      :first-child {
+        position: absolute;
+        left: 0;
+      }
 
       :hover {
         transition: 0.2s box-shadow ease;
@@ -72,6 +63,7 @@ const StyledNav = styled.nav`
 `;
 
 function Nav() {
+  const router = useRouter();
   const [showNavName, setShowNavName] = useState(false);
 
   const isNameOffScreen = () =>
@@ -106,11 +98,11 @@ function Nav() {
     <StyledNav>
       <FrostedGlass>
         <ul>
-          {/* <ShowyHideyLinky > */}
           <ActiveLink href="/">
-            <a className={!showNavName && 'hide-me'}>gabriel russ</a>
+            <a className={router.route === '/' && !showNavName && 'hide-me'}>
+              gabriel russ
+            </a>
           </ActiveLink>
-          {/* </ShowyHideyLinky> */}
           <ActiveLink href="/resume">
             <a>resume</a>
           </ActiveLink>
@@ -119,6 +111,9 @@ function Nav() {
             target="_blank"
           >
             github
+          </a>
+          <a href="mailto:contact.me@gabrielruss.dev">
+            contact.me@gabrielruss.dev
           </a>
         </ul>
       </FrostedGlass>

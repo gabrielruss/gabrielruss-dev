@@ -118,7 +118,8 @@ function TitleCard() {
       <LongSquareContainer>
         <StyledBorderContainer>
           <Header>Gabriel Russ</Header>
-          <p>i’m just a guy who’s a web developer for fun</p>
+          {/* <p>i’m just a guy who’s a web developer for fun</p> */}
+          <p>making the internet a better place, one {`<div>`} at a time</p>
         </StyledBorderContainer>
         <LongSquare />
       </LongSquareContainer>
