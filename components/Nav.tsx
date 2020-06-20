@@ -4,16 +4,11 @@ import { styled } from '.';
 import ActiveLink from './common/ActiveLink';
 import FrostedGlass from './styles/FrostedGlass';
 
-// const SubTitle1 = styled(Custom).attrs(({ customProperty }) => ({
-//   customProperty,
-// }))`
-//   font-style: italic;
-// `;
-
-const StyledNav = styled.nav`
+const StyledNav = styled.nav<{ showNavName: boolean }>`
   padding: 0 5rem;
   margin-left: -17px;
   position: sticky;
+  display: grid;
   top: 0;
   z-index: 9999;
 
@@ -33,13 +28,7 @@ const StyledNav = styled.nav`
       list-style: none;
       cursor: pointer;
       color: ${(props) => props.theme.colors.black};
-      opacity: 1;
       transition: 0.6s opacity ease-in-out;
-
-      :first-child {
-        position: absolute;
-        left: 0;
-      }
 
       :hover {
         transition: 0.2s box-shadow ease;
@@ -49,8 +38,10 @@ const StyledNav = styled.nav`
         box-shadow: 0 3px ${(props) => props.theme.colors.aa_teal};
       }
 
-      &.hide-me {
-        opacity: 0;
+      :first-child {
+        position: absolute;
+        left: 0;
+        opacity: ${(props) => (props.showNavName ? 1 : 0)};
       }
     }
   }
@@ -59,6 +50,15 @@ const StyledNav = styled.nav`
     padding: 0;
     margin: 0;
     justify-content: space-around;
+
+    ul {
+      gap: 2rem;
+      a {
+        :first-child {
+          position: unset;
+        }
+      }
+    }
   }
 `;
 
@@ -95,13 +95,11 @@ function Nav() {
   }, []);
 
   return (
-    <StyledNav>
+    <StyledNav showNavName={showNavName || router.route !== '/'}>
       <FrostedGlass>
         <ul>
           <ActiveLink href="/">
-            <a className={router.route === '/' && !showNavName && 'hide-me'}>
-              gabriel russ
-            </a>
+            <a>gabriel russ</a>
           </ActiveLink>
           <ActiveLink href="/resume">
             <a>resume</a>
@@ -112,9 +110,7 @@ function Nav() {
           >
             github
           </a>
-          <a href="mailto:contact.me@gabrielruss.dev">
-            contact.me@gabrielruss.dev
-          </a>
+          <a href="mailto:contact.me@gabrielruss.dev">contact me</a>
         </ul>
       </FrostedGlass>
     </StyledNav>
