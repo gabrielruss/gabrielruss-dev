@@ -4,7 +4,7 @@ import { styled } from '..';
 import FrostedGlass from '../styles/FrostedGlass';
 
 const StyledSkills = styled.div`
-  > ${StyledHeader} {
+  ${StyledHeader} {
     margin-bottom: 3rem;
   }
 `;
@@ -13,9 +13,14 @@ const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 5rem;
-  max-width: ${props => props.theme.break_large};
+  max-width: ${(props) => props.theme.break_large};
   width: calc(100vw - 33px);
   padding: 0 2rem;
+
+  ${StyledHeader} {
+    /* stops skill headers from inheriting margin-bottom above */
+    margin-bottom: unset;
+  }
 `;
 
 interface ISkillsProps {

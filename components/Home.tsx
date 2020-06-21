@@ -10,6 +10,8 @@ const Home = () => (
   <main>
     <TitleCard />
     <ContainerSeperator />
+    <Time />
+    <ContainerSeperator />
     <Skills header="what i'm good at">
       <Icon iconType="javascript" header="JavaScript" />
       <Icon iconType="react" header="React" />
@@ -19,10 +21,11 @@ const Home = () => (
       <Icon iconType="sass" header="SASS" />
     </Skills>
     <ContainerSeperator />
+    <ImportantToMe />
+    <ContainerSeperator />
     <Skills header="what i'm learning">
       <Icon iconType="python" footer="Python" />
       <Icon iconType="graphql" footer="GraphQL" />
-      <Icon iconType="styled-components" footer="Styled Components" />
       <span>
         <p>
           centering things in CSS without getting frustrated and 'display: flex'
@@ -34,10 +37,6 @@ const Home = () => (
         To be clear, the centering thing is a joke...maybe :)
       </span>
     </Skills>
-    <ContainerSeperator />
-    <Time />
-    <ContainerSeperator />
-    <ImportantToMe />
   </main>
 );
 

@@ -51,7 +51,6 @@ const StyledNav = styled.nav<{ showNavName: boolean }>`
     margin: 0;
     justify-content: space-around;
 
-    /* TODO: shift menu to left when name is hidden, unshift when shown  */
     ul {
       gap: 2rem;
       margin-left: ${(props) => (props.showNavName ? 'unset' : '-130px')};
@@ -113,7 +112,7 @@ function Nav() {
           >
             github
           </a>
-          <a href="mailto:contact.me@gabrielruss.dev">contact me</a>
+          <a href="mailto:me@gabrielruss.dev">email me</a>
         </ul>
       </FrostedGlass>
     </StyledNav>
