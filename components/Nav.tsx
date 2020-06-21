@@ -51,8 +51,11 @@ const StyledNav = styled.nav<{ showNavName: boolean }>`
     margin: 0;
     justify-content: space-around;
 
+    /* TODO: shift menu to left when name is hidden, unshift when shown  */
     ul {
       gap: 2rem;
+      margin-left: ${(props) => (props.showNavName ? 'unset' : '-130px')};
+      transition: 0.5s margin ease-in-out;
       a {
         :first-child {
           position: unset;
