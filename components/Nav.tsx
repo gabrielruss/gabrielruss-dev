@@ -62,6 +62,14 @@ const StyledNav = styled.nav<{ showNavName: boolean }>`
       }
     }
   }
+
+  @media (max-width: ${(props) => props.theme.break_small}) {
+    ul {
+      text-align: center;
+      grid-template-rows: ${(props) =>
+        props.showNavName ? '1fr 1fr' : 'unset'};
+    }
+  }
 `;
 
 function Nav() {
