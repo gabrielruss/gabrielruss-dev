@@ -54,7 +54,7 @@ const StyledNav = styled.nav<{ showNavName: boolean }>`
     ul {
       gap: 2rem;
       margin-left: ${(props) => (props.showNavName ? 'unset' : '-130px')};
-      transition: 0.5s margin ease-in-out;
+      transition: 0.3s margin ease-in-out;
       a {
         :first-child {
           position: unset;
@@ -66,8 +66,16 @@ const StyledNav = styled.nav<{ showNavName: boolean }>`
   @media (max-width: ${(props) => props.theme.break_small}) {
     ul {
       text-align: center;
-      grid-template-rows: ${(props) =>
-        props.showNavName ? '1fr 1fr' : 'unset'};
+      display: ${(props) => (props.showNavName ? 'flex' : 'grid')};
+
+      a {
+        opacity: ${(props) => (props.showNavName ? 0 : 1)};
+        white-space: nowrap;
+
+        :last-child {
+          opacity: 1;
+        }
+      }
     }
   }
 `;

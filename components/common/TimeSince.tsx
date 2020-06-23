@@ -12,6 +12,10 @@ const TimeSinceWrapper = styled.div`
   div {
     display: flex;
     align-items: center;
+
+    p {
+      margin-left: 0.5rem;
+    }
   }
 `;
 

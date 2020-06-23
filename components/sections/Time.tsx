@@ -9,8 +9,8 @@ const TimeWrapper = styled.div`
 `;
 
 const TimeHeader = styled.div`
-  @media (max-width: ${props => props.theme.break_small}) {
-    padding: 0 10rem;
+  @media (max-width: ${(props) => props.theme.break_small}) {
+    padding: 0;
   }
 `;
 
@@ -18,6 +18,10 @@ const TimeContent = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
   gap: 2rem;
+
+  @media (max-width: ${(props) => props.theme.break_small}) {
+    grid-template-columns: auto;
+  }
 `;
 
 function Time() {
