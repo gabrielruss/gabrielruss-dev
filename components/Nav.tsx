@@ -4,7 +4,7 @@ import { styled } from '.';
 import ActiveLink from './common/ActiveLink';
 import FrostedGlass from './styles/FrostedGlass';
 
-const StyledNav = styled.nav<{ showNavName: boolean }>`
+const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
   padding: 0 5rem;
   margin-left: -17px;
   position: sticky;
@@ -66,11 +66,16 @@ const StyledNav = styled.nav<{ showNavName: boolean }>`
   @media (max-width: ${(props) => props.theme.break_small}) {
     ul {
       text-align: center;
-      display: ${(props) => (props.showNavName ? 'flex' : 'grid')};
+      gap: ${(props) => (props.showNavName && props.isHome ? '0' : '')};
+      padding: ${(props) => (props.showNavName ? '0 2rem' : '0')};
 
       a {
-        opacity: ${(props) => (props.showNavName ? 0 : 1)};
+        opacity: ${(props) => (props.showNavName && props.isHome ? 0 : 1)};
         white-space: nowrap;
+
+        :nth-child(2) {
+          display: ${(props) => (props.isHome ? 'inherit' : 'none')};
+        }
 
         :last-child {
           opacity: 1;
@@ -113,7 +118,10 @@ function Nav() {
   }, []);
 
   return (
-    <StyledNav showNavName={showNavName || router.route !== '/'}>
+    <StyledNav
+      showNavName={showNavName || router.route !== '/'}
+      isHome={router.route === '/'}
+    >
       <FrostedGlass>
         <ul>
           <ActiveLink href="/">
