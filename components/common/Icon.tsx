@@ -10,7 +10,8 @@ type IconTypes =
   | 'sass'
   | 'python'
   | 'graphql'
-  | 'styled-components';
+  | 'styled-components'
+  | 'next';
 
 interface IIconProps {
   iconType: IconTypes;

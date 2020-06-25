@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { theme } from '..';
+
 const getTypeFontSize = (size: HeaderSizes) => {
   switch (size) {
     case 'large':
@@ -24,9 +26,9 @@ const getTypeFontSize = (size: HeaderSizes) => {
 };
 
 export const StyledHeader = styled.div<IHeaderProps>`
-  font-size: ${props => getTypeFontSize(props.size)};
-  color: ${props => props.theme.colors.black};
-  font-family: ${props => props.theme.fonts.overpass_regular};
+  font-size: ${(props) => getTypeFontSize(props.size)};
+  color: ${(props) => props.color};
+  font-family: ${(props) => props.theme.fonts.overpass_regular};
   font-weight: 700;
 `;
 
@@ -34,6 +36,7 @@ type HeaderSizes = 'small' | 'medium' | 'large';
 
 interface IHeaderProps {
   size?: HeaderSizes;
+  color?: keyof typeof theme.colors;
 }
 
 /**
@@ -42,9 +45,14 @@ interface IHeaderProps {
  */
 function Header({
   size = 'large',
+  color = 'black',
   children,
 }: React.PropsWithChildren<IHeaderProps>) {
-  return <StyledHeader size={size}>{children}</StyledHeader>;
+  return (
+    <StyledHeader size={size} color={color}>
+      {children}
+    </StyledHeader>
+  );
 }
 
 export default Header;

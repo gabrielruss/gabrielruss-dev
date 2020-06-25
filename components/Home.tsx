@@ -1,10 +1,9 @@
 import TitleCard from './sections/TitleCard';
-import Skills from './sections/Skills';
-import Time from './sections/Time';
+
 import Icon from './common/Icon';
 import Header from './common/Header';
-import ImportantToMe from './sections/ImportantToMe';
 import { ContainerSeperator } from './styles/ContainerSeperator';
+import { Time, Skills, ImportantToMe, ContactMe } from './sections';
 
 const Home = () => (
   <main>
@@ -37,6 +36,13 @@ const Home = () => (
         To be clear, the centering thing is a joke...maybe :)
       </span>
     </Skills>
+    <Skills header="this site was made with">
+      <Icon iconType="next" header="Next.js" />
+      <Icon iconType="react" header="React" />
+      <Icon iconType="typescript" header="TypeScript" />
+      <Icon iconType="styled-components" header="Styled Components" />
+    </Skills>
+    <ContactMe />
   </main>
 );
 

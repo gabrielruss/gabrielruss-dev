@@ -77,49 +77,15 @@ export const StyledTitleCard = styled.div`
 `;
 
 function TitleCard() {
-  // const ref = useRef<HTMLParagraphElement>(null);
-  // let throttleAmount = 50;
-
-  // const handleTopCheck = (element: HTMLParagraphElement) => {
-  //   if (element) {
-  //     const { top } = element.getBoundingClientRect();
-
-  //     if (top <= 50) {
-  //       console.log('show name');
-  //     } else {
-  //       console.log('hide name');
-  //     }
-  //   }
-  // };
-
-  // const handleScroll = throttle(
-  //   () => handleTopCheck(ref.current),
-  //   throttleAmount
-  // );
-
-  // // just in case someone scrolls to the top like a crazy
-  // useEffect(() => {
-  //   const handleTimerCheck = setInterval(
-  //     () => handleTopCheck(ref.current),
-  //     2000
-  //   );
-
-  //   return () => clearInterval(handleTimerCheck);
-  // }, []);
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
-
   return (
     <StyledTitleCard>
       <LongSquareContainer>
         <StyledBorderContainer>
           <Header>Gabriel Russ</Header>
-          {/* <p>i’m just a guy who’s a web developer for fun</p> */}
-          <p>making the internet a better place, one {`<div>`} at a time</p>
+          <p>
+            making the internet a better place, one <code>{`<div>`}</code> at a
+            time
+          </p>
         </StyledBorderContainer>
         <LongSquare />
       </LongSquareContainer>
