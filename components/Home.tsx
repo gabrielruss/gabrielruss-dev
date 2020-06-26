@@ -12,19 +12,19 @@ const Home = () => (
     <Time />
     <ContainerSeperator />
     <Skills header="what i'm good at">
-      <Icon iconType="javascript" header="JavaScript" />
-      <Icon iconType="react" header="React" />
-      <Icon iconType="typescript" header="TypeScript" />
-      <Icon iconType="html" header="HTML" />
-      <Icon iconType="css" header="CSS" />
-      <Icon iconType="sass" header="SASS" />
+      <Icon iconName="javascript" header="JavaScript" />
+      <Icon iconName="react" header="React" />
+      <Icon iconName="typescript" header="TypeScript" />
+      <Icon iconName="html" header="HTML" />
+      <Icon iconName="css" header="CSS" />
+      <Icon iconName="sass" header="SASS" />
     </Skills>
     <ContainerSeperator />
     <ImportantToMe />
     <ContainerSeperator />
     <Skills header="what i'm learning">
-      <Icon iconType="python" footer="Python" />
-      <Icon iconType="graphql" footer="GraphQL" />
+      <Icon iconName="python" footer="Python" />
+      <Icon iconName="graphql" footer="GraphQL" />
       <span>
         <p>
           centering things in CSS without getting frustrated and 'display: flex'
@@ -37,10 +37,10 @@ const Home = () => (
       </span>
     </Skills>
     <Skills header="this site was made with">
-      <Icon iconType="next" header="Next.js" />
-      <Icon iconType="react" header="React" />
-      <Icon iconType="typescript" header="TypeScript" />
-      <Icon iconType="styled-components" header="Styled Components" />
+      <Icon iconName="next" header="Next.js" />
+      <Icon iconName="react" header="React" />
+      <Icon iconName="typescript" header="TypeScript" />
+      <Icon iconName="styled-components" header="Styled Components" />
     </Skills>
     <ContactMe />
   </main>

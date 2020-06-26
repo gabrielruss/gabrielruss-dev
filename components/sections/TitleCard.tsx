@@ -1,14 +1,6 @@
 import { styled } from '..';
 import StyledBorderContainer from '../styles/StyledBorderContainer';
 import Header from '../common/Header';
-import {
-  useRef,
-  useEffect,
-  MutableRefObject,
-  useState,
-  useCallback,
-} from 'react';
-import { debounce, throttle } from '../util/_helpers';
 
 // FYI long square is an inside joke between my wife and I
 // I am aware what a rectangle is :)
