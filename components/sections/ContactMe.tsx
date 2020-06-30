@@ -4,7 +4,7 @@ import Link from 'next/link';
 import StyledContainer from '../styles/StyledContainer';
 import Header from '../common/Header';
 import StyledBorderContainer from '../styles/StyledBorderContainer';
-import Icon from '../common/Icon';
+import Icon, { IconWrapper, StyledIcon } from '../common/Icon';
 import { IconGrid } from './Skills';
 
 const StyledContactMe = styled.div`
@@ -14,6 +14,17 @@ const StyledContactMe = styled.div`
 
   a {
     text-decoration: none;
+  }
+
+  ${IconWrapper} {
+    ${StyledIcon} {
+      transition: 0.3s all ease-in-out;
+    }
+    :hover {
+      ${StyledIcon} {
+        transform: scale(1.1);
+      }
+    }
   }
 `;
 
@@ -26,15 +37,29 @@ function ContactMe() {
           <IconGrid>
             <Link href="/resume">
               <a>
-                <Icon iconName="arrow-right" iconType="svg" header="resume" />
+                <Icon iconName="professional" iconType="svg" header="resume" />
               </a>
             </Link>
-            <a href="https://www.linkedin.com/in/gabriel-russ-2ab06930/">
+            <a
+              href="https://github.com/gabrielruss?tab=repositories"
+              target="_blank"
+            >
+              <Icon iconName="github" header="github" iconType="svg" />
+            </a>
+            <Link href="/contact-me">
+              <a>
+                <Icon iconName="email" iconType="svg" header="contact me" />
+              </a>
+            </Link>
+            {/* <a
+              href="https://www.linkedin.com/in/gabriel-russ-2ab06930/"
+              target="_blank"
+            >
               <Icon iconName="linkedin" header="linkedin" iconType="svg" />
-            </a>
-            <a href="mailto:me@gabrielruss.dev">
+            </a> */}
+            {/* <a href="mailto:me@gabrielruss.dev">
               <Icon iconName="email" header="email me" iconType="svg" />
-            </a>
+            </a> */}
           </IconGrid>
         </StyledBorderContainer>
       </StyledContactMe>

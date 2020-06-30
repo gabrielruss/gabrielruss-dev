@@ -14,7 +14,9 @@ type IconNames =
   | 'next'
   | 'arrow-right'
   | 'linkedin'
-  | 'email';
+  | 'email'
+  | 'github'
+  | 'professional';
 
 interface IIconProps {
   iconName: IconNames;
@@ -23,8 +25,9 @@ interface IIconProps {
   footer?: string;
 }
 
-const StyledIcon = styled.img`
-  width: 8rem;
+export const StyledIcon = styled.img`
+  max-width: 8rem;
+  max-height: 8rem;
   margin: 1rem 0;
 `;
 

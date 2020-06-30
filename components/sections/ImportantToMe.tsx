@@ -50,47 +50,46 @@ function ImportantToMe() {
             <li>
               <Header size="small">build with empathy</Header>
               <ListItemContent>
-                I work to understand my users and try to put myself in their
-                shoes. Would I want to use the application I'm building?
+                I work to understand my users and put myself in their shoes.
+                Would I want to use the application I'm building?
               </ListItemContent>
             </li>
             <li>
-              <Header size="small">UX before all</Header>
+              <Header size="small">UX comes first</Header>
               <ListItemContent>
-                The user experience is my top priority. Making things easy is
-                hard to do. As a UI developer, my job is to make the users' jobs
-                easier.
+                The user experience is my top priority. As a UI developer, my
+                job is to make the users' jobs easier.
               </ListItemContent>
             </li>
             <li>
               <Header size="small">pure, single purpose functions</Header>
               <ListItemContent>
-                I try to break complex tasks down into the smallest chunks
-                possible until single purpose, pure functions can be written for
-                each task.
+                I break complex tasks down into the smallest chunks possible
+                until single purpose, pure functions can be written for each
+                task.
               </ListItemContent>
             </li>
             <li>
               <Header size="small">keep things simple</Header>
               <ListItemContent>
-                Does my solution elegantly solve the problem? Can other senior
-                and junior developers easily understand and use it?
+                Does my solution elegantly solve the problem? Developers at any
+                experience level should be able to understand and use my code.
               </ListItemContent>
             </li>
             <li>
               <Header size="small">code comments</Header>
               <ListItemContent>
-                If I am writing some code that isn't super obvious or is based
-                on complex business logic, I always try and write a comment
-                explaining why that code is there.
+                When code is required to be complex, it can be difficult to
+                understand and debug. Writing comments helps others to know why
+                each piece of the code is needed.
               </ListItemContent>
             </li>
             <li>
-              <Header size="small">use TypeScript</Header>
+              <Header size="small">write tests</Header>
               <ListItemContent>
-                I have fully jumped aboard the TypeScript train. I have caught
-                numerous coding issues pre-deployment because of strongly typing
-                my code.
+                I have found numerous issues by writing tests for my code.
+                Running those tests pre-deployment catches mistakes before the
+                users are affected.
               </ListItemContent>
             </li>
           </ul>

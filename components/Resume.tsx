@@ -87,7 +87,7 @@ const Resume = () => (
               <li>{years} years of experience with JavaScript</li>
               <li>{years} years of experience with React</li>
               <li>Proficient in TypeScript, SASS, and Styled-Components</li>
-              <li>Played around with GraphQL, C#, Java, and Python</li>
+              <li>Dabbled in GraphQL, C#, Java, and Python</li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
@@ -100,25 +100,35 @@ const Resume = () => (
             <p>May 2019 - Present</p>
             <br />
             <p>
-              Led the front-end development effort to create a multiple new SAAS
-              products for lease accounting using React (16.8+), TypeScript,
-              Redux, react-router, react-testing-library, Formik, NextJS,
-              styled-components. Worked on integrating 3rd party products into
-              our tools, such as QuickBooks Online.
+              Led the front-end development effort to create multiple new SaaS
+              products for lease accounting.
             </p>
             <ul>
               <li>
-                Worked closely with Back-End Developers, Product Owners, UX
-                Designers, QA Engineers, and Junior Developers
+                Authored LeaseQueries first reusable UI component library using
+                React, TypeScript, and Storybook with the goal of creating a
+                consistant look and feel across all future projects.
+              </li>
+              <li>
+                Collaborated with the UX Design team to create the best user
+                experience possible.
               </li>
               <li>Ensured code quality by conducting code reviews</li>
               <li>
-                Set up and maintained branching and pull request strategies as
-                well as backlog organization
+                Worked on the integration of 3rd party APIs into our tools
               </li>
               <li>
-                Coordinated with Dev-Ops to set up CI for running, testing, and
-                deploying each branch of the code
+                Some of the libraries that I worked with:
+                <ul>
+                  <li>React (16.8+)</li>
+                  <li>TypeScript</li>
+                  <li>Redux</li>
+                  <li>react-router</li>
+                  <li>react-testing-library</li>
+                  <li>Formik</li>
+                  <li>Next.js</li>
+                  <li>styled-components</li>
+                </ul>
               </li>
             </ul>
           </ResumeSubSection>
@@ -148,10 +158,6 @@ const Resume = () => (
                 acceptance criteria
               </li>
               <li>Developed custom Web APIs in .NET Core (C#)</li>
-              <li>
-                Developed a SignalR websocket to provide real time updates to
-                the UI
-              </li>
             </ul>
           </ResumeSubSection>
           <ResumeSubSection>

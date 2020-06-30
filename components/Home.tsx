@@ -36,7 +36,7 @@ const Home = () => (
         To be clear, the centering thing is a joke...maybe :)
       </span>
     </Skills>
-    <Skills header="this site was made with">
+    <Skills header="i made this site with">
       <Icon iconName="next" header="Next.js" />
       <Icon iconName="react" header="React" />
       <Icon iconName="typescript" header="TypeScript" />
