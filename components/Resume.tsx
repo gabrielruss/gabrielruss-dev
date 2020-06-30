@@ -53,7 +53,7 @@ const ResumeSection = styled.div`
   }
 
   @media (max-width: ${(props) => props.theme.break_small}) {
-    margin: auto;
+    margin: 0;
   }
 `;
 
@@ -105,29 +105,35 @@ const Resume = () => (
             </p>
             <ul>
               <li>
-                Authored LeaseQueries first reusable UI component library using
-                React, TypeScript, and Storybook with the goal of creating a
-                consistant look and feel across all future projects.
+                Authored LeaseQuery's first reusable UI component library with
+                the goal of creating a consistant look and feel across all
+                future projects.
               </li>
               <li>
-                Collaborated with the UX Design team to create the best user
-                experience possible.
-              </li>
-              <li>Ensured code quality by conducting code reviews</li>
-              <li>
-                Worked on the integration of 3rd party APIs into our tools
+                Ensured reusable components were tested and met WCAG 2.0 AA or
+                AAA accessibility standards.
               </li>
               <li>
-                Some of the libraries that I worked with:
+                Became an honorary member of the UX Design team by participating
+                in design studios and regular UX discussions.
+              </li>
+              <li>Ensured code quality by conducting code reviews.</li>
+              <li>
+                Worked on the integration of 3rd party APIs into LeaseQuery's
+                tools.
+              </li>
+              <li>
+                The libraries that I used include:
                 <ul>
                   <li>React (16.8+)</li>
                   <li>TypeScript</li>
-                  <li>Redux</li>
-                  <li>react-router</li>
-                  <li>react-testing-library</li>
-                  <li>Formik</li>
                   <li>Next.js</li>
+                  <li>Storybook</li>
                   <li>styled-components</li>
+                  <li>react-testing-library</li>
+                  <li>react-router</li>
+                  <li>Redux</li>
+                  <li>Formik</li>
                 </ul>
               </li>
             </ul>
@@ -147,17 +153,17 @@ const Resume = () => (
               <li>
                 Led the front-end development team on an agile, large-scale EMR
                 solution using React, Redux, react-router, and
-                react-testing-library
+                react-testing-library.
               </li>
               <li>
                 Worked with the UX team to translate wireframes and business
-                requirements into working solutions
+                requirements into working solutions.
               </li>
               <li>
                 Worked with the Back-End team to ensure custom APIs met
-                acceptance criteria
+                acceptance criteria.
               </li>
-              <li>Developed custom Web APIs in .NET Core (C#)</li>
+              <li>Developed custom Web APIs in .NET Core (C#).</li>
             </ul>
           </ResumeSubSection>
           <ResumeSubSection>
@@ -168,10 +174,10 @@ const Resume = () => (
             <ul>
               <li>
                 Within Microsoft ecosystem, built custom forms using React,
-                TypeScript, and Office UI Fabric (UI framework)
+                TypeScript, and Office UI Fabric (UI framework).
               </li>
-              <li>Developed and maintained custom solutions in C#</li>
-              <li>Built a development infrastructure within Azure</li>
+              <li>Developed and maintained custom solutions in C#.</li>
+              <li>Built a development infrastructure within Azure.</li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
