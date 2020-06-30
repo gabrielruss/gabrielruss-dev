@@ -136,7 +136,10 @@ function Nav() {
           >
             github
           </a>
-          <a href="mailto:me@gabrielruss.dev">email me</a>
+          <ActiveLink href="/contact-me">
+            <a>contact me</a>
+          </ActiveLink>
+          {/* <a href="mailto:me@gabrielruss.dev">email me</a> */}
         </ul>
       </FrostedGlass>
     </StyledNav>
