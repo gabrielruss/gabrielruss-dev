@@ -7,7 +7,7 @@ import StyledBorderContainer from '../styles/StyledBorderContainer';
 import Icon, { IconWrapper, StyledIcon } from '../common/Icon';
 import { IconGrid } from './Skills';
 
-const StyledContactMe = styled.div`
+const StyledWhatsNext = styled.div`
   position: relative;
   width: 100%;
   max-width: ${(props) => props.theme.break_medium};
@@ -28,10 +28,10 @@ const StyledContactMe = styled.div`
   }
 `;
 
-function ContactMe() {
+function WhatsNext() {
   return (
     <StyledContainer>
-      <StyledContactMe>
+      <StyledWhatsNext>
         <StyledBorderContainer>
           <Header size="medium">What next?</Header>
           <IconGrid>
@@ -62,9 +62,9 @@ function ContactMe() {
             </a> */}
           </IconGrid>
         </StyledBorderContainer>
-      </StyledContactMe>
+      </StyledWhatsNext>
     </StyledContainer>
   );
 }
 
-export default ContactMe;
+export default WhatsNext;

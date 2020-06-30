@@ -3,10 +3,10 @@ import TitleCard from './sections/TitleCard';
 import Icon from './common/Icon';
 import Header from './common/Header';
 import { ContainerSeperator } from './styles/ContainerSeperator';
-import { Time, Skills, ImportantToMe, ContactMe } from './sections';
+import { Time, Skills, ImportantToMe, WhatsNext } from './sections';
 
 const Home = () => (
-  <main>
+  <>
     <TitleCard />
     <ContainerSeperator />
     <Time />
@@ -42,8 +42,8 @@ const Home = () => (
       <Icon iconName="typescript" header="TypeScript" />
       <Icon iconName="styled-components" header="Styled Components" />
     </Skills>
-    <ContactMe />
-  </main>
+    <WhatsNext />
+  </>
 );
 
 export default Home;

@@ -8,7 +8,7 @@ const StyledPage = styled.div`
   color: ${(props) => props.theme.colors.black};
 `;
 
-const Inner = styled.div`
+const Inner = styled.main`
   max-width: ${(props) => props.theme.break_large};
   margin: 0 auto;
   padding: 2rem;

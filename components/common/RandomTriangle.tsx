@@ -1,5 +1,5 @@
 import { styled } from '..';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { randomNumberPlease } from '../util/_helpers';
 import useInterval from '../hooks/useInterval';
 
@@ -62,6 +62,10 @@ const RandomTriangleStyle = styled.div<IStyledRandomTriangle>`
       transform: rotate(360deg);
     }
   }
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 interface IRandomTriangle {
@@ -69,7 +73,7 @@ interface IRandomTriangle {
 }
 
 function RandomTriangle({ speed }: IRandomTriangle) {
-  const getRandomProps = (): IStyledRandomTriangle => {
+  const getRandomProps = useCallback((): IStyledRandomTriangle => {
     return {
       top: randomNumberPlease(100, 10),
       right: randomNumberPlease(90, 0),
@@ -79,7 +83,7 @@ function RandomTriangle({ speed }: IRandomTriangle) {
       opacity: randomNumberPlease(65, 35) / 100,
       color: TriangleColorValues[randomNumberPlease(6, 0)],
     };
-  };
+  }, []);
 
   const [randomProps, setRandomProps] = useState<IStyledRandomTriangle>(
     getRandomProps()
@@ -94,7 +98,12 @@ function RandomTriangle({ speed }: IRandomTriangle) {
     }
   }, speed);
 
-  return <RandomTriangleStyle {...randomProps} />;
+  return (
+    <RandomTriangleStyle
+      {...randomProps}
+      onClick={() => setRandomProps(getRandomProps())}
+    />
+  );
 }
 
 export default RandomTriangle;
