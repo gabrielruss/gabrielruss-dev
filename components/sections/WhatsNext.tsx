@@ -57,7 +57,7 @@ function WhatsNext() {
             >
               <Icon iconName="linkedin" header="linkedin" iconType="svg" />
             </a> */}
-            {/* <a href="mailto:me@gabrielruss.dev">
+            {/* <a href="mailto:hi@gabrielruss.dev">
               <Icon iconName="email" header="email me" iconType="svg" />
             </a> */}
           </IconGrid>

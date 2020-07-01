@@ -106,7 +106,7 @@ const Resume = () => (
             <ul>
               <li>
                 Authored LeaseQuery's first reusable UI component library with
-                the goal of creating a consistant look and feel across all
+                the goal of creating a consistent look and feel across all
                 future projects.
               </li>
               <li>
@@ -173,7 +173,7 @@ const Resume = () => (
             {/* <br /> */}
             <ul>
               <li>
-                Within Microsoft ecosystem, built custom forms using React,
+                Within the Microsoft ecosystem, built custom forms using React,
                 TypeScript, and Office UI Fabric (UI framework).
               </li>
               <li>Developed and maintained custom solutions in C#.</li>
