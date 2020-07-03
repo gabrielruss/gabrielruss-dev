@@ -56,6 +56,7 @@ export const GlobalStyle = createGlobalStyle`
     /* makes about 17px of blank space on left side of screen */
     /* margin-left: calc(100vw - 100%); */
     overflow-x: hidden;
+    background-color: white;
   }
 
   *, *:before, *:after {
