@@ -18,7 +18,7 @@ const StyledWhatsNext = styled.div`
 
   ${IconWrapper} {
     ${StyledIcon} {
-      transition: 0.3s all ease-in-out;
+      transition: 0.1s all ease-in-out;
     }
     :hover {
       ${StyledIcon} {
@@ -51,15 +51,6 @@ function WhatsNext() {
                 <Icon iconName="email" iconType="svg" header="contact me" />
               </a>
             </Link>
-            {/* <a
-              href="https://www.linkedin.com/in/gabriel-russ-2ab06930/"
-              target="_blank"
-            >
-              <Icon iconName="linkedin" header="linkedin" iconType="svg" />
-            </a> */}
-            {/* <a href="mailto:hi@gabrielruss.dev">
-              <Icon iconName="email" header="email me" iconType="svg" />
-            </a> */}
           </IconGrid>
         </StyledBorderContainer>
       </StyledWhatsNext>
