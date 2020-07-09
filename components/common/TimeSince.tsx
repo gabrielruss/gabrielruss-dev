@@ -27,7 +27,7 @@ function TimeSince({ startDate }: ITimeSinceProps) {
   const months = differenceInMonths(new Date(), startDate);
   const years = Math.floor(months / 12);
 
-  const remainingMonths = months - years * 12 + 1;
+  const remainingMonths = months - years * 12;
 
   return (
     <TimeSinceWrapper>

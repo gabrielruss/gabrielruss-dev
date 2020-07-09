@@ -33,7 +33,7 @@ function Time() {
             🤓
             <br /> i've been a developer for
           </Header>
-          <TimeSince startDate={new Date(2014, 7)} />
+          <TimeSince startDate={new Date(2014, 6)} />
         </TimeHeader>
         <TimeContent>
           <div>
@@ -41,14 +41,14 @@ function Time() {
               👶
               <br /> father for{' '}
             </Header>
-            <TimeSince startDate={new Date(2013, 8)} />
+            <TimeSince startDate={new Date(2013, 7)} />
           </div>
           <div>
             <Header size="medium">
               💍
               <br /> married for{' '}
             </Header>
-            <TimeSince startDate={new Date(2011, 8)} />
+            <TimeSince startDate={new Date(2011, 7)} />
           </div>
         </TimeContent>
       </FrostedGlass>
