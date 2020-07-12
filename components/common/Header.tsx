@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { theme } from '..';
+import { theme } from '../styles';
 
 const getTypeFontSize = (size: HeaderSizes) => {
   switch (size) {

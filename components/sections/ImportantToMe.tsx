@@ -1,7 +1,6 @@
-import { styled } from '..';
-import StyledContainer from '../styles/StyledContainer';
-import Header from '../common/Header';
-import FrostedGlass from '../styles/FrostedGlass';
+import { styled } from '../styles';
+import { StyledContainer, FrostedGlass } from '../styles/components';
+import { Header } from '../common';
 
 const ImportantToMeWrapper = styled.div`
   padding: 10rem 3rem;

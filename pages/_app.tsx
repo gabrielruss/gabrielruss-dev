@@ -1,9 +1,10 @@
 import App from 'next/app';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../components';
+
+import { theme } from '../components/styles';
+import { Meta } from '../components/common';
 import Page from '../components/Page';
-import Meta from '../components/common/Meta';
 
 export default class MyApp extends App {
   render() {

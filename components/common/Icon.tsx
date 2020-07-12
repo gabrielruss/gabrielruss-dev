@@ -1,4 +1,4 @@
-import { styled } from '..';
+import { styled } from '../styles';
 import Header from './Header';
 
 type IconNames =

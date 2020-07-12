@@ -1,10 +1,9 @@
-import { styled } from '.';
-import Header, { StyledHeader } from './common/Header';
 import { differenceInYears } from 'date-fns';
-import StyledButton from './styles/StyledButton';
-import FrostedGlass from './styles/FrostedGlass';
+
+import { styled } from './styles';
+import { StyledButton, StyledLink, FrostedGlass } from './styles/components';
+import { StyledHeader, Header } from './common';
 import { RESUME_DL_LINK } from './util/_constants';
-import StyledLink from './styles/StyledLink';
 
 const ResumeWrapper = styled.span`
   ${StyledButton} {

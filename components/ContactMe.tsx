@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import StyledBorderContainer from './styles/StyledBorderContainer';
-import Header from './common/Header';
-import StyledLink from './styles/StyledLink';
-import Icon, { StyledIcon } from './common/Icon';
+import { StyledBorderContainer, StyledLink } from './styles/components';
+import { StyledIcon, Header, Icon } from './common';
 
 const RightContainer = styled.div`
   display: grid;

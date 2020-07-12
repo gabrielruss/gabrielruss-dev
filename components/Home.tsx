@@ -1,9 +1,7 @@
 import TitleCard from './sections/TitleCard';
-
-import Icon from './common/Icon';
-import Header from './common/Header';
-import { ContainerSeperator } from './styles/ContainerSeperator';
+import { ContainerSeperator } from './styles/components';
 import { Time, Skills, ImportantToMe, WhatsNext } from './sections';
+import { Icon, Header } from './common';
 
 const Home = () => (
   <>

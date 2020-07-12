@@ -1,6 +1,6 @@
-import { GlobalStyle, styled } from '.';
+import { styled, GlobalStyle } from './styles';
 import Nav from './Nav';
-import { TriangleOverlay } from './sections/TriangleOverlay';
+import { TriangleOverlay } from './sections';
 
 const StyledPage = styled.div`
   z-index: 1;

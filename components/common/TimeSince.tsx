@@ -1,6 +1,6 @@
-import { styled } from '..';
 import { differenceInMonths } from 'date-fns';
 
+import { styled } from '../styles';
 import Header from './Header';
 
 const TimeSinceWrapper = styled.div`

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { styled } from '.';
-import ActiveLink from './common/ActiveLink';
-import FrostedGlass from './styles/FrostedGlass';
+
+import { styled } from './styles';
+import { FrostedGlass } from './styles/components';
+import { ActiveLink } from './common';
 
 const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
   padding: 0 5rem;

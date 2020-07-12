@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-
-import StyledContainer from '../styles/StyledContainer';
-import Header from '../common/Header';
-import StyledBorderContainer from '../styles/StyledBorderContainer';
-import Icon, { IconWrapper, StyledIcon } from '../common/Icon';
-import { IconGrid } from './Skills';
+import {
+  StyledContainer,
+  StyledBorderContainer,
+  IconGrid,
+} from '../styles/components';
+import { Header, Icon, IconWrapper, StyledIcon } from '../common';
 
 const StyledWhatsNext = styled.div`
   position: relative;

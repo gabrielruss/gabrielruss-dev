@@ -1,5 +1,5 @@
-import { styled } from '..';
-import RandomTriangle from '../common/RandomTriangle';
+import { styled } from '../styles';
+import { RandomTriangle } from '../common';
 
 const StyledTriangleOverlay = styled.div`
   z-index: 1000;

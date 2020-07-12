@@ -1,6 +1,6 @@
-import { styled } from '..';
-import StyledBorderContainer from '../styles/StyledBorderContainer';
-import Header from '../common/Header';
+import { styled } from '../styles';
+import { StyledBorderContainer } from '../styles/components';
+import { Header } from '../common';
 
 // FYI long square is an inside joke between my wife and I
 // I am aware what a rectangle is :)

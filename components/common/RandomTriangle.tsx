@@ -1,7 +1,8 @@
-import { styled } from '..';
 import { useState, useCallback } from 'react';
+
+import { styled } from '../styles';
 import { randomNumberPlease } from '../util/_helpers';
-import useInterval from '../hooks/useInterval';
+import { useInterval } from '../hooks';
 
 export enum TriangleColors {
   TEAL = 'teal',
