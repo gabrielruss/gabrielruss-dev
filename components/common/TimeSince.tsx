@@ -1,6 +1,6 @@
-import { styled } from '..';
 import { differenceInMonths } from 'date-fns';
 
+import { styled } from '../styles';
 import Header from './Header';
 
 const TimeSinceWrapper = styled.div`
@@ -12,18 +12,22 @@ const TimeSinceWrapper = styled.div`
   div {
     display: flex;
     align-items: center;
+
+    p {
+      margin-left: 0.5rem;
+    }
   }
 `;
 
-interface ITimeSinceProps {
+interface TimeSinceProps {
   startDate: Date;
 }
 
-function TimeSince({ startDate }: ITimeSinceProps) {
+function TimeSince({ startDate }: TimeSinceProps) {
   const months = differenceInMonths(new Date(), startDate);
   const years = Math.floor(months / 12);
 
-  const remainingMonths = months - years * 12 + 1;
+  const remainingMonths = months - years * 12;
 
   return (
     <TimeSinceWrapper>

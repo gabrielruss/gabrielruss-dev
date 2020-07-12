@@ -1,7 +1,7 @@
-import { styled } from '..';
+import { styled } from '../styles';
 import Header from './Header';
 
-type IconTypes =
+type IconNames =
   | 'javascript'
   | 'react'
   | 'typescript'
@@ -10,31 +10,39 @@ type IconTypes =
   | 'sass'
   | 'python'
   | 'graphql'
-  | 'styled-components';
+  | 'styled-components'
+  | 'next'
+  | 'arrow-right'
+  | 'linkedin'
+  | 'email'
+  | 'github'
+  | 'professional';
 
-interface IIconProps {
-  iconType: IconTypes;
+interface IconProps {
+  iconName: IconNames;
+  iconType?: 'png' | 'svg';
   header?: string;
   footer?: string;
 }
 
-const StyledIcon = styled.img`
-  width: 8rem;
+export const StyledIcon = styled.img`
+  max-width: 8rem;
+  max-height: 8rem;
   margin: 1rem 0;
 `;
 
-const IconWrapper = styled.div`
+export const IconWrapper = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
 `;
 
-function Icon({ iconType, header, footer }: IIconProps) {
+function Icon({ iconName, header, footer, iconType = 'png' }: IconProps) {
   return (
     <IconWrapper>
       <Header size="small">{header}</Header>
-      <StyledIcon src={`./icons/${iconType}.png`} />
+      <StyledIcon src={`./icons/${iconName}.${iconType}`} />
       <Header size="small">{footer}</Header>
     </IconWrapper>
   );

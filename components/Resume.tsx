@@ -1,16 +1,16 @@
-import { styled } from '.';
-import Header, { StyledHeader } from './common/Header';
 import { differenceInYears } from 'date-fns';
-import StyledButton from './styles/StyledButton';
-import FrostedGlass from './common/FrostedGlass';
-import { RESUME_VIEW_LINK } from './utilities/_constants';
+
+import { styled } from './styles';
+import { StyledButton, StyledLink, FrostedGlass } from './styles/components';
+import { StyledHeader, Header } from './common';
+import { RESUME_DL_LINK } from './util/_constants';
 
 const ResumeWrapper = styled.span`
   ${StyledButton} {
     position: absolute;
     left: 5rem;
 
-    @media (max-width: ${props => props.theme.break_large}) {
+    @media (max-width: ${(props) => props.theme.break_large}) {
       margin: 0 auto;
       left: 0;
       right: 0;
@@ -23,10 +23,15 @@ const ResumeContainer = styled.div`
   flex-flow: column;
   text-align: left;
   margin: 10rem auto 0;
-  max-width: ${props => props.theme.break_medium};
+  max-width: ${(props) => props.theme.break_medium};
 
   > :first-child {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  ${StyledLink} {
+    margin-bottom: 2rem;
+    margin-left: 10rem;
   }
 
   > :last-child {
@@ -42,12 +47,12 @@ const ResumeSection = styled.div`
     margin-bottom: 2rem;
   }
 
-  @media (max-width: ${props => props.theme.break_medium}) {
+  @media (max-width: ${(props) => props.theme.break_medium}) {
     margin-left: 5rem;
   }
 
-  @media (max-width: ${props => props.theme.break_small}) {
-    margin: auto;
+  @media (max-width: ${(props) => props.theme.break_small}) {
+    margin: 0;
   }
 `;
 
@@ -68,62 +73,72 @@ const years = differenceInYears(new Date(), new Date(2014, 8));
 
 const Resume = () => (
   <ResumeWrapper>
-    <StyledButton onClick={() => window.open(RESUME_VIEW_LINK, '_blank')}>
-      Google Drive Link
-    </StyledButton>
     <FrostedGlass>
       <ResumeContainer>
         <Header size="medium">{`<Resume>`}</Header>
+        <StyledLink href={RESUME_DL_LINK} target="_blank">
+          Download a copy
+        </StyledLink>
         <ResumeSection>
           <Header size="small">Specialties</Header>
           <ResumeSubSection>
             <ul>
               <li>{years} years of experience with JavaScript</li>
               <li>{years} years of experience with React</li>
-              <li>Proficient in TypeScript, HTML, and CSS</li>
-              <li>Familiar with GraphQL, Apollo Client, Angular, C#, Java</li>
+              <li>Proficient in TypeScript, SASS, and styled-components</li>
+              <li>Dabbled in GraphQL, C#, Java, and Python</li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
-        <ResumeSection>
-          <Header size="small">Education</Header>
-          <ResumeSubSection>
-            <b>Georgia Southern University</b>
-            <p>BBA in Information Systems</p>
-            <p>December 2011</p>
-            <p>Dean’s List: Fall 2010, Spring 2011, Fall 2011</p>
-          </ResumeSubSection>
-        </ResumeSection>
+
         <ResumeSection>
           <Header size="small">Work Experience</Header>
           <ResumeSubSection>
             <b>LeaseQuery</b>
-            <p>UI Engineer</p>
+            <p>Lead UI Engineer</p>
             <p>May 2019 - Present</p>
             <br />
             <p>
-              Led the Front-End Development effort to create a new SAAS product
-              for lease accounting using React (16.8), TypeScript, Redux,
-              react-router, react-testing-library, and formik.
+              Led the front-end development effort to create multiple new SaaS
+              products for lease accounting.
             </p>
             <ul>
               <li>
-                Worked closely with back-end developer, product owner, UX
-                designer, QA engineer, and junior developers.
+                Authored LeaseQuery's first reusable UI component library with
+                the goal of creating a consistent look and feel across all
+                future projects.
+              </li>
+              <li>
+                Ensured reusable components were tested and met WCAG 2.0 AA or
+                AAA accessibility standards.
+              </li>
+              <li>
+                Became an honorary member of the UX Design team by participating
+                in design studios and regular UX discussions.
               </li>
               <li>Ensured code quality by conducting code reviews.</li>
               <li>
-                Set up and maintained branching strategies and pull request/jira
-                ticket organization.
+                Worked on the integration of 3rd party APIs into LeaseQuery's
+                tools.
               </li>
               <li>
-                Coordinated with dev-ops to set up CI for running, testing, and
-                deploying each branch of the code.
+                The libraries that I used include:
+                <ul>
+                  <li>React (16.8+)</li>
+                  <li>TypeScript</li>
+                  <li>Next.js</li>
+                  <li>Storybook</li>
+                  <li>styled-components</li>
+                  <li>react-testing-library</li>
+                  <li>react-router</li>
+                  <li>Redux</li>
+                  <li>Formik</li>
+                </ul>
               </li>
             </ul>
           </ResumeSubSection>
           <ResumeSubSection>
-            <b>Intellinet Consulting</b>
+            <b>Intellinet</b>
             <p>Senior Developer</p>
             <p>August 2017 - May 2019</p>
             <br />
@@ -135,23 +150,19 @@ const Resume = () => (
             </p>
             <ul>
               <li>
-                Led the Front-End Development team on an agile, large-scale EMR
+                Led the front-end development team on an agile, large-scale EMR
                 solution using React, Redux, react-router, and
-                react-testing-library
+                react-testing-library.
               </li>
               <li>
                 Worked with the UX team to translate wireframes and business
-                requirements into working solutions
+                requirements into working solutions.
               </li>
               <li>
-                Worked with the Back-End team to ensure custom APIs meet
-                acceptance criteria
+                Worked with the Back-End team to ensure custom APIs met
+                acceptance criteria.
               </li>
-              <li>Developed custom Web APIs in .NET Core (C#)</li>
-              <li>
-                Developed and consumed a SignalR websocket to provide real time
-                updates to the UI
-              </li>
+              <li>Developed custom Web APIs in .NET Core (C#).</li>
             </ul>
           </ResumeSubSection>
           <ResumeSubSection>
@@ -161,14 +172,11 @@ const Resume = () => (
             {/* <br /> */}
             <ul>
               <li>
-                Within Microsoft ecosystem, built custom forms using React,
-                TypeScript, and Office UI Fabric (UI framework)
+                Within the Microsoft ecosystem, built custom forms using React,
+                TypeScript, and Office UI Fabric (UI framework).
               </li>
-              <li>
-                Developed and maintained custom solutions in C# to meet required
-                business logic
-              </li>
-              <li>Built out a development infrastructure within Azure</li>
+              <li>Developed and maintained custom solutions in C#.</li>
+              <li>Built a development infrastructure within Azure.</li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
@@ -193,6 +201,15 @@ const Resume = () => (
             <b>Georgia Southern University</b>
             <p>SharePoint Engineer Intern</p>
             <p>February 2011 - December 2011</p>
+          </ResumeSubSection>
+        </ResumeSection>
+        <ResumeSection>
+          <Header size="small">Education</Header>
+          <ResumeSubSection>
+            <b>Georgia Southern University</b>
+            <p>BBA in Information Systems</p>
+            <p>December 2011</p>
+            <p>Dean’s List: Fall 2010, Spring 2011, Fall 2011</p>
           </ResumeSubSection>
         </ResumeSection>
         <Header size="medium">{`</Resume>`}</Header>

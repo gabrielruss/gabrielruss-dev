@@ -1,10 +1,6 @@
 import { styled } from '..';
 
 const FrostedGlass = styled.div`
-  /* frosted glass for chrome */
-  /* background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px); */
-
   position: relative;
   z-index: 1;
 

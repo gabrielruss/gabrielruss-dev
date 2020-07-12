@@ -1,10 +1,9 @@
-import Header, { StyledHeader } from '../common/Header';
-import StyledContainer from '../styles/StyledContainer';
-import { styled } from '..';
-import FrostedGlass from '../common/FrostedGlass';
+import { styled } from '../styles';
+import { StyledContainer, FrostedGlass } from '../styles/components';
+import { Header, StyledHeader } from '../common';
 
 const StyledSkills = styled.div`
-  > ${StyledHeader} {
+  ${StyledHeader} {
     margin-bottom: 3rem;
   }
 `;
@@ -13,16 +12,21 @@ const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 5rem;
-  max-width: ${props => props.theme.break_large};
+  max-width: ${(props) => props.theme.break_large};
   width: calc(100vw - 33px);
   padding: 0 2rem;
+
+  ${StyledHeader} {
+    /* stops skill headers from inheriting margin-bottom above */
+    margin-bottom: unset;
+  }
 `;
 
-interface ISkillsProps {
+interface SkillsProps {
   header: string | JSX.Element;
 }
 
-function Skills({ header, children }: React.PropsWithChildren<ISkillsProps>) {
+function Skills({ header, children }: React.PropsWithChildren<SkillsProps>) {
   return (
     <StyledContainer>
       <StyledSkills>

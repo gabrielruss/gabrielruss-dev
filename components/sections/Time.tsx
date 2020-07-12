@@ -1,20 +1,15 @@
-import Header, { StyledHeader } from '../common/Header';
-import TimeSince from '../common/TimeSince';
-import { styled } from '..';
-import FrostedGlass from '../common/FrostedGlass';
+import { styled } from '../styles';
+import { FrostedGlass } from '../styles/components';
+import { Header, TimeSince } from '../common';
 
 const TimeWrapper = styled.div`
-  display: grid;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   min-height: 100vh;
-  gap: 2rem;
 `;
 
 const TimeHeader = styled.div`
-  @media (max-width: ${props => props.theme.break_small}) {
-    padding: 0 10rem;
+  @media (max-width: ${(props) => props.theme.break_small}) {
+    padding: 0;
   }
 `;
 
@@ -22,6 +17,10 @@ const TimeContent = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
   gap: 2rem;
+
+  @media (max-width: ${(props) => props.theme.break_small}) {
+    grid-template-columns: auto;
+  }
 `;
 
 function Time() {
@@ -31,9 +30,9 @@ function Time() {
         <TimeHeader>
           <Header size="medium">
             🤓
-            <br /> i have been a developer for give or take...
+            <br /> i've been a developer for
           </Header>
-          <TimeSince startDate={new Date(2014, 7)} />
+          <TimeSince startDate={new Date(2014, 6)} />
         </TimeHeader>
         <TimeContent>
           <div>
@@ -41,21 +40,16 @@ function Time() {
               👶
               <br /> father for{' '}
             </Header>
-            <TimeSince startDate={new Date(2013, 8)} />
+            <TimeSince startDate={new Date(2013, 7)} />
           </div>
           <div>
             <Header size="medium">
               💍
               <br /> married for{' '}
             </Header>
-            <TimeSince startDate={new Date(2011, 8)} />
+            <TimeSince startDate={new Date(2011, 7)} />
           </div>
         </TimeContent>
-        {/* <p>
-      By the way...that isn't an error in months...
-      <br />
-      Major events just seem to happen around August in my life for some reason
-    </p> */}
       </FrostedGlass>
     </TimeWrapper>
   );

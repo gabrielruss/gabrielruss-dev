@@ -1,7 +1,8 @@
-import { styled } from '..';
-import { useState } from 'react';
-import { randomNumberPlease } from '../utilities/_helpers';
-import useInterval from '../hooks/useInterval';
+import { useState, useCallback } from 'react';
+
+import { styled } from '../styles';
+import { randomNumberPlease } from '../util/_helpers';
+import { useInterval } from '../hooks';
 
 export enum TriangleColors {
   TEAL = 'teal',
@@ -16,7 +17,7 @@ const TriangleColorValues: TriangleColors[] = Object.values(TriangleColors).map(
   (t: TriangleColors) => t
 );
 
-export interface ITrangleProps {
+export interface StyledRandomTriangleProps {
   top: number;
   right: number;
   rotation: '' | 'reverse';
@@ -26,17 +27,17 @@ export interface ITrangleProps {
   color: TriangleColors;
 }
 
-const RandomTriangleStyle = styled.div<ITrangleProps>`
+const RandomTriangleStyle = styled.div<StyledRandomTriangleProps>`
   position: fixed;
-  background-color: ${props => props.theme.colors[props.color]};
+  background-color: ${(props) => props.theme.colors[props.color]};
 
-  top: ${props => props.top}rem;
-  right: ${props => props.right}vw;
+  top: ${(props) => props.top}rem;
+  right: ${(props) => props.right}vw;
 
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
 
-  opacity: ${props => props.opacity};
+  opacity: ${(props) => props.opacity};
 
   transition: 2s all ease;
 
@@ -44,7 +45,7 @@ const RandomTriangleStyle = styled.div<ITrangleProps>`
 
   -webkit-animation: spin 150s linear infinite;
   -moz-animation: spin 150s linear infinite;
-  animation: spin 150s linear infinite ${props => props.rotation};
+  animation: spin 150s linear infinite ${(props) => props.rotation};
 
   @-moz-keyframes spin {
     100% {
@@ -62,10 +63,18 @@ const RandomTriangleStyle = styled.div<ITrangleProps>`
       transform: rotate(360deg);
     }
   }
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
-const RandomTriangle = ({ speed }: { speed: number }) => {
-  const getRandomProps = (): ITrangleProps => {
+interface RandomTriangleModel {
+  speed: number;
+}
+
+function RandomTriangle({ speed }: RandomTriangleModel) {
+  const getRandomProps = useCallback((): StyledRandomTriangleProps => {
     return {
       top: randomNumberPlease(100, 10),
       right: randomNumberPlease(90, 0),
@@ -75,9 +84,9 @@ const RandomTriangle = ({ speed }: { speed: number }) => {
       opacity: randomNumberPlease(65, 35) / 100,
       color: TriangleColorValues[randomNumberPlease(6, 0)],
     };
-  };
+  }, []);
 
-  const [randomProps, setRandomProps] = useState<ITrangleProps>(
+  const [randomProps, setRandomProps] = useState<StyledRandomTriangleProps>(
     getRandomProps()
   );
 
@@ -90,7 +99,12 @@ const RandomTriangle = ({ speed }: { speed: number }) => {
     }
   }, speed);
 
-  return <RandomTriangleStyle {...randomProps} />;
-};
+  return (
+    <RandomTriangleStyle
+      {...randomProps}
+      onClick={() => setRandomProps(getRandomProps())}
+    />
+  );
+}
 
 export default RandomTriangle;
