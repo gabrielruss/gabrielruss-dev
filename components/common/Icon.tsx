@@ -18,7 +18,7 @@ type IconNames =
   | 'github'
   | 'professional';
 
-interface IIconProps {
+interface IconProps {
   iconName: IconNames;
   iconType?: 'png' | 'svg';
   header?: string;
@@ -38,7 +38,7 @@ export const IconWrapper = styled.div`
   align-items: center;
 `;
 
-function Icon({ iconName, header, footer, iconType = 'png' }: IIconProps) {
+function Icon({ iconName, header, footer, iconType = 'png' }: IconProps) {
   return (
     <IconWrapper>
       <Header size="small">{header}</Header>

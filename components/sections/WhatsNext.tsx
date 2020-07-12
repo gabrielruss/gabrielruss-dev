@@ -33,7 +33,7 @@ function WhatsNext() {
     <StyledContainer>
       <StyledWhatsNext>
         <StyledBorderContainer>
-          <Header size="medium">What next?</Header>
+          <Header size="medium">what's next?</Header>
           <IconGrid>
             <Link href="/resume">
               <a>

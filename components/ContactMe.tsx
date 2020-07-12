@@ -61,15 +61,6 @@ function ContactMe() {
         <RightContainer>
           <IconLink>
             <StyledLink
-              href="https://github.com/gabrielruss?tab=repositories"
-              target="_blank"
-            >
-              Github
-            </StyledLink>
-            <Icon iconName="github" iconType="svg" />
-          </IconLink>
-          <IconLink>
-            <StyledLink
               href="https://www.linkedin.com/in/gabriel-russ-2ab06930/"
               target="_blank"
             >

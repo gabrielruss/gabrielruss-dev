@@ -19,11 +19,11 @@ const TimeSinceWrapper = styled.div`
   }
 `;
 
-interface ITimeSinceProps {
+interface TimeSinceProps {
   startDate: Date;
 }
 
-function TimeSince({ startDate }: ITimeSinceProps) {
+function TimeSince({ startDate }: TimeSinceProps) {
   const months = differenceInMonths(new Date(), startDate);
   const years = Math.floor(months / 12);
 

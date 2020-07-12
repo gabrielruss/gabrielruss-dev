@@ -16,7 +16,7 @@ const TriangleColorValues: TriangleColors[] = Object.values(TriangleColors).map(
   (t: TriangleColors) => t
 );
 
-export interface IStyledRandomTriangle {
+export interface StyledRandomTriangleProps {
   top: number;
   right: number;
   rotation: '' | 'reverse';
@@ -26,7 +26,7 @@ export interface IStyledRandomTriangle {
   color: TriangleColors;
 }
 
-const RandomTriangleStyle = styled.div<IStyledRandomTriangle>`
+const RandomTriangleStyle = styled.div<StyledRandomTriangleProps>`
   position: fixed;
   background-color: ${(props) => props.theme.colors[props.color]};
 
@@ -68,12 +68,12 @@ const RandomTriangleStyle = styled.div<IStyledRandomTriangle>`
   }
 `;
 
-interface IRandomTriangle {
+interface RandomTriangleModel {
   speed: number;
 }
 
-function RandomTriangle({ speed }: IRandomTriangle) {
-  const getRandomProps = useCallback((): IStyledRandomTriangle => {
+function RandomTriangle({ speed }: RandomTriangleModel) {
+  const getRandomProps = useCallback((): StyledRandomTriangleProps => {
     return {
       top: randomNumberPlease(100, 10),
       right: randomNumberPlease(90, 0),
@@ -85,18 +85,18 @@ function RandomTriangle({ speed }: IRandomTriangle) {
     };
   }, []);
 
-  const [randomProps, setRandomProps] = useState<IStyledRandomTriangle>(
+  const [randomProps, setRandomProps] = useState<StyledRandomTriangleProps>(
     getRandomProps()
   );
 
-  // useInterval(() => {
-  //   const trianglePick1 = randomNumberPlease(15, 1);
-  //   const trianglePick2 = randomNumberPlease(15, 1);
+  useInterval(() => {
+    const trianglePick1 = randomNumberPlease(15, 1);
+    const trianglePick2 = randomNumberPlease(15, 1);
 
-  //   if (trianglePick1 === trianglePick2) {
-  //     setRandomProps(getRandomProps());
-  //   }
-  // }, speed);
+    if (trianglePick1 === trianglePick2) {
+      setRandomProps(getRandomProps());
+    }
+  }, speed);
 
   return (
     <RandomTriangleStyle

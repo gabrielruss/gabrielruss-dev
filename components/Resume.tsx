@@ -3,7 +3,7 @@ import Header, { StyledHeader } from './common/Header';
 import { differenceInYears } from 'date-fns';
 import StyledButton from './styles/StyledButton';
 import FrostedGlass from './styles/FrostedGlass';
-import { RESUME_VIEW_LINK } from './util/_constants';
+import { RESUME_DL_LINK } from './util/_constants';
 import StyledLink from './styles/StyledLink';
 
 const ResumeWrapper = styled.span`
@@ -77,7 +77,7 @@ const Resume = () => (
     <FrostedGlass>
       <ResumeContainer>
         <Header size="medium">{`<Resume>`}</Header>
-        <StyledLink href={RESUME_VIEW_LINK} target="_blank">
+        <StyledLink href={RESUME_DL_LINK} target="_blank">
           Download a copy
         </StyledLink>
         <ResumeSection>
@@ -86,7 +86,7 @@ const Resume = () => (
             <ul>
               <li>{years} years of experience with JavaScript</li>
               <li>{years} years of experience with React</li>
-              <li>Proficient in TypeScript, SASS, and Styled-Components</li>
+              <li>Proficient in TypeScript, SASS, and styled-components</li>
               <li>Dabbled in GraphQL, C#, Java, and Python</li>
             </ul>
           </ResumeSubSection>
@@ -139,7 +139,7 @@ const Resume = () => (
             </ul>
           </ResumeSubSection>
           <ResumeSubSection>
-            <b>Intellinet Consulting</b>
+            <b>Intellinet</b>
             <p>Senior Developer</p>
             <p>August 2017 - May 2019</p>
             <br />

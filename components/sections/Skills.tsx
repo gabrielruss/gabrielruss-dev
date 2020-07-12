@@ -32,11 +32,11 @@ const SkillsGrid = styled.div`
   }
 `;
 
-interface ISkillsProps {
+interface SkillsProps {
   header: string | JSX.Element;
 }
 
-function Skills({ header, children }: React.PropsWithChildren<ISkillsProps>) {
+function Skills({ header, children }: React.PropsWithChildren<SkillsProps>) {
   return (
     <StyledContainer>
       <StyledSkills>

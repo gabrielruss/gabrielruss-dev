@@ -1,15 +1,11 @@
 import { styled } from '..';
 import RandomTriangle from '../common/RandomTriangle';
 
-interface IStyledTriangleOverlay {
-  triangles: number;
-}
-
-const StyledTriangleOverlay = styled.div<IStyledTriangleOverlay>`
+const StyledTriangleOverlay = styled.div`
   z-index: 1000;
 `;
 
-interface ITriangleOverlay {
+interface TriangleOverlayProps {
   speed?: number;
   baseTriangles?: number;
 }
@@ -18,7 +14,7 @@ export function TriangleOverlay({
   speed = 5000,
   baseTriangles = 15,
   children,
-}: React.PropsWithChildren<ITriangleOverlay>) {
+}: React.PropsWithChildren<TriangleOverlayProps>) {
   const getInitialTriangles = () => {
     const triangles = [];
 
@@ -30,7 +26,7 @@ export function TriangleOverlay({
   };
 
   return (
-    <StyledTriangleOverlay triangles={baseTriangles}>
+    <StyledTriangleOverlay>
       {getInitialTriangles()}
       {children}
     </StyledTriangleOverlay>
