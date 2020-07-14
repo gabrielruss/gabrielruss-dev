@@ -11,7 +11,6 @@ const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
   position: sticky;
   display: grid;
   top: 0;
-  z-index: 9999;
 
   ul {
     display: grid;
@@ -76,6 +75,13 @@ const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
 
         :nth-child(2) {
           display: ${(props) => (props.isHome ? 'inherit' : 'none')};
+        }
+
+        :nth-child(2),
+        :nth-child(3) {
+          width: ${(props) =>
+            props.showNavName && props.isHome ? '3rem' : 'auto'};
+          transition: 0.3s width ease-in-out;
         }
 
         :last-child {
