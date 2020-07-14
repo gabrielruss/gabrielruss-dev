@@ -8,6 +8,13 @@ const StyledPage = styled.div`
   color: ${(props) => props.theme.colors.black};
 `;
 
+const NavWrapper = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  padding: 0 5rem;
+`;
+
 const Inner = styled.main`
   max-width: ${(props) => props.theme.break_large};
   margin: 0 auto;
@@ -19,7 +26,9 @@ function Page({ children }) {
     <>
       <GlobalStyle />
       <StyledPage>
-        <Nav />
+        <NavWrapper>
+          <Nav />
+        </NavWrapper>
         <TriangleOverlay>
           <Inner>{children}</Inner>
         </TriangleOverlay>
