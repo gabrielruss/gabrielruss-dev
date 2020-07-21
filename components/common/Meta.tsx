@@ -9,10 +9,16 @@ const Meta = () => (
       property="og:description"
       content="making the internet a better place, one div at a time"
     />
-    <meta property="og:image" content="/static/biglogo.png" />
+    <meta
+      property="og:image"
+      content="https://photos.app.goo.gl/yutZCka15PimR7Wp9"
+    />
     <meta property="og:url" content="https://gabrielruss.dev" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="/static/biglogo.png" />
+    <meta
+      name="twitter:image"
+      content="https://photos.app.goo.gl/yutZCka15PimR7Wp9"
+    />
     <meta name="twitter:image:alt" content="Gabriel Russ Portfolio" />
     <link rel="shortcut icon" href="/static/favicon.ico" />
     <title>Gabriel Russ Portfolio</title>
