@@ -18,15 +18,15 @@ const Meta = () => (
     />
     <meta property="og:image" content="/static/biglogo.png" />
     {/* Twitter */}
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://gabrielruss.dev/" />
-    <meta property="twitter:title" content="Gabriel Russ Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://gabrielruss.dev/" />
+    <meta name="twitter:title" content="Gabriel Russ Portfolio" />
     <meta
-      property="twitter:description"
+      name="twitter:description"
       content="making the internet a better place, one div at a time"
     />
-    <meta property="twitter:image" content="/static/biglogo.png" />
-    <meta property="twitter:image:alt" content="Gabriel Russ Portfolio" />
+    <meta name="twitter:image" content="/static/biglogo.png" />
+    <meta name="twitter:image:alt" content="Gabriel Russ Portfolio" />
   </Head>
 );
 
