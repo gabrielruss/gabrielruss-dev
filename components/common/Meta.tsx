@@ -12,6 +12,7 @@ const Meta = () => (
     <meta property="og:image" content="/static/biglogo.png" />
     <meta property="og:url" content="https://gabrielruss.dev" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/static/biglogo.png" />
     <meta name="twitter:image:alt" content="Gabriel Russ Portfolio" />
     <link rel="shortcut icon" href="/static/favicon.ico" />
     <title>Gabriel Russ Portfolio</title>
