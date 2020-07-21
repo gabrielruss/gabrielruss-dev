@@ -16,10 +16,7 @@ const Meta = () => (
       property="og:description"
       content="making the internet a better place, one div at a time"
     />
-    <meta
-      property="og:image"
-      content="https://gabrielruss.dev/static/biglogo.png"
-    />
+    <meta property="og:image" content="/static/biglogo.png" />
     {/* Twitter */}
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://gabrielruss.dev/" />
@@ -28,10 +25,7 @@ const Meta = () => (
       property="twitter:description"
       content="making the internet a better place, one div at a time"
     />
-    <meta
-      property="twitter:image"
-      content="https://gabrielruss.dev/static/biglogo.png"
-    />
+    <meta property="twitter:image" content="/static/biglogo.png" />
     <meta property="twitter:image:alt" content="Gabriel Russ Portfolio" />
   </Head>
 );
