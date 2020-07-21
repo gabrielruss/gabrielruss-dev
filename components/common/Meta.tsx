@@ -14,7 +14,7 @@ const Meta = () => (
     <meta property="og:title" content="Gabriel Russ Portfolio" />
     <meta
       property="og:description"
-      content="making the internet a better place, one div at a time"
+      content="Making the internet a better place, one div at a time."
     />
     <meta property="og:image" content="/static/biglogo.png" />
     {/* Twitter */}
@@ -23,7 +23,7 @@ const Meta = () => (
     <meta name="twitter:title" content="Gabriel Russ Portfolio" />
     <meta
       name="twitter:description"
-      content="making the internet a better place, one div at a time"
+      content="Making the internet a better place, one div at a time."
     />
     <meta name="twitter:image" content="/static/biglogo.png" />
     <meta name="twitter:image:alt" content="Gabriel Russ Portfolio" />
