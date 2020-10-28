@@ -59,7 +59,7 @@ function ContactMe() {
         <RightContainer>
           <IconLink>
             <StyledLink
-              href="https://www.linkedin.com/in/gabriel-russ-2ab06930/"
+              href="https://www.linkedin.com/in/gabriel-russ/"
               target="_blank"
             >
               LinkedIn
