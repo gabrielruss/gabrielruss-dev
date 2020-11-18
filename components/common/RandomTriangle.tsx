@@ -12,7 +12,6 @@ export enum TriangleColors {
 }
 
 export interface RandomTriangleProps {
-  uniqueId: number;
   top: number;
   right: number;
   rotation: '' | 'reverse';
