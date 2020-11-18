@@ -11,7 +11,8 @@ export enum TriangleColors {
   BLUE = 'blue',
 }
 
-export interface StyledRandomTriangleProps {
+export interface RandomTriangleProps {
+  uniqueId: number;
   top: number;
   right: number;
   rotation: '' | 'reverse';
@@ -21,7 +22,7 @@ export interface StyledRandomTriangleProps {
   color: TriangleColors;
 }
 
-const RandomTriangleStyle = styled.div<StyledRandomTriangleProps>`
+const RandomTriangleStyle = styled.div<RandomTriangleProps>`
   position: fixed;
   background-color: ${(props) => props.theme.colors[props.color]};
 
@@ -57,23 +58,14 @@ const RandomTriangleStyle = styled.div<StyledRandomTriangleProps>`
       transform: rotate(360deg);
     }
   }
-  /* 
-  :hover {
-    cursor: pointer;
-  } */
 `;
 
 interface RandomTriangleModel {
-  randomProps: StyledRandomTriangleProps;
+  randomProps: RandomTriangleProps;
 }
 
 function RandomTriangle({ randomProps }: RandomTriangleModel) {
-  return (
-    <RandomTriangleStyle
-      {...randomProps}
-      // onClick={() => setRandomProps(getRandomProps())}
-    />
-  );
+  return <RandomTriangleStyle {...randomProps} />;
 }
 
 export default memo(RandomTriangle);
