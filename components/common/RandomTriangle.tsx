@@ -1,8 +1,6 @@
-import { useState, useCallback } from 'react';
+import { memo } from 'react';
 
 import { styled } from '../styles';
-import { randomNumberPlease } from '../util/_helpers';
-import { useInterval } from '../hooks';
 
 export enum TriangleColors {
   TEAL = 'teal',
@@ -13,11 +11,7 @@ export enum TriangleColors {
   BLUE = 'blue',
 }
 
-const TriangleColorValues: TriangleColors[] = Object.values(TriangleColors).map(
-  (t: TriangleColors) => t
-);
-
-export interface StyledRandomTriangleProps {
+export interface RandomTriangleProps {
   top: number;
   right: number;
   rotation: '' | 'reverse';
@@ -27,7 +21,7 @@ export interface StyledRandomTriangleProps {
   color: TriangleColors;
 }
 
-const RandomTriangleStyle = styled.div<StyledRandomTriangleProps>`
+const RandomTriangleStyle = styled.div<RandomTriangleProps>`
   position: fixed;
   background-color: ${(props) => props.theme.colors[props.color]};
 
@@ -63,48 +57,14 @@ const RandomTriangleStyle = styled.div<StyledRandomTriangleProps>`
       transform: rotate(360deg);
     }
   }
-  /* 
-  :hover {
-    cursor: pointer;
-  } */
 `;
 
 interface RandomTriangleModel {
-  speed: number;
+  randomProps: RandomTriangleProps;
 }
 
-function RandomTriangle({ speed }: RandomTriangleModel) {
-  const getRandomProps = useCallback((): StyledRandomTriangleProps => {
-    return {
-      top: randomNumberPlease(100, 10),
-      right: randomNumberPlease(90, 0),
-      rotation: Math.random() < 0.5 ? '' : 'reverse',
-      width: randomNumberPlease(115, 75),
-      height: randomNumberPlease(85, 45),
-      opacity: randomNumberPlease(65, 35) / 100,
-      color: TriangleColorValues[randomNumberPlease(6, 0)],
-    };
-  }, []);
-
-  const [randomProps, setRandomProps] = useState<StyledRandomTriangleProps>(
-    getRandomProps()
-  );
-
-  useInterval(() => {
-    const trianglePick1 = randomNumberPlease(15, 1);
-    const trianglePick2 = randomNumberPlease(15, 1);
-
-    if (trianglePick1 === trianglePick2) {
-      setRandomProps(getRandomProps());
-    }
-  }, speed);
-
-  return (
-    <RandomTriangleStyle
-      {...randomProps}
-      // onClick={() => setRandomProps(getRandomProps())}
-    />
-  );
+function RandomTriangle({ randomProps }: RandomTriangleModel) {
+  return <RandomTriangleStyle {...randomProps} />;
 }
 
-export default RandomTriangle;
+export default memo(RandomTriangle);
