@@ -79,15 +79,6 @@ function TriangleOverlay() {
     return () => clearInterval(interval);
   }, []);
 
-  // on load, create a list of triangle props
-  // map those out below
-
-  // set a timer and change 1-3 triangles based on a random number pick
-
-  // memoize the random triangles that way they don't re-render if their props don't change.
-
-  // troubleshoot the jumping at that point
-
   return (
     <StyledTriangleOverlay>
       {randomProps.map((rp, i) => {
