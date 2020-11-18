@@ -29,9 +29,8 @@ function Page({ children }) {
         <NavWrapper>
           <Nav />
         </NavWrapper>
-        <TriangleOverlay>
-          <Inner>{children}</Inner>
-        </TriangleOverlay>
+        <TriangleOverlay />
+        <Inner>{children}</Inner>
       </StyledPage>
     </>
   );
