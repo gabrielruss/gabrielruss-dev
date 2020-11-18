@@ -1,8 +1,6 @@
-import { useState, useCallback } from 'react';
+import { memo } from 'react';
 
 import { styled } from '../styles';
-import { randomNumberPlease } from '../util/_helpers';
-import { useInterval } from '../hooks';
 
 export enum TriangleColors {
   TEAL = 'teal',
@@ -12,10 +10,6 @@ export enum TriangleColors {
   BLACK = 'black',
   BLUE = 'blue',
 }
-
-const TriangleColorValues: TriangleColors[] = Object.values(TriangleColors).map(
-  (t: TriangleColors) => t
-);
 
 export interface StyledRandomTriangleProps {
   top: number;
@@ -70,35 +64,10 @@ const RandomTriangleStyle = styled.div<StyledRandomTriangleProps>`
 `;
 
 interface RandomTriangleModel {
-  speed: number;
+  randomProps: StyledRandomTriangleProps;
 }
 
-function RandomTriangle({ speed }: RandomTriangleModel) {
-  const getRandomProps = useCallback((): StyledRandomTriangleProps => {
-    return {
-      top: randomNumberPlease(100, 10),
-      right: randomNumberPlease(90, 0),
-      rotation: Math.random() < 0.5 ? '' : 'reverse',
-      width: randomNumberPlease(115, 75),
-      height: randomNumberPlease(85, 45),
-      opacity: randomNumberPlease(65, 35) / 100,
-      color: TriangleColorValues[randomNumberPlease(6, 0)],
-    };
-  }, []);
-
-  const [randomProps, setRandomProps] = useState<StyledRandomTriangleProps>(
-    getRandomProps()
-  );
-
-  useInterval(() => {
-    const trianglePick1 = randomNumberPlease(15, 1);
-    const trianglePick2 = randomNumberPlease(15, 1);
-
-    if (trianglePick1 === trianglePick2) {
-      setRandomProps(getRandomProps());
-    }
-  }, speed);
-
+function RandomTriangle({ randomProps }: RandomTriangleModel) {
   return (
     <RandomTriangleStyle
       {...randomProps}
@@ -107,4 +76,4 @@ function RandomTriangle({ speed }: RandomTriangleModel) {
   );
 }
 
-export default RandomTriangle;
+export default memo(RandomTriangle);
