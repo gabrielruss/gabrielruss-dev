@@ -5,6 +5,15 @@ import { styled } from './styles';
 import { FrostedGlass } from './styles/components';
 import { ActiveLink } from './common';
 
+const NavLinkWrapper = styled.div`
+  display: grid;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  justify-content: flex-end;
+`;
+
 const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
   padding: 0 5rem;
   margin-left: -17px;
@@ -12,14 +21,7 @@ const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
   display: grid;
   top: 0;
 
-  ul {
-    display: grid;
-    gap: 4rem;
-    margin: 0;
-    padding: 0;
-    grid-auto-flow: column;
-    justify-content: flex-end;
-
+  ${NavLinkWrapper} {
     a {
       text-decoration: none;
       font-size: 2rem;
@@ -51,7 +53,7 @@ const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
     margin: 0;
     justify-content: space-around;
 
-    ul {
+    ${NavLinkWrapper} {
       gap: 2rem;
       margin-left: ${(props) => (props.showNavName ? 'unset' : '-130px')};
       transition: 0.3s margin ease-in-out;
@@ -64,7 +66,7 @@ const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
   }
 
   @media (max-width: ${(props) => props.theme.break_small}) {
-    ul {
+    ${NavLinkWrapper} {
       text-align: center;
       gap: ${(props) => (props.showNavName && props.isHome ? '0' : '')};
       padding: ${(props) => (props.showNavName ? '0 2rem' : '0')};
@@ -130,7 +132,7 @@ function Nav() {
       isHome={router.route === '/'}
     >
       <FrostedGlass>
-        <ul>
+        <NavLinkWrapper>
           <ActiveLink href="/">
             <a>gabriel russ</a>
           </ActiveLink>
@@ -146,8 +148,7 @@ function Nav() {
           <ActiveLink href="/contact-me">
             <a>contact me</a>
           </ActiveLink>
-          {/* <a href="mailto:me@gabrielruss.dev">email me</a> */}
-        </ul>
+        </NavLinkWrapper>
       </FrostedGlass>
     </StyledNav>
   );

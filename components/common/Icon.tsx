@@ -42,7 +42,7 @@ function Icon({ iconName, header, footer, iconType = 'png' }: IconProps) {
   return (
     <IconWrapper>
       <Header size="small">{header}</Header>
-      <StyledIcon src={`./icons/${iconName}.${iconType}`} />
+      <StyledIcon src={`./icons/${iconName}.${iconType}`} alt={iconName} />
       <Header size="small">{footer}</Header>
     </IconWrapper>
   );
