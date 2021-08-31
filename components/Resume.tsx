@@ -69,7 +69,7 @@ const ResumeSubSection = styled.div`
   }
 `;
 
-const years = differenceInYears(new Date(), new Date(2014, 8));
+const years = differenceInYears(new Date(), new Date(2014, 6));
 
 const Resume = () => (
   <ResumeWrapper>
