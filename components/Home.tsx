@@ -21,8 +21,8 @@ const Home = () => (
     <ImportantToMe />
     <ContainerSeperator />
     <Skills header="what i'm learning">
-      <Icon iconName="python" footer="Python" />
-      <Icon iconName="graphql" footer="GraphQL" />
+      <Icon iconName="dotnet" footer="ASP.NET" />
+      <Icon iconName="java" footer="Java" />
       <span>
         <p>
           centering things in CSS without getting frustrated and 'display: flex'

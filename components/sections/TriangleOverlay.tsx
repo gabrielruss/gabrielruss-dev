@@ -41,9 +41,8 @@ function getInitialProps(): RandomTriangleProps[] {
 const initialTriangles = getInitialProps();
 
 function TriangleOverlay() {
-  const [randomProps, setRandomProps] = useState<RandomTriangleProps[]>(
-    initialTriangles
-  );
+  const [randomProps, setRandomProps] =
+    useState<RandomTriangleProps[]>(initialTriangles);
 
   useEffect(() => {
     const interval = setInterval(() => {

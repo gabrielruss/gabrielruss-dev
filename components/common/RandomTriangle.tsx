@@ -33,7 +33,9 @@ const RandomTriangleStyle = styled.div<RandomTriangleProps>`
 
   opacity: ${(props) => props.opacity};
 
-  transition: 2s all ease;
+  -webkit-transition: 2s all ease-in-out;
+  -moz-transition: 2s all ease-in-out;
+  transition: 2s all ease-in-out;
 
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
 

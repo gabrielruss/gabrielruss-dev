@@ -16,7 +16,9 @@ type IconNames =
   | 'linkedin'
   | 'email'
   | 'github'
-  | 'professional';
+  | 'professional'
+  | 'java'
+  | 'dotnet';
 
 interface IconProps {
   iconName: IconNames;
