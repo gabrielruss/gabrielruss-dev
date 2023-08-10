@@ -3,7 +3,7 @@ export function randomNumberPlease(max: number, min: number) {
 }
 
 export function debounce(func: Function, wait: number) {
-  let timeout: number;
+  let timeout: NodeJS.Timeout;
 
   return function () {
     function later() {
