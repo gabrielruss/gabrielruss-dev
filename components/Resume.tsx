@@ -94,9 +94,40 @@ const Resume = () => (
         <ResumeSection>
           <Header size="small">Work Experience</Header>
           <ResumeSubSection>
+            <b>Capacity</b>
+            <p>Senior Software Engineer</p>
+            <p>Febuary 2022 - Present</p>
+            <br />
+            <p>Worked as a Senior Software Engineer on Capacity’s UI team.</p>
+            <ul>
+              <li>
+                Lead the effort on several large scale features for Capacity’s
+                primary application
+              </li>
+              <li>Ensured code quality by conducting code reviews</li>
+              <li>
+                Worked with Management to improve and document team processes
+              </li>
+              <li>
+                The libraries that I used include:
+                <ul>
+                  <li>React (16.8+)</li>
+                  <li>TypeScript</li>
+                  <li>react-query</li>
+                  <li>react-testing-library</li>
+                  <li>react-router</li>
+                  <li>Redux</li>
+                  <li>SASS</li>
+                  <li>Next.js</li>
+                  <li>styled-components</li>
+                </ul>
+              </li>
+            </ul>
+          </ResumeSubSection>
+          <ResumeSubSection>
             <b>LeaseQuery</b>
             <p>Lead UI Engineer</p>
-            <p>May 2019 - Present</p>
+            <p>May 2019 - Febuary 2022</p>
             <br />
             <p>
               Led the front-end development effort to create multiple new SaaS
