@@ -1,6 +1,7 @@
 import App from 'next/app';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Analytics } from '@vercel/analytics/react';
 
 import { theme } from '../components/styles';
 import { Meta } from '../components/common';
@@ -30,6 +31,7 @@ export default class MyApp extends App {
           <Meta />
           <Page>
             <Component {...pageProps} />
+            <Analytics />
           </Page>
         </ThemeProvider>
       </>
