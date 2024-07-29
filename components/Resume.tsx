@@ -85,8 +85,10 @@ const Resume = () => (
             <ul>
               <li>{years} years of experience with JavaScript</li>
               <li>{years} years of experience with React</li>
-              <li>Proficient in TypeScript, SASS, and styled-components</li>
-              <li>Dabbled in GraphQL, C#, Java, and Python</li>
+              <li>
+                Proficient in TypeScript, GraphQL, SASS, and styled-components
+              </li>
+              <li>Dabbled in Python, C#, and Java</li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
@@ -94,9 +96,41 @@ const Resume = () => (
         <ResumeSection>
           <Header size="small">Work Experience</Header>
           <ResumeSubSection>
+            <b>Calendly</b>
+            <p>Senior Software Engineer</p>
+            <p>Oct 2023 - Aug 2024</p>
+            <br />
+            <p>
+              Worked with a team of developers and marketing professionals as a
+              Senior Software Engineer on Calendly’s Marketing Website team.
+            </p>
+            <ul>
+              <li>
+                Worked tickets to improve the user experience of the marketing
+                site with a focus on user signups
+              </li>
+              <li>Ensured code quality by conducting code reviews</li>
+              <li>
+                Worked to improve team processes with weekly check-ins with the
+                team to lead the improvement effort
+              </li>
+              <li>
+                Used the following libraries:
+                <ul>
+                  <li>React (18+)</li>
+                  <li>TypeScript</li>
+                  <li>Next.js</li>
+                  <li>styled-components</li>
+                  <li>react-testing-library</li>
+                  <li>Contentful</li>
+                </ul>
+              </li>
+            </ul>
+          </ResumeSubSection>
+          <ResumeSubSection>
             <b>Capacity</b>
             <p>Senior Software Engineer</p>
-            <p>Febuary 2022 - Present</p>
+            <p>Febuary 2022 - Aug 2023</p>
             <br />
             <p>Worked as a Senior Software Engineer on Capacity’s UI team.</p>
             <ul>
@@ -109,7 +143,7 @@ const Resume = () => (
                 Worked with Management to improve and document team processes
               </li>
               <li>
-                The libraries that I used include:
+                Used the following libraries:
                 <ul>
                   <li>React (16.8+)</li>
                   <li>TypeScript</li>
@@ -153,7 +187,7 @@ const Resume = () => (
                 tools.
               </li>
               <li>
-                The libraries that I used include:
+                Used the following libraries:
                 <ul>
                   <li>React (16.8+)</li>
                   <li>TypeScript</li>
