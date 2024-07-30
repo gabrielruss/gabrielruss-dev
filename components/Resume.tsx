@@ -88,7 +88,7 @@ const Resume = () => (
               <li>
                 Proficient in TypeScript, GraphQL, SASS, and styled-components
               </li>
-              <li>Dabbled in Python, C#, and Java</li>
+              <li>Dabbled in Python, Java, and C#</li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
@@ -106,13 +106,15 @@ const Resume = () => (
             </p>
             <ul>
               <li>
-                Worked tickets to improve the user experience of the marketing
-                site with a focus on user signups
+                Worked to improve the user experience of the marketing site
               </li>
               <li>Ensured code quality by conducting code reviews</li>
               <li>
-                Worked to improve team processes with weekly check-ins with the
-                team to lead the improvement effort
+                Lead the effort to create and maintain the technical backlog
+              </li>
+              <li>
+                Lead weekly team meetings to improve processes and add issues to
+                technical backlog
               </li>
               <li>
                 Used the following libraries:
@@ -122,7 +124,6 @@ const Resume = () => (
                   <li>Next.js</li>
                   <li>styled-components</li>
                   <li>react-testing-library</li>
-                  <li>Contentful</li>
                 </ul>
               </li>
             </ul>

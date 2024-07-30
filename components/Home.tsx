@@ -21,7 +21,7 @@ const Home = () => (
     <ImportantToMe />
     <ContainerSeperator />
     <Skills header="what i'm learning">
-      <Icon iconName="dotnet" footer="ASP.NET" />
+      <Icon iconName="python" footer="Python" />
       <Icon iconName="java" footer="Java" />
       <span>
         <p>
