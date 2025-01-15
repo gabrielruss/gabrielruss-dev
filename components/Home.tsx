@@ -13,16 +13,16 @@ const Home = () => (
       <Icon iconName="javascript" header="JavaScript" />
       <Icon iconName="react" header="React" />
       <Icon iconName="typescript" header="TypeScript" />
+      <Icon iconName="python" header="Python" />
       <Icon iconName="html" header="HTML" />
       <Icon iconName="css" header="CSS" />
-      <Icon iconName="sass" header="SASS" />
     </Skills>
     <ContainerSeperator />
     <ImportantToMe />
     <ContainerSeperator />
-    <Skills header="what i'm learning">
+    <Skills header="what i'm improving">
       <Icon iconName="python" footer="Python" />
-      <Icon iconName="java" footer="Java" />
+      <Icon iconName="peach" footer="Backend Skills" />
       <span>
         <p>
           centering things in CSS without getting frustrated and 'display: flex'

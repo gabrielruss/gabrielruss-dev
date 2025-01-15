@@ -18,7 +18,8 @@ type IconNames =
   | 'github'
   | 'professional'
   | 'java'
-  | 'dotnet';
+  | 'dotnet'
+  | 'peach';
 
 interface IconProps {
   iconName: IconNames;

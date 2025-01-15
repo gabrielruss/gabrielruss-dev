@@ -1,4 +1,4 @@
-const RESUME_GUID = '1zyQvYpaty5Ugv6FotejBtoNRNzR_Whok';
+const RESUME_GUID = '1DdZRq5UvWhGUsEJAryr5ljhF3DH9JOpK';
 
 export const RESUME_DL_LINK = `https://drive.google.com/uc?export=download&id=${RESUME_GUID}`;
 

@@ -22,6 +22,12 @@ const getTypeFontSize = (size: HeaderSizes) => {
         20px + (30 - 20) *
           ((100vw - 360px) / (1920 - 360))
       );`;
+    case 'xsmall':
+      // between 10px and 20px
+      return `calc(
+        10px + (20 - 10) *
+          ((100vw - 360px) / (1920 - 360))
+      );`;
   }
 };
 
@@ -32,7 +38,7 @@ export const StyledHeader = styled.div<IHeaderProps>`
   font-weight: 700;
 `;
 
-type HeaderSizes = 'small' | 'medium' | 'large';
+type HeaderSizes = 'xsmall' | 'small' | 'medium' | 'large';
 
 interface IHeaderProps {
   size?: HeaderSizes;
