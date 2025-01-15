@@ -1,7 +1,12 @@
 import { differenceInYears } from 'date-fns';
 
 import { styled } from './styles';
-import { StyledButton, StyledLink, FrostedGlass } from './styles/components';
+import {
+  StyledButton,
+  StyledLink,
+  FrostedGlass,
+  ContainerSeperator,
+} from './styles/components';
 import { StyledHeader, Header } from './common';
 import { RESUME_DL_LINK } from './util/_constants';
 
@@ -39,6 +44,19 @@ const ResumeContainer = styled.div`
   }
 `;
 
+const ResumeSubSection = styled.div`
+  margin: 0 auto;
+
+  ul {
+    text-align: left;
+    list-style: disclosure-closed;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+`;
+
 const ResumeSection = styled.div`
   margin-left: 10rem;
   padding: 2rem 0;
@@ -56,19 +74,6 @@ const ResumeSection = styled.div`
   }
 `;
 
-const ResumeSubSection = styled.div`
-  margin: 0 auto;
-
-  ul {
-    text-align: left;
-    list-style: disclosure-closed;
-  }
-
-  p {
-    margin: 0.5rem 0;
-  }
-`;
-
 const years = differenceInYears(new Date(), new Date(2014, 6));
 
 const Resume = () => (
@@ -81,14 +86,26 @@ const Resume = () => (
         </StyledLink>
         <ResumeSection>
           <Header size="small">Specialties</Header>
+          <Header size="xsmall">Frontend</Header>
           <ResumeSubSection>
             <ul>
-              <li>{years} years of experience with JavaScript</li>
-              <li>{years} years of experience with React</li>
               <li>
-                Proficient in TypeScript, GraphQL, SASS, and styled-components
+                {years} years of experience with JavaScript, React, TypeScript
               </li>
-              <li>Dabbled in Python, Java, and C#</li>
+              <li>
+                Proficient with SASS, styled-components, GraphQL, Redux, and
+                react-query
+              </li>
+            </ul>
+          </ResumeSubSection>
+          <Header size="xsmall">Backend</Header>
+          <ResumeSubSection>
+            <ul>
+              <li>
+                Experience with backend tasks using Node.js, Python, and .NET
+                Core, including API development, server-side logic, and database
+                integration
+              </li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
@@ -99,6 +116,17 @@ const Resume = () => (
             <b>Calendly</b>
             <p>Senior Software Engineer</p>
             <p>Oct 2023 - Aug 2024</p>
+            <br />
+            <p>Technologies & Libraries Used:</p>
+            <ul>
+              <li>React (18+)</li>
+              <li>TypeScript</li>
+              <li>Next.js</li>
+              <li>styled-components</li>
+              <li>react-testing-library</li>
+              <li>Node.js</li>
+              <li>Express</li>
+            </ul>
             <br />
             <p>
               Worked with a team of developers and marketing professionals as a
@@ -117,21 +145,32 @@ const Resume = () => (
                 technical backlog
               </li>
               <li>
-                Used the following libraries:
-                <ul>
-                  <li>React (18+)</li>
-                  <li>TypeScript</li>
-                  <li>Next.js</li>
-                  <li>styled-components</li>
-                  <li>react-testing-library</li>
-                </ul>
+                Maintained routing and authentication checks using Node.js and
+                Express middleware, ensuring secure and efficient user
+                navigation and authentication across the backend
               </li>
             </ul>
           </ResumeSubSection>
+          <br />
           <ResumeSubSection>
             <b>Capacity</b>
             <p>Senior Software Engineer</p>
             <p>Febuary 2022 - Aug 2023</p>
+            <br />
+            <p>Technologies & Libraries Used:</p>
+            <ul>
+              <li>React (16.8+)</li>
+              <li>TypeScript</li>
+              <li>react-query</li>
+              <li>react-testing-library</li>
+              <li>react-router</li>
+              <li>Redux</li>
+              <li>SASS</li>
+              <li>Next.js</li>
+              <li>styled-components</li>
+              <li>Python</li>
+              <li>GraphQL</li>
+            </ul>
             <br />
             <p>Worked as a Senior Software Engineer on Capacity’s UI team.</p>
             <ul>
@@ -144,25 +183,30 @@ const Resume = () => (
                 Worked with Management to improve and document team processes
               </li>
               <li>
-                Used the following libraries:
-                <ul>
-                  <li>React (16.8+)</li>
-                  <li>TypeScript</li>
-                  <li>react-query</li>
-                  <li>react-testing-library</li>
-                  <li>react-router</li>
-                  <li>Redux</li>
-                  <li>SASS</li>
-                  <li>Next.js</li>
-                  <li>styled-components</li>
-                </ul>
+                Worked closely with the backend team to update and maintain the
+                Python GraphQL API layer, ensuring the frontend received
+                accurate and properly formatted data
               </li>
             </ul>
           </ResumeSubSection>
+          <br />
           <ResumeSubSection>
             <b>LeaseQuery</b>
             <p>Lead UI Engineer</p>
             <p>May 2019 - Febuary 2022</p>
+            <br />
+            <p>Technologies & Libraries Used:</p>
+            <ul>
+              <li>React (16.8+)</li>
+              <li>TypeScript</li>
+              <li>Next.js</li>
+              <li>Storybook</li>
+              <li>styled-components</li>
+              <li>react-testing-library</li>
+              <li>react-router</li>
+              <li>Redux</li>
+              <li>.NET Core</li>
+            </ul>
             <br />
             <p>
               Led the front-end development effort to create multiple new SaaS
@@ -172,41 +216,38 @@ const Resume = () => (
               <li>
                 Authored LeaseQuery's first reusable UI component library with
                 the goal of creating a consistent look and feel across all
-                future projects.
+                future projects
               </li>
               <li>
                 Ensured reusable components were tested and met WCAG 2.0 AA or
-                AAA accessibility standards.
+                AAA accessibility standards
               </li>
               <li>
                 Became an honorary member of the UX Design team by participating
-                in design studios and regular UX discussions.
+                in design studios and regular UX discussions
               </li>
-              <li>Ensured code quality by conducting code reviews.</li>
+              <li>Ensured code quality by conducting code reviews</li>
               <li>
-                Worked on the integration of 3rd party APIs into LeaseQuery's
-                tools.
-              </li>
-              <li>
-                Used the following libraries:
-                <ul>
-                  <li>React (16.8+)</li>
-                  <li>TypeScript</li>
-                  <li>Next.js</li>
-                  <li>Storybook</li>
-                  <li>styled-components</li>
-                  <li>react-testing-library</li>
-                  <li>react-router</li>
-                  <li>Redux</li>
-                  <li>Formik</li>
-                </ul>
+                Collaborated closely with the backend team to maintain the .NET
+                Core API layer, assisting with the integration of 3rd-party APIs
+                into LeaseQuery's tools
               </li>
             </ul>
           </ResumeSubSection>
+          <br />
           <ResumeSubSection>
             <b>Intellinet</b>
             <p>Senior Developer</p>
             <p>August 2017 - May 2019</p>
+            <br />
+            <p>Technologies & Libraries Used:</p>
+            <ul>
+              <li>React</li>
+              <li>Redux</li>
+              <li>react-router</li>
+              <li>react-testing-library</li>
+              <li>.NET Core</li>
+            </ul>
             <br />
             <p>
               Specialized in front-end development. Worked closely with clients
@@ -218,31 +259,39 @@ const Resume = () => (
               <li>
                 Led the front-end development team on an agile, large-scale EMR
                 solution using React, Redux, react-router, and
-                react-testing-library.
+                react-testing-library
               </li>
               <li>
                 Worked with the UX team to translate wireframes and business
-                requirements into working solutions.
+                requirements into working solutions
               </li>
               <li>
                 Worked with the Back-End team to ensure custom APIs met
-                acceptance criteria.
+                acceptance criteria
               </li>
-              <li>Developed custom Web APIs in .NET Core (C#).</li>
+              <li>Developed custom Web APIs in .NET Core</li>
             </ul>
           </ResumeSubSection>
+          <br />
           <ResumeSubSection>
             <b>Abel Solutions</b>
             <p>Developer</p>
             <p>August 2014 - August 2017</p>
-            {/* <br /> */}
+            <br />
+            <p>Technologies & Libraries Used:</p>
             <ul>
-              <li>
-                Within the Microsoft ecosystem, built custom forms using React,
-                TypeScript, and Office UI Fabric (UI framework).
-              </li>
-              <li>Developed and maintained custom solutions in C#.</li>
-              <li>Built a development infrastructure within Azure.</li>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>C#</li>
+            </ul>
+            <br />
+            <p>
+              Within the Microsoft ecosystem, built custom forms using React,
+              TypeScript, and Office UI Fabric (UI framework).
+            </p>
+            <ul>
+              <li>Developed and maintained custom solutions in C#</li>
+              <li>Built a development infrastructure within Azure</li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
