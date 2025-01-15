@@ -25,9 +25,9 @@ const getTypeFontSize = (size: HeaderSizes) => {
     case 'xsmall':
       // between 10px and 20px
       return `calc(
-        10px + (20 - 10) *
-          ((100vw - 360px) / (1920 - 360))
-      );`;
+          15px + (20 - 15) *
+            ((100vw - 360px) / (1920 - 360))
+        );`;
   }
 };
 
