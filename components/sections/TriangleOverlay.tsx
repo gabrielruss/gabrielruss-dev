@@ -48,11 +48,11 @@ function TriangleOverlay() {
     const interval = setInterval(() => {
       const trianglePick = randomNumberPlease(NUM_TRIANGLES, 1);
 
-      const newProps = [...randomProps];
-
-      newProps[trianglePick] = getRandomProps();
-
-      setRandomProps(newProps);
+      setRandomProps((prevProps) => {
+        const newProps = [...prevProps];
+        newProps[trianglePick] = getRandomProps();
+        return newProps;
+      });
     }, 5000);
     return () => clearInterval(interval);
   }, []);
