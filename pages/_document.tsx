@@ -28,7 +28,8 @@ export default class MyDocument extends Document {
               {`
                 @font-face {
                   font-family: 'overpass-regular';
-                  src: url('/static/overpass-regular.woff2') format('woff2'),
+                  src:
+                    url('/static/overpass-regular.woff2') format('woff2'),
                     /* Super Modern Browsers */
                       url('/static/overpass-regular.woff') format('woff'),
                     /* Pretty Modern Browsers */
