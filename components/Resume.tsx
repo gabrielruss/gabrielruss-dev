@@ -1,12 +1,7 @@
 import { differenceInYears } from 'date-fns';
 
 import { styled } from './styles';
-import {
-  StyledButton,
-  StyledLink,
-  FrostedGlass,
-  ContainerSeperator,
-} from './styles/components';
+import { StyledButton, StyledLink, FrostedGlass } from './styles/components';
 import { StyledHeader, Header } from './common';
 import { RESUME_DL_LINK } from './util/_constants';
 
@@ -86,25 +81,23 @@ const Resume = () => (
         </StyledLink>
         <ResumeSection>
           <Header size="small">Specialties</Header>
-          <Header size="xsmall">Frontend</Header>
           <ResumeSubSection>
             <ul>
               <li>
-                {years} years of experience with JavaScript, React, TypeScript
+                <b>Frontend:</b> {years} years of experience with React,
+                TypeScript, JavaScript
               </li>
               <li>
-                Proficient with SASS, styled-components, GraphQL, Redux, and
-                react-query
+                <b>Libraries & Data:</b> Redux, TanStack Query (React Query),
+                GraphQL, styled-components, SASS
               </li>
-            </ul>
-          </ResumeSubSection>
-          <Header size="xsmall">Backend</Header>
-          <ResumeSubSection>
-            <ul>
               <li>
-                Experience with backend tasks using Node.js, Python, and .NET
-                Core, including API development, server-side logic, and database
-                integration
+                <b>Backend:</b> Node.js, Python, .NET: API development,
+                server-side logic, database integration
+              </li>
+              <li>
+                <b>AI-Assisted Development:</b> Daily experience using GenAI for
+                writing, debugging, and testing code
               </li>
             </ul>
           </ResumeSubSection>
@@ -112,6 +105,45 @@ const Resume = () => (
 
         <ResumeSection>
           <Header size="small">Work Experience</Header>
+          <ResumeSubSection>
+            <b>Imagine Learning</b>
+            <p>Senior Software Engineer</p>
+            <p>March 2025 - Oct 2026</p>
+            <br />
+            <p>Technologies & Libraries Used:</p>
+            <ul>
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Redux</li>
+              <li>Material UI</li>
+              <li>styled-components</li>
+              <li>Node.js</li>
+            </ul>
+            <br />
+            <p>
+              Worked on a team of frontend, backend, and UX engineers to build
+              Imagine Learning’s digital curriculum platforms for Traverse and
+              Dragonfly.
+            </p>
+            <ul>
+              <li>
+                Used Claude Code in daily workflows to implement features and
+                fix bugs
+              </li>
+              <li>
+                Led efforts to modernize the frontend codebase and improve
+                developer experience.
+                <ul>
+                  <li>
+                    Expanded TypeScript coverage, reduced TypeScript errors, and
+                    integrated AI skills into workflow
+                  </li>
+                </ul>
+              </li>
+              <li>Ensured code quality by conducting code reviews</li>
+            </ul>
+          </ResumeSubSection>
+          <br />
           <ResumeSubSection>
             <b>Calendly</b>
             <p>Senior Software Engineer</p>
