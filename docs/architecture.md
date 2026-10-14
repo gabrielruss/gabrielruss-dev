@@ -41,13 +41,13 @@ All static content; no API routes, no data fetching (`getStaticProps`/`getServer
 - `components/Page.tsx`: global styles, sticky `Nav`, `TriangleOverlay` background, then page content in a `main` (max width = `break_large`).
 
 ## Components (`components/`)
-- `Home.tsx`: composes `TitleCard`, `Time`, `Skills` (x3, icon grids), `ImportantToMe`, `WhatsNext`, separated by `ContainerSeperator`.
+- `Home.tsx`: composes `TitleCard`, `Time`, `Skills` (x3, icon grids), `ImportantToMe`, `WhatsNext`, separated by `ContainerSeparator`.
 - `Resume.tsx` (368 lines): hard-coded resume content; "years of experience" computed with `differenceInYears`; download link from `util/_constants`.
 - `ContactMe.tsx`: LinkedIn and `mailto:` links.
 - `Nav.tsx`: sticky nav; shows the name link once scrolled past ~half viewport (scroll listener); uses `ActiveLink` to add `selected` class; external GitHub link.
 - `sections/`: `TitleCard`, `Time` (uses `TimeSince` for dev/father/married durations from hard-coded dates), `Skills`, `ImportantToMe`, `WhatsNext`, `TriangleOverlay`. Barrel: `sections/index.ts` (note `TitleCard` is also imported directly in `Home.tsx`).
 - `common/`: `Header` (responsive font sizes via `calc`), `Icon` (img from `./icons/<name>.<png|svg>`), `Meta`, `ActiveLink`, `TimeSince`, `RandomTriangle`. Barrel: `common/index.ts`.
-- `styles/index.ts`: `theme` (colors, breakpoints 1366/900/500px, font), typed `styled`, `GlobalStyle` (html font-size 10px, so 1rem = 10px). `styles/components/`: shared styled pieces (`FrostedGlass`, `StyledContainer`, `IconGrid`, `StyledLink`, `StyledButton`, `ContainerSeperator`, `StyledBorderContainer`).
+- `styles/index.ts`: `theme` (colors, breakpoints 1366/900/500px, font), typed `styled`, `GlobalStyle` (html font-size 10px, so 1rem = 10px). `styles/components/`: shared styled pieces (`FrostedGlass`, `StyledContainer`, `IconGrid`, `StyledLink`, `StyledButton`, `ContainerSeparator`, `StyledBorderContainer`).
 - `util/_helpers.ts`: `randomNumberPlease(max, min)`, `debounce`, `throttle`. `util/_constants.ts`: resume Google Drive links.
 - `hooks/useInterval.ts`: exported, not used.
 

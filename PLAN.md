@@ -9,15 +9,11 @@ Deploy flow (verified 2026-10-14 via response headers and GitHub deployments API
 - Latest production deploy: 2026-10-02, from `main` at `cc0774e` (merge of PR #41, `oct2026`).
 
 ## Built, not deployed
-- None known.
+- Resume typo and wording fixes (uncommitted on branch `oct2026`; production is on `main`).
 
 ## Next up
-1. Fix typos on the live site (all in `components/Resume.tsx`; confirmed present on https://gabrielruss.dev/resume on 2026-10-14). Not yet fixed.
-   - "Febuary" -> "February": line 190 (Capacity) and line 228 (LeaseQuery).
-   - "Lead" -> "Led" (past tense): lines 173, 176 (Calendly) and line 210 (Capacity).
-   - Line 210 also: "large scale features" -> "large-scale features".
-   - Optional polish: heading "Full Time Developer" -> "Full-Time" (line 331); inconsistent "Aug"/"August" and "Oct" month abbreviations; inconsistent "front-end"/"frontend" and "Back-End"/"backend".
-   - Not live, code only: `ContainerSeperator` component name is misspelled (8 references).
+1. Deploy the resume typo/polish fixes (done in `components/Resume.tsx`, uncommitted, not deployed). Fixed 2026-10-14: "Febuary", "Lead"->"Led", "large-scale", "Full-Time", month abbreviations (Jan/Feb/...), "frontend"/"backend".
+   - Also renamed `ContainerSeperator` -> `ContainerSeparator` (2026-10-14, code only, uncommitted).
 
 ## Known issues
 - Minor code quirks (unused helpers, relative icon path, duplicated `@font-face`, missing `rel` on `_blank` links): see "Observed quirks" in `docs/architecture.md`. Not fixed.

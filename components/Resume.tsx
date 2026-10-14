@@ -108,7 +108,7 @@ const Resume = () => (
           <ResumeSubSection>
             <b>Imagine Learning</b>
             <p>Senior Software Engineer</p>
-            <p>March 2025 - Oct 2026</p>
+            <p>Mar 2025 - Oct 2026</p>
             <br />
             <p>Technologies & Libraries Used:</p>
             <ul>
@@ -170,10 +170,10 @@ const Resume = () => (
               </li>
               <li>Ensured code quality by conducting code reviews</li>
               <li>
-                Lead the effort to create and maintain the technical backlog
+                Led the effort to create and maintain the technical backlog
               </li>
               <li>
-                Lead weekly team meetings to improve processes and add issues to
+                Led weekly team meetings to improve processes and add issues to
                 technical backlog
               </li>
               <li>
@@ -187,7 +187,7 @@ const Resume = () => (
           <ResumeSubSection>
             <b>Capacity</b>
             <p>Senior Software Engineer</p>
-            <p>Febuary 2022 - Aug 2023</p>
+            <p>Feb 2022 - Aug 2023</p>
             <br />
             <p>Technologies & Libraries Used:</p>
             <ul>
@@ -207,7 +207,7 @@ const Resume = () => (
             <p>Worked as a Senior Software Engineer on Capacity’s UI team.</p>
             <ul>
               <li>
-                Lead the effort on several large scale features for Capacity’s
+                Led the effort on several large-scale features for Capacity’s
                 primary application
               </li>
               <li>Ensured code quality by conducting code reviews</li>
@@ -225,7 +225,7 @@ const Resume = () => (
           <ResumeSubSection>
             <b>LeaseQuery</b>
             <p>Lead UI Engineer</p>
-            <p>May 2019 - Febuary 2022</p>
+            <p>May 2019 - Feb 2022</p>
             <br />
             <p>Technologies & Libraries Used:</p>
             <ul>
@@ -241,7 +241,7 @@ const Resume = () => (
             </ul>
             <br />
             <p>
-              Led the front-end development effort to create multiple new SaaS
+              Led the frontend development effort to create multiple new SaaS
               products for lease accounting.
             </p>
             <ul>
@@ -270,7 +270,7 @@ const Resume = () => (
           <ResumeSubSection>
             <b>Intellinet</b>
             <p>Senior Developer</p>
-            <p>August 2017 - May 2019</p>
+            <p>Aug 2017 - May 2019</p>
             <br />
             <p>Technologies & Libraries Used:</p>
             <ul>
@@ -282,14 +282,14 @@ const Resume = () => (
             </ul>
             <br />
             <p>
-              Specialized in front-end development. Worked closely with clients
+              Specialized in frontend development. Worked closely with clients
               to understand requirements and develop solutions that leveraged a
-              wide range of front-end development tools. Focused on writing
+              wide range of frontend development tools. Focused on writing
               clean and reusable code to maximize efficiency and readability.
             </p>
             <ul>
               <li>
-                Led the front-end development team on an agile, large-scale EMR
+                Led the frontend development team on an agile, large-scale EMR
                 solution using React, Redux, react-router, and
                 react-testing-library
               </li>
@@ -298,7 +298,7 @@ const Resume = () => (
                 requirements into working solutions
               </li>
               <li>
-                Worked with the Back-End team to ensure custom APIs met
+                Worked with the backend team to ensure custom APIs met
                 acceptance criteria
               </li>
               <li>Developed custom Web APIs in .NET Core</li>
@@ -308,7 +308,7 @@ const Resume = () => (
           <ResumeSubSection>
             <b>Abel Solutions</b>
             <p>Developer</p>
-            <p>August 2014 - August 2017</p>
+            <p>Aug 2014 - Aug 2017</p>
             <br />
             <p>Technologies & Libraries Used:</p>
             <ul>
@@ -328,26 +328,26 @@ const Resume = () => (
           </ResumeSubSection>
         </ResumeSection>
         <ResumeSection>
-          <Header size="small">Before I Became a Full Time Developer</Header>
+          <Header size="small">Before I Became a Full-Time Developer</Header>
           <ResumeSubSection>
             <b>McKesson Corporation</b>
             <p>SharePoint Engineer</p>
-            <p>November 2012 - June 2014</p>
+            <p>Nov 2012 - Jun 2014</p>
           </ResumeSubSection>
           <br />
           <ResumeSubSection>
             <b>The Coca-Cola Company</b>
             <p>Customer Data Analyst</p>
-            <p>January 2012 - November 2012</p>
+            <p>Jan 2012 - Nov 2012</p>
             <br />
             <p>Customer Data Analyst Intern</p>
-            <p>May 2011 - August 2011</p>
+            <p>May 2011 - Aug 2011</p>
           </ResumeSubSection>
           <br />
           <ResumeSubSection>
             <b>Georgia Southern University</b>
             <p>SharePoint Engineer Intern</p>
-            <p>February 2011 - December 2011</p>
+            <p>Feb 2011 - Dec 2011</p>
           </ResumeSubSection>
         </ResumeSection>
         <ResumeSection>
@@ -355,7 +355,7 @@ const Resume = () => (
           <ResumeSubSection>
             <b>Georgia Southern University</b>
             <p>BBA in Information Systems</p>
-            <p>December 2011</p>
+            <p>Dec 2011</p>
             <p>Dean’s List: Fall 2010, Spring 2011, Fall 2011</p>
           </ResumeSubSection>
         </ResumeSection>

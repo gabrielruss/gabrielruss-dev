@@ -1,4 +1,4 @@
-import { ContainerSeperator } from './ContainerSeperator';
+import { ContainerSeparator } from './ContainerSeparator';
 import FrostedGlass from './FrostedGlass';
 import StyledBorderContainer from './StyledBorderContainer';
 import StyledButton from './StyledButton';
@@ -7,7 +7,7 @@ import StyledLink from './StyledLink';
 import IconGrid from './IconGrid';
 
 export {
-  ContainerSeperator,
+  ContainerSeparator,
   FrostedGlass,
   StyledBorderContainer,
   StyledButton,

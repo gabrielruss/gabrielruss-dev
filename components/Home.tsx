@@ -1,14 +1,14 @@
 import TitleCard from './sections/TitleCard';
-import { ContainerSeperator } from './styles/components';
+import { ContainerSeparator } from './styles/components';
 import { Time, Skills, ImportantToMe, WhatsNext } from './sections';
 import { Icon, Header } from './common';
 
 const Home = () => (
   <>
     <TitleCard />
-    <ContainerSeperator />
+    <ContainerSeparator />
     <Time />
-    <ContainerSeperator />
+    <ContainerSeparator />
     <Skills header="what i'm good at">
       <Icon iconName="javascript" header="JavaScript" />
       <Icon iconName="react" header="React" />
@@ -17,9 +17,9 @@ const Home = () => (
       <Icon iconName="html" header="HTML" />
       <Icon iconName="css" header="CSS" />
     </Skills>
-    <ContainerSeperator />
+    <ContainerSeparator />
     <ImportantToMe />
-    <ContainerSeperator />
+    <ContainerSeparator />
     <Skills header="what i'm improving">
       <Icon iconName="python" footer="Python" />
       <Icon iconName="peach" footer="Backend Skills" />

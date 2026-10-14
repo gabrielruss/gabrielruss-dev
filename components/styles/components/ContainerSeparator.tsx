@@ -1,6 +1,6 @@
 import { styled } from '..';
 
-export const ContainerSeperator = styled.hr`
+export const ContainerSeparator = styled.hr`
   border: 0;
   height: 1px;
   background-image: linear-gradient(
