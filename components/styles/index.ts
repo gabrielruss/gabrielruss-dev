@@ -29,6 +29,8 @@ export const theme = {
     purple: '#7a82ab',
     yellow: '#e6e18f',
     blue: '#145C9E',
+    caution: '#FFD60A',
+    muted: '#595959',
   },
   fonts: {
     overpass_regular: 'overpass-regular',

@@ -80,7 +80,8 @@ const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
         }
 
         :nth-child(2),
-        :nth-child(3) {
+        :nth-child(3),
+        :nth-child(4) {
           width: ${(props) =>
             props.showNavName && props.isHome ? '3rem' : 'auto'};
           transition: 0.3s width ease-in-out;
@@ -138,6 +139,9 @@ function Nav() {
           </ActiveLink>
           <ActiveLink href="/resume">
             <a>resume</a>
+          </ActiveLink>
+          <ActiveLink href="/dlams">
+            <a>project</a>
           </ActiveLink>
           <a
             href="https://github.com/gabrielruss?tab=repositories"

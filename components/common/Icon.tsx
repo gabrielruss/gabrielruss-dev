@@ -19,7 +19,17 @@ type IconNames =
   | 'professional'
   | 'java'
   | 'dotnet'
-  | 'peach';
+  | 'peach'
+  | 'vite'
+  | 'fastapi'
+  | 'postgresql'
+  | 'docker'
+  | 'github-actions'
+  | 'raspberry-pi'
+  | 'tailwindcss'
+  | 'tanstack-query'
+  | 'nginx'
+  | 'sqlalchemy';
 
 interface IconProps {
   iconName: IconNames;
