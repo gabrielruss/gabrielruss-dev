@@ -14,7 +14,7 @@ const DLAMS_APP_URL = 'https://dontlookatmystuff.com';
 
 const DlamsWrapper = styled.div`
   max-width: ${(props) => props.theme.break_medium};
-  margin: 10rem auto 0;
+  margin: 2rem auto 0;
   text-align: left;
 `;
 

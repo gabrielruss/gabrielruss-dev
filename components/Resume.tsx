@@ -22,7 +22,7 @@ const ResumeContainer = styled.div`
   display: flex;
   flex-flow: column;
   text-align: left;
-  margin: 10rem auto 0;
+  margin: 5rem auto 0;
   max-width: ${(props) => props.theme.break_medium};
 
   > :first-child {
@@ -284,8 +284,8 @@ const Resume = () => (
             <p>
               Specialized in frontend development. Worked closely with clients
               to understand requirements and develop solutions that leveraged a
-              wide range of frontend development tools. Focused on writing
-              clean and reusable code to maximize efficiency and readability.
+              wide range of frontend development tools. Focused on writing clean
+              and reusable code to maximize efficiency and readability.
             </p>
             <ul>
               <li>
