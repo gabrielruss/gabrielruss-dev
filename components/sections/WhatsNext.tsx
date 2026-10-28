@@ -5,7 +5,7 @@ import {
   StyledBorderContainer,
   IconGrid,
 } from '../styles/components';
-import { Header, Icon, IconWrapper, StyledIcon } from '../common';
+import { Header, Icon, IconWrapper, StyledHeader, StyledIcon } from '../common';
 
 const StyledWhatsNext = styled.div`
   position: relative;
@@ -16,7 +16,15 @@ const StyledWhatsNext = styled.div`
     text-decoration: none;
   }
 
+  ${IconGrid} {
+    gap: 2rem;
+  }
+
   ${IconWrapper} {
+    ${StyledHeader} {
+      white-space: nowrap;
+    }
+
     ${StyledIcon} {
       transition: 0.1s all ease-in-out;
     }
@@ -38,6 +46,11 @@ function WhatsNext() {
             <Link href="/resume">
               <a>
                 <Icon iconName="professional" iconType="svg" header="resume" />
+              </a>
+            </Link>
+            <Link href="/dlams">
+              <a>
+                <Icon iconName="folder-code" iconType="svg" header="project" />
               </a>
             </Link>
             <a

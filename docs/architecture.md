@@ -58,7 +58,7 @@ All static content; no API routes, no data fetching (`getStaticProps`/`getServer
 
 ## Static assets (`public/`)
 - `static/`: Overpass regular+bold fonts (ttf/woff/woff2), `favicon.ico`, `biglogo.png` (OG/Twitter image), `dlams-preview.png` (1600x787 DLAMS wordmark, used by the link card on `/dlams`; resized from the owner's 5120x2520 screenshot).
-- `icons/`: tech and UI icons (png/svg) used by `Icon`. SVGs for vite, fastapi, postgresql, docker, github-actions, raspberry-pi, tailwindcss, tanstack-query, nginx, sqlalchemy are from Simple Icons v13.21.0 (CC0), each given its official brand color via a `fill` attribute on `<svg>`. Exception: `vite.svg` is the classic full-color (purple gradient + yellow bolt) logo from the Vite repo at tag v5.4.0 (`docs/public/logo.svg`, MIT), because Simple Icons only has a single-color silhouette and Vite's current logo has white brackets that vanish on a white background.
+- `icons/`: tech and UI icons (png/svg) used by `Icon`. SVGs for vite, fastapi, postgresql, docker, github-actions, raspberry-pi, tailwindcss, tanstack-query, nginx, sqlalchemy are from Simple Icons v13.21.0 (CC0), each given its official brand color via a `fill` attribute on `<svg>`. Exception: `vite.svg` is the classic full-color (purple gradient + yellow bolt) logo from the Vite repo at tag v5.4.0 (`docs/public/logo.svg`, MIT), because Simple Icons only has a single-color silhouette and Vite's current logo has white brackets that vanish on a white background. `folder-code.svg` (the "project" link in What's Next) is the Lucide `folder-code` icon (ISC, outline style, `currentColor` so it renders black), fetched from the Lucide repo on 2026-10-28.
 
 ## External dependencies
 - DLAMS repo and live app links (`Dlams.tsx` constants).

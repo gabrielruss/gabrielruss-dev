@@ -176,28 +176,25 @@ const Dlams = () => (
         imageHeight={787}
         title="Don't Look At My Stuff"
         displayUrl="dontlookatmystuff.com"
-        description="Try the read-only live demo."
+        description="Try the read-only live demo"
       />
 
       <Columns>
         <Section>
-          <Header size="small">What is</Header>
+          <Header size="small">Current features</Header>
           <ul>
-            <li>
-              A tracker for your video game collection: consoles and games, with
-              condition and play status
-            </li>
+            <li>A tracker for your video game collection</li>
             <li>Multiple collections per account</li>
             <li>A read-only demo</li>
             <li>Mobile friendly</li>
           </ul>
         </Section>
         <Section>
-          <Header size="small">What will be</Header>
+          <Header size="small">Future features</Header>
           <ul>
-            <li>Sharing a collection with other people</li>
-            <li>Editing in the demo, kept in your own browser</li>
-            <li>More types of collections beyond video games</li>
+            <li>Share a collection with other people</li>
+            <li>Ability to edit in the demo</li>
+            <li>Create different collection types - Books, Boardgames, etc.</li>
           </ul>
         </Section>
       </Columns>
@@ -209,7 +206,7 @@ const Dlams = () => (
           workflow. The job runs on a self-hosted runner on a Raspberry Pi,
           which pulls the code and rebuilds the containers in place with Docker
           Compose. A separate workflow runs lint, tests, and a build on every
-          push, and a nightly database backup runs on the Pi.
+          push. A nightly database backup runs on the Pi.
         </p>
         <Flow>
           <Step

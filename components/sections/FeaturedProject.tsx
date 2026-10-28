@@ -26,6 +26,13 @@ const ProjectContent = styled.div`
   }
 `;
 
+const BuiltWith = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
 const ProjectButton = styled(StyledButton)`
   display: inline-block;
   padding: 1rem 1.5rem;
@@ -42,13 +49,14 @@ function FeaturedProject() {
             <Header size="small">DLAMS</Header>
             <StatusBadge>in active development</StatusBadge>
             <p>
-              A video game collection tracker with a read-only demo you can
-              try.
-              <br />
-              Built with React and TypeScript on the frontend and Python,
-              FastAPI, and PostgreSQL on the backend, and self-hosted on a
-              Raspberry Pi.
+              A video game collection tracker with a read-only demo you can try
             </p>
+            <BuiltWith>
+              <b>Built with</b>
+              <span>frontend: React, TypeScript</span>
+              <span>backend: Python, FastAPI, PostgreSQL</span>
+              <span>self-hosted on: Raspberry Pi</span>
+            </BuiltWith>
             <Link href="/dlams" passHref>
               <ProjectButton as="a">see how it's built</ProjectButton>
             </Link>

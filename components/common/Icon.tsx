@@ -29,7 +29,8 @@ type IconNames =
   | 'tailwindcss'
   | 'tanstack-query'
   | 'nginx'
-  | 'sqlalchemy';
+  | 'sqlalchemy'
+  | 'folder-code';
 
 interface IconProps {
   iconName: IconNames;
