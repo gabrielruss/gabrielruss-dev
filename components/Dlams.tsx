@@ -188,7 +188,6 @@ const Dlams = () => (
               condition and play status
             </li>
             <li>Multiple collections per account</li>
-            <li>Invite-only accounts, so it stays private</li>
             <li>A read-only demo</li>
             <li>Mobile friendly</li>
           </ul>
@@ -232,11 +231,7 @@ const Dlams = () => (
           />
         </Flow>
         <Flow>
-          <Step
-            icon={icon('nginx')}
-            title="Nginx"
-            note="routes traffic"
-          />
+          <Step icon={icon('nginx')} title="Nginx" note="routes traffic" />
           <FlowArrow>→</FlowArrow>
           <Step
             icon={icon('fastapi')}

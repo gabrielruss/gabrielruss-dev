@@ -22,9 +22,15 @@ const ImportantToMeWrapper = styled.div`
     }
   }
 
+  @media (max-width: ${(props) => props.theme.break_nav}) {
+    ul {
+      max-width: calc(100vw - 6rem);
+    }
+  }
+
   @media (max-width: ${(props) => props.theme.break_small}) {
     ul {
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
       padding: 2rem;
 
       li {

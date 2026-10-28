@@ -16,6 +16,10 @@ export const theme = {
    * 500px
    */
   break_small: '500px',
+  /**
+   * 700px
+   */
+  break_nav: '700px',
   colors: {
     white: '#fafafa',
     trans_white: '#fafafae6',
