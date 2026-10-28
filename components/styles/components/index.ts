@@ -5,6 +5,7 @@ import StyledButton from './StyledButton';
 import StyledContainer from './StyledContainer';
 import StyledLink from './StyledLink';
 import IconGrid from './IconGrid';
+import StatusBadge from './StatusBadge';
 
 export {
   ContainerSeparator,
@@ -14,4 +15,5 @@ export {
   StyledContainer,
   StyledLink,
   IconGrid,
+  StatusBadge,
 };

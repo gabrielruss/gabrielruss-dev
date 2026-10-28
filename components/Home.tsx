@@ -1,6 +1,12 @@
 import TitleCard from './sections/TitleCard';
 import { ContainerSeparator } from './styles/components';
-import { Time, Skills, ImportantToMe, WhatsNext } from './sections';
+import {
+  Time,
+  Skills,
+  FeaturedProject,
+  ImportantToMe,
+  WhatsNext,
+} from './sections';
 import { Icon, Header } from './common';
 
 const Home = () => (
@@ -17,6 +23,8 @@ const Home = () => (
       <Icon iconName="html" header="HTML" />
       <Icon iconName="css" header="CSS" />
     </Skills>
+    <ContainerSeparator />
+    <FeaturedProject />
     <ContainerSeparator />
     <ImportantToMe />
     <ContainerSeparator />

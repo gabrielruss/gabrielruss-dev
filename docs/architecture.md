@@ -32,6 +32,7 @@ Declared ranges are from `package.json`; installed versions were read from `node
 | `/` | `pages/index.tsx` | `components/Home.tsx` |
 | `/resume` | `pages/resume.tsx` | `components/Resume.tsx` |
 | `/contact-me` | `pages/contact-me.tsx` | `components/ContactMe.tsx` |
+| `/dlams` | `pages/dlams.tsx` | `components/Dlams.tsx` |
 
 All static content; no API routes, no data fetching (`getStaticProps`/`getServerSideProps`), no env vars.
 
@@ -43,11 +44,12 @@ All static content; no API routes, no data fetching (`getStaticProps`/`getServer
 ## Components (`components/`)
 - `Home.tsx`: composes `TitleCard`, `Time`, `Skills` (x3, icon grids), `ImportantToMe`, `WhatsNext`, separated by `ContainerSeparator`.
 - `Resume.tsx` (368 lines): hard-coded resume content; "years of experience" computed with `differenceInYears`; download link from `util/_constants`.
+- `Dlams.tsx`: DLAMS project page. Blurb, a `LinkCard` to the live demo, boxed "What it is" and "Coming soon" lists (a mini roadmap), an infrastructure flow diagram (CSS grid boxes and arrows; stacks vertically below `break_medium`), and Frontend/Backend icon grids with text chips for lesser tech, then a GitHub source link above the closing `</DLAMS>` tag. Content is hard-coded and mirrors `~/Code/dlams/DLAMS-PLAN.md` and `docs/architecture.md`; last synced against them 2026-10-27. Update it when DLAMS ships something listed under "Coming soon".
 - `ContactMe.tsx`: LinkedIn and `mailto:` links.
-- `Nav.tsx`: sticky nav; shows the name link once scrolled past ~half viewport (scroll listener); uses `ActiveLink` to add `selected` class; external GitHub link.
-- `sections/`: `TitleCard`, `Time` (uses `TimeSince` for dev/father/married durations from hard-coded dates), `Skills`, `ImportantToMe`, `WhatsNext`, `TriangleOverlay`. Barrel: `sections/index.ts` (note `TitleCard` is also imported directly in `Home.tsx`).
-- `common/`: `Header` (responsive font sizes via `calc`), `Icon` (img from `./icons/<name>.<png|svg>`), `Meta`, `ActiveLink`, `TimeSince`, `RandomTriangle`. Barrel: `common/index.ts`.
-- `styles/index.ts`: `theme` (colors, breakpoints 1366/900/500px, font), typed `styled`, `GlobalStyle` (html font-size 10px, so 1rem = 10px). `styles/components/`: shared styled pieces (`FrostedGlass`, `StyledContainer`, `IconGrid`, `StyledLink`, `StyledButton`, `ContainerSeparator`, `StyledBorderContainer`).
+- `Nav.tsx`: sticky nav (links: name, resume, project (-> `/dlams`), github, contact me; below `break_nav` (700px) the link row scales its font with the viewport (`min(2rem, (100vw - 16px) / 27.5)`, `/ 23` at 500px and below) and `Page.tsx` cuts the nav's side padding to 0.8rem. At 500px and below the nav shows every link except the current page's (`ActiveLink` adds `selected`, CSS hides `a.selected`) and ignores the scroll-based name toggle; above 500px the scroll toggle (`-7em` hidden-name offset until scrolled) still applies); shows the name link once scrolled past ~half viewport (scroll listener); uses `ActiveLink` to add `selected` class; external GitHub link.
+- `sections/`: `TitleCard`, `FeaturedProject` (home section matching the other sections, with a single button linking to `/dlams`), `Time` (uses `TimeSince` for dev/father/married durations from hard-coded dates), `Skills`, `ImportantToMe`, `WhatsNext`, `TriangleOverlay`. Barrel: `sections/index.ts` (note `TitleCard` is also imported directly in `Home.tsx`).
+- `common/`: `Header` (responsive font sizes via `calc`), `LinkCard` (LinkedIn-style "featured link" card: image left, title/URL/description right, whole card is one external link; a teal rectangle sits behind it offset down-right like the home-page name card, and on hover/focus the card slides right and down over it, with no motion under `prefers-reduced-motion`; stacks below `break_medium`), `Icon` (img from `./icons/<name>.<png|svg>`), `Meta`, `ActiveLink`, `TimeSince`, `RandomTriangle`. Barrel: `common/index.ts`.
+- `styles/index.ts`: `theme` (colors, breakpoints 1366/900/500px, font), typed `styled` (theme colors include `caution` yellow for status badges and `muted` #595959, 5.8:1 on the link-card panel, for secondary text), `GlobalStyle` (html font-size 10px, so 1rem = 10px). `styles/components/`: shared styled pieces (`FrostedGlass`, `StyledContainer`, `IconGrid`, `StyledLink`, `StyledButton`, `ContainerSeparator`, `StyledBorderContainer`, `StatusBadge`).
 - `util/_helpers.ts`: `randomNumberPlease(max, min)`, `debounce`, `throttle`. `util/_constants.ts`: resume Google Drive links.
 - `hooks/useInterval.ts`: exported, not used.
 
@@ -55,10 +57,11 @@ All static content; no API routes, no data fetching (`getStaticProps`/`getServer
 `TriangleOverlay` creates 15 `RandomTriangle`s (fixed-position, clip-path triangles, 6 theme colors) with random position/size/opacity/rotation. Every 5s one random triangle gets new props; CSS transitions (2s) animate the change, and a 150s spin animation runs continuously.
 
 ## Static assets (`public/`)
-- `static/`: Overpass regular+bold fonts (ttf/woff/woff2), `favicon.ico`, `biglogo.png` (OG/Twitter image).
-- `icons/`: tech and UI icons (png/svg) used by `Icon`.
+- `static/`: Overpass regular+bold fonts (ttf/woff/woff2), `favicon.ico`, `biglogo.png` (OG/Twitter image), `dlams-preview.png` (1600x787 DLAMS wordmark, used by the link card on `/dlams`; resized from the owner's 5120x2520 screenshot).
+- `icons/`: tech and UI icons (png/svg) used by `Icon`. SVGs for vite, fastapi, postgresql, docker, github-actions, raspberry-pi, tailwindcss, tanstack-query, nginx, sqlalchemy are from Simple Icons v13.21.0 (CC0), each given its official brand color via a `fill` attribute on `<svg>`. Exception: `vite.svg` is the classic full-color (purple gradient + yellow bolt) logo from the Vite repo at tag v5.4.0 (`docs/public/logo.svg`, MIT), because Simple Icons only has a single-color silhouette and Vite's current logo has white brackets that vanish on a white background.
 
 ## External dependencies
+- DLAMS repo and live app links (`Dlams.tsx` constants).
 - Resume file hosted on Google Drive (ID in `util/_constants.ts`, a share link, not a secret).
 - Vercel (hosting and analytics); see `PLAN.md`.
 

@@ -14,7 +14,7 @@ const NavLinkWrapper = styled.div`
   justify-content: flex-end;
 `;
 
-const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
+const StyledNav = styled.nav<{ showNavName: boolean }>`
   padding: 0 5rem;
   margin-left: -17px;
   position: sticky;
@@ -65,29 +65,38 @@ const StyledNav = styled.nav<{ showNavName: boolean; isHome: boolean }>`
     }
   }
 
-  @media (max-width: ${(props) => props.theme.break_small}) {
+  @media (max-width: ${(props) => props.theme.break_nav}) {
     ${NavLinkWrapper} {
-      text-align: center;
-      gap: ${(props) => (props.showNavName && props.isHome ? '0' : '')};
-      padding: ${(props) => (props.showNavName ? '0 2rem' : '0')};
+      /* 16px: nav side padding. 27.5em: widest row of 5 links, with slack */
+      font-size: min(2rem, calc((100vw - 16px) / 27.5));
+      gap: 0.6em;
+      /* width of the hidden name link plus one gap */
+      margin-left: ${(props) => (props.showNavName ? 'unset' : '-7em')};
 
       a {
-        opacity: ${(props) => (props.showNavName && props.isHome ? 0 : 1)};
+        font-size: inherit;
+        padding: 2rem 0.3em 0.5rem;
+      }
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.break_small}) {
+    ${NavLinkWrapper} {
+      /* 23em: widest row of 4 links (one is hidden below), with slack */
+      font-size: min(2rem, calc((100vw - 16px) / 23));
+      text-align: center;
+      margin-left: unset;
+
+      a {
+        opacity: 1;
         white-space: nowrap;
 
-        :nth-child(2) {
-          display: ${(props) => (props.isHome ? 'inherit' : 'none')};
-        }
-
-        :nth-child(2),
-        :nth-child(3) {
-          width: ${(props) =>
-            props.showNavName && props.isHome ? '3rem' : 'auto'};
-          transition: 0.3s width ease-in-out;
-        }
-
-        :last-child {
+        :first-child {
           opacity: 1;
+        }
+
+        &.selected {
+          display: none;
         }
       }
     }
@@ -127,10 +136,7 @@ function Nav() {
   }, []);
 
   return (
-    <StyledNav
-      showNavName={showNavName || router.route !== '/'}
-      isHome={router.route === '/'}
-    >
+    <StyledNav showNavName={showNavName || router.route !== '/'}>
       <FrostedGlass>
         <NavLinkWrapper>
           <ActiveLink href="/">
@@ -138,6 +144,9 @@ function Nav() {
           </ActiveLink>
           <ActiveLink href="/resume">
             <a>resume</a>
+          </ActiveLink>
+          <ActiveLink href="/dlams">
+            <a>project</a>
           </ActiveLink>
           <a
             href="https://github.com/gabrielruss?tab=repositories"

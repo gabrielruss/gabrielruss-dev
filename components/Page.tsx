@@ -13,6 +13,10 @@ const NavWrapper = styled.div`
   top: 0;
   z-index: 9999;
   padding: 0 5rem;
+
+  @media (max-width: ${(props) => props.theme.break_nav}) {
+    padding: 0 0.8rem;
+  }
 `;
 
 const Inner = styled.main`
