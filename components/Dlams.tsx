@@ -176,7 +176,7 @@ const Dlams = () => (
         imageHeight={787}
         title="Don't Look At My Stuff"
         displayUrl="dontlookatmystuff.com"
-        description="Try the read-only live demo"
+        description="Try the live demo and edit your own sandbox"
       />
 
       <Columns>
@@ -185,7 +185,7 @@ const Dlams = () => (
           <ul>
             <li>A tracker for your video game collection</li>
             <li>Multiple collections per account</li>
-            <li>A read-only demo</li>
+            <li>A demo with a temporary sandbox you can edit</li>
             <li>Mobile friendly</li>
           </ul>
         </Section>
@@ -193,7 +193,7 @@ const Dlams = () => (
           <Header size="small">Future features</Header>
           <ul>
             <li>Share a collection with other people</li>
-            <li>Ability to edit in the demo</li>
+            <li>Search your collection</li>
             <li>Create different collection types - Books, Boardgames, etc.</li>
           </ul>
         </Section>

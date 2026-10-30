@@ -27,3 +27,6 @@ yarn-error.log*
 .now
 # private ops notes
 /.private/
+
+# typescript incremental build cache
+*.tsbuildinfo
