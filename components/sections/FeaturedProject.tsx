@@ -49,7 +49,7 @@ function FeaturedProject() {
             <Header size="small">DLAMS</Header>
             <StatusBadge>in active development</StatusBadge>
             <p>
-              A video game collection tracker with a read-only demo you can try
+              A video game collection tracker with a temporary sandbox demo
             </p>
             <BuiltWith>
               <b>Built with</b>
