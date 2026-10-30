@@ -176,7 +176,7 @@ const Dlams = () => (
         imageHeight={787}
         title="Don't Look At My Stuff"
         displayUrl="dontlookatmystuff.com"
-        description="Try the live demo and edit your own sandbox"
+        description="Try the temporary sandbox demo"
       />
 
       <Columns>
@@ -185,7 +185,7 @@ const Dlams = () => (
           <ul>
             <li>A tracker for your video game collection</li>
             <li>Multiple collections per account</li>
-            <li>A demo with a temporary sandbox you can edit</li>
+            <li>A temporary sandbox demo</li>
             <li>Mobile friendly</li>
           </ul>
         </Section>
