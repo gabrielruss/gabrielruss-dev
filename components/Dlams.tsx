@@ -186,6 +186,7 @@ const Dlams = () => (
             <li>A tracker for your video game collection</li>
             <li>Multiple collections per account</li>
             <li>Share a collection with a read-only link</li>
+            <li>Search across all your collections</li>
             <li>A temporary sandbox demo</li>
             <li>Mobile friendly</li>
           </ul>
@@ -193,7 +194,8 @@ const Dlams = () => (
         <Section>
           <Header size="small">Future features</Header>
           <ul>
-            <li>Search your collection</li>
+            <li>Stats about your collection</li>
+            <li>Move items between your collections</li>
             <li>Create different collection types - Books, Boardgames, etc.</li>
           </ul>
         </Section>
