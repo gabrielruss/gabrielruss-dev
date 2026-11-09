@@ -167,7 +167,10 @@ const Dlams = () => (
     <DlamsWrapper>
       <Header size="medium">{`<DLAMS>`}</Header>
       <Header size="small">Don't Look At My Stuff</Header>
-      <p>A silly website for adding and sharing your collections</p>
+      <p>
+        A silly name for a seriously good way to track and share your
+        collections
+      </p>
       <Badge>in active development</Badge>
       <LinkCard
         href={DLAMS_APP_URL}
@@ -200,6 +203,45 @@ const Dlams = () => (
           </ul>
         </Section>
       </Columns>
+
+      <Section>
+        <Header size="small">Frontend</Header>
+        <TechGrid>
+          <Icon iconName="react" footer="React" />
+          <Icon iconName="typescript" footer="TypeScript" />
+          <Icon iconName="vite" iconType="svg" footer="Vite" />
+          <Icon iconName="tailwindcss" iconType="svg" footer="Tailwind CSS" />
+          <Icon
+            iconName="tanstack-query"
+            iconType="svg"
+            footer="TanStack Query"
+          />
+        </TechGrid>
+        <Chips>
+          <li>React Router</li>
+          <li>shadcn/ui</li>
+          <li>React Hook Form</li>
+          <li>Zod</li>
+          <li>Vitest</li>
+          <li>Testing Library</li>
+        </Chips>
+      </Section>
+
+      <Section>
+        <Header size="small">Backend</Header>
+        <TechGrid>
+          <Icon iconName="python" footer="Python" />
+          <Icon iconName="fastapi" iconType="svg" footer="FastAPI" />
+          <Icon iconName="postgresql" iconType="svg" footer="PostgreSQL" />
+          <Icon iconName="sqlalchemy" iconType="svg" footer="SQLAlchemy" />
+        </TechGrid>
+        <Chips>
+          <li>Alembic</li>
+          <li>Pydantic</li>
+          <li>JWT cookie auth</li>
+          <li>unittest</li>
+        </Chips>
+      </Section>
 
       <Section>
         <Header size="small">Infrastructure</Header>
@@ -254,45 +296,6 @@ const Dlams = () => (
           />
           <Icon iconName="nginx" iconType="svg" footer="Nginx" />
         </TechGrid>
-      </Section>
-
-      <Section>
-        <Header size="small">Frontend</Header>
-        <TechGrid>
-          <Icon iconName="react" footer="React" />
-          <Icon iconName="typescript" footer="TypeScript" />
-          <Icon iconName="vite" iconType="svg" footer="Vite" />
-          <Icon iconName="tailwindcss" iconType="svg" footer="Tailwind CSS" />
-          <Icon
-            iconName="tanstack-query"
-            iconType="svg"
-            footer="TanStack Query"
-          />
-        </TechGrid>
-        <Chips>
-          <li>React Router</li>
-          <li>shadcn/ui</li>
-          <li>React Hook Form</li>
-          <li>Zod</li>
-          <li>Vitest</li>
-          <li>Testing Library</li>
-        </Chips>
-      </Section>
-
-      <Section>
-        <Header size="small">Backend</Header>
-        <TechGrid>
-          <Icon iconName="python" footer="Python" />
-          <Icon iconName="fastapi" iconType="svg" footer="FastAPI" />
-          <Icon iconName="postgresql" iconType="svg" footer="PostgreSQL" />
-          <Icon iconName="sqlalchemy" iconType="svg" footer="SQLAlchemy" />
-        </TechGrid>
-        <Chips>
-          <li>Alembic</li>
-          <li>Pydantic</li>
-          <li>JWT cookie auth</li>
-          <li>unittest</li>
-        </Chips>
       </Section>
 
       <Closing>
