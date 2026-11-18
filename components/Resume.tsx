@@ -50,6 +50,10 @@ const ResumeSubSection = styled.div`
   p {
     margin: 0.5rem 0;
   }
+
+  ${StyledLink} {
+    margin: 0;
+  }
 `;
 
 const ResumeSection = styled.div`
@@ -80,24 +84,62 @@ const Resume = () => (
           Download a copy
         </StyledLink>
         <ResumeSection>
-          <Header size="small">Specialties</Header>
+          <Header size="small">Summary</Header>
+          <ResumeSubSection>
+            <p>
+              Senior Software Engineer (frontend focused, full stack) with{' '}
+              {years} years of experience building frontend architecture with
+              React and TypeScript, and working on the backend with Node.js and
+              Python.
+            </p>
+            <br />
+            <p>
+              Built scalable and accessible applications for SaaS companies in
+              education, help desk, finance, and healthcare. Led teams,
+              architected projects, and mentored developers for over 7 years.
+            </p>
+            <br />
+            <p>
+              Experienced using agentic AI workflows to deliver features and fix
+              bugs.
+            </p>
+          </ResumeSubSection>
+        </ResumeSection>
+
+        <ResumeSection>
+          <Header size="small">Skills</Header>
           <ResumeSubSection>
             <ul>
               <li>
-                <b>Frontend:</b> {years} years of experience with React,
-                TypeScript, JavaScript
+                <b>Frontend:</b> React, React Native, TypeScript, JavaScript,
+                Next.js, HTML, CSS, SASS, Tailwind CSS, shadcn/ui, Vite,
+                Material UI, state management (Redux, TanStack Query, Zustand),
+                React Hook Form, Zod
               </li>
               <li>
-                <b>Libraries & Data:</b> Redux, TanStack Query (React Query),
-                GraphQL, styled-components, SASS
+                <b>Architecture and UI systems:</b> frontend architecture,
+                design systems, component libraries, accessibility (WCAG),
+                responsive design, web performance
               </li>
               <li>
-                <b>Backend:</b> Node.js, Python, .NET: API development,
-                server-side logic, database integration
+                <b>Backend and data:</b> Node.js, Express, Python, FastAPI, REST
+                APIs, GraphQL, WebSockets, PostgreSQL
               </li>
               <li>
-                <b>AI-Assisted Development:</b> Daily experience using GenAI for
-                writing, debugging, and testing code
+                <b>Testing and delivery:</b> Jest, Vitest, React Testing
+                Library, Storybook, CI/CD, GitHub Actions, Docker, Git
+              </li>
+              <li>
+                <b>Cloud and monitoring:</b> AWS (S3, CloudFront, Lambda),
+                Datadog
+              </li>
+              <li>
+                <b>AI assisted development:</b> Claude Code, GitHub Copilot,
+                agentic workflows (Emdash, git worktrees)
+              </li>
+              <li>
+                <b>Practices:</b> mentoring, code review, A/B testing, Agile and
+                Scrum
               </li>
             </ul>
           </ResumeSubSection>
@@ -110,16 +152,6 @@ const Resume = () => (
             <p>Senior Software Engineer</p>
             <p>Mar 2025 - Oct 2026</p>
             <br />
-            <p>Technologies & Libraries Used:</p>
-            <ul>
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>Redux</li>
-              <li>Material UI</li>
-              <li>styled-components</li>
-              <li>Node.js</li>
-            </ul>
-            <br />
             <p>
               Worked on a team of frontend, backend, and UX engineers to build
               Imagine Learning’s digital curriculum platforms for Traverse and
@@ -127,20 +159,31 @@ const Resume = () => (
             </p>
             <ul>
               <li>
-                Used Claude Code in daily workflows to implement features and
-                fix bugs
+                Helped migrate every file from plain JavaScript to TypeScript,
+                and did pull requests and code reviews to speed along the
+                process.
               </li>
               <li>
-                Led efforts to modernize the frontend codebase and improve
-                developer experience.
-                <ul>
-                  <li>
-                    Expanded TypeScript coverage, reduced TypeScript errors, and
-                    integrated AI skills into workflow
-                  </li>
-                </ul>
+                Reduced TypeScript errors by around 1,000, completely removed
+                the old PropTypes patterns, and placed CI checks to prevent
+                further TypeScript errors from being merged in.
               </li>
-              <li>Ensured code quality by conducting code reviews</li>
+              <li>
+                Built the Bring Students Here feature for Traverse, which
+                navigated all signed in students assigned to a lesson to the
+                page the teacher was on, using a React UI and a Node.js backend
+                with a websocket for real time navigation.
+              </li>
+              <li>
+                Established agentic coding style sheets and custom instructions
+                to guide AI agents through the TypeScript conversions.
+              </li>
+              <li>
+                Used an AI workflow of Emdash, git worktrees, and Claude Code to
+                deliver large and small features and bug fixes. Caught niche
+                scenarios and wrote tests so the final product was more
+                complete.
+              </li>
             </ul>
           </ResumeSubSection>
           <br />
@@ -149,37 +192,28 @@ const Resume = () => (
             <p>Senior Software Engineer</p>
             <p>Oct 2023 - Aug 2024</p>
             <br />
-            <p>Technologies & Libraries Used:</p>
-            <ul>
-              <li>React (18+)</li>
-              <li>TypeScript</li>
-              <li>Next.js</li>
-              <li>styled-components</li>
-              <li>react-testing-library</li>
-              <li>Node.js</li>
-              <li>Express</li>
-            </ul>
-            <br />
             <p>
-              Worked with a team of developers and marketing professionals as a
-              Senior Software Engineer on Calendly’s Marketing Website team.
+              Led the development effort on Calendly’s Marketing Website team,
+              working with marketing professionals.
             </p>
             <ul>
               <li>
-                Worked to improve the user experience of the marketing site
-              </li>
-              <li>Ensured code quality by conducting code reviews</li>
-              <li>
-                Led the effort to create and maintain the technical backlog
+                Responsible for the front page of calendly.com, which served
+                millions of users per day and had analytics and A/B testing
+                tools installed.
               </li>
               <li>
-                Led weekly team meetings to improve processes and add issues to
-                technical backlog
+                Refactored the pricing page from a temporary solution into
+                scalable, reusable components that were used in other areas of
+                the site.
+              </li>
+              <li>
+                Identified the need for a technical backlog, created the
+                process, and led biweekly grooming sessions.
               </li>
               <li>
                 Maintained routing and authentication checks using Node.js and
-                Express middleware, ensuring secure and efficient user
-                navigation and authentication across the backend
+                Express middleware.
               </li>
             </ul>
           </ResumeSubSection>
@@ -189,56 +223,35 @@ const Resume = () => (
             <p>Senior Software Engineer</p>
             <p>Feb 2022 - Aug 2023</p>
             <br />
-            <p>Technologies & Libraries Used:</p>
-            <ul>
-              <li>React (16.8+)</li>
-              <li>TypeScript</li>
-              <li>react-query</li>
-              <li>react-testing-library</li>
-              <li>react-router</li>
-              <li>Redux</li>
-              <li>SASS</li>
-              <li>Next.js</li>
-              <li>styled-components</li>
-              <li>Python</li>
-              <li>GraphQL</li>
-            </ul>
-            <br />
-            <p>Worked as a Senior Software Engineer on Capacity’s UI team.</p>
+            <p>
+              Worked as a Senior Software Engineer on the UI team for
+              Capacity’s AI help desk software.
+            </p>
             <ul>
               <li>
-                Led the effort on several large-scale features for Capacity’s
-                primary application
-              </li>
-              <li>Ensured code quality by conducting code reviews</li>
-              <li>
-                Worked with Management to improve and document team processes
+                Led the effort for creating the AI chatbot in Capacity’s mobile
+                app with React Native, alongside a manager and a junior
+                developer.
               </li>
               <li>
                 Worked closely with the backend team to update and maintain the
-                Python GraphQL API layer, ensuring the frontend received
-                accurate and properly formatted data
+                Python GraphQL API layer so the frontend received accurate and
+                properly formatted data.
+              </li>
+              <li>
+                Worked with management to improve and document team processes.
+              </li>
+              <li>
+                Acted as a first point of contact for a junior developer in an
+                informal mentorship.
               </li>
             </ul>
           </ResumeSubSection>
           <br />
           <ResumeSubSection>
-            <b>LeaseQuery</b>
-            <p>Lead UI Engineer</p>
+            <b>FinQuery (formerly LeaseQuery)</b>
+            <p>Senior Software Engineer (Lead UI Engineer)</p>
             <p>May 2019 - Feb 2022</p>
-            <br />
-            <p>Technologies & Libraries Used:</p>
-            <ul>
-              <li>React (16.8+)</li>
-              <li>TypeScript</li>
-              <li>Next.js</li>
-              <li>Storybook</li>
-              <li>styled-components</li>
-              <li>react-testing-library</li>
-              <li>react-router</li>
-              <li>Redux</li>
-              <li>.NET Core</li>
-            </ul>
             <br />
             <p>
               Led the frontend development effort to create multiple new SaaS
@@ -246,23 +259,45 @@ const Resume = () => (
             </p>
             <ul>
               <li>
-                Authored LeaseQuery's first reusable UI component library with
-                the goal of creating a consistent look and feel across all
-                future projects
+                Architected LeaseGuru, a self serve lease accounting
+                application, and led it from a small team of a few people to
+                several full stack teams all using the base code across several
+                new products.
               </li>
               <li>
-                Ensured reusable components were tested and met WCAG 2.0 AA or
-                AAA accessibility standards
+                Architected and authored LeaseQuery’s first reusable UI
+                component library for a consistent look and feel across all
+                future projects. Components were previewed in Storybook and
+                tested to meet WCAG 2.0 AA or AAA accessibility standards.
               </li>
               <li>
-                Became an honorary member of the UX Design team by participating
-                in design studios and regular UX discussions
+                Architected the Reporting tool redesign using the reusable
+                component library, and rebuilt the old .NET application as a
+                modern UI with React, TypeScript, Next.js, and
+                styled-components.
               </li>
-              <li>Ensured code quality by conducting code reviews</li>
+              <li>
+                Acted as the bridge between engineering, product, and design,
+                and handled defining and documenting the team processes and
+                coding conventions.
+              </li>
+              <li>
+                Built an onboarding wizard that guided users through complex
+                accounting in a simple and intuitive way, and it received
+                positive feedback from users.
+              </li>
+              <li>
+                Scaled the lease home page for hundreds of customers by adding
+                pagination and separate API calls for the initial data load,
+                which greatly decreased initial load time.
+              </li>
+              <li>
+                Led standups and technical backlog meetings, and mentored a
+                junior developer in a formal mentorship.
+              </li>
               <li>
                 Collaborated closely with the backend team to maintain the .NET
-                Core API layer, assisting with the integration of 3rd-party APIs
-                into LeaseQuery's tools
+                Core API layer and integrate 3rd party APIs.
               </li>
             </ul>
           </ResumeSubSection>
@@ -272,36 +307,17 @@ const Resume = () => (
             <p>Senior Developer</p>
             <p>Aug 2017 - May 2019</p>
             <br />
-            <p>Technologies & Libraries Used:</p>
-            <ul>
-              <li>React</li>
-              <li>Redux</li>
-              <li>react-router</li>
-              <li>react-testing-library</li>
-              <li>.NET Core</li>
-            </ul>
-            <br />
-            <p>
-              Specialized in frontend development. Worked closely with clients
-              to understand requirements and develop solutions that leveraged a
-              wide range of frontend development tools. Focused on writing clean
-              and reusable code to maximize efficiency and readability.
-            </p>
             <ul>
               <li>
-                Led the frontend development team on an agile, large-scale EMR
-                solution using React, Redux, react-router, and
-                react-testing-library
+                Architected and led the frontend development team on an agile,
+                large scale, HIPAA regulated electronic medical record (EMR)
+                solution using React, Redux, and React Testing Library.
               </li>
               <li>
-                Worked with the UX team to translate wireframes and business
-                requirements into working solutions
+                Worked with the UX and backend teams to translate wireframes and
+                business requirements into working solutions, and developed
+                custom Web APIs in .NET Core.
               </li>
-              <li>
-                Worked with the backend team to ensure custom APIs met
-                acceptance criteria
-              </li>
-              <li>Developed custom Web APIs in .NET Core</li>
             </ul>
           </ResumeSubSection>
           <br />
@@ -310,20 +326,58 @@ const Resume = () => (
             <p>Developer</p>
             <p>Aug 2014 - Aug 2017</p>
             <br />
-            <p>Technologies & Libraries Used:</p>
             <ul>
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>C#</li>
+              <li>
+                Built custom forms within the Microsoft ecosystem using React,
+                TypeScript, and Office UI Fabric, and developed custom solutions
+                in C# with a development infrastructure in Azure.
+              </li>
             </ul>
-            <br />
+          </ResumeSubSection>
+        </ResumeSection>
+
+        <ResumeSection>
+          <Header size="small">Projects</Header>
+          <ResumeSubSection>
+            <b>Don’t Look At My Stuff (DLAMS)</b>
+            <p>Personal Project</p>
+            <p>Oct 2026 - present</p>
             <p>
-              Within the Microsoft ecosystem, built custom forms using React,
-              TypeScript, and Office UI Fabric (UI framework).
+              <StyledLink href="https://dontlookatmystuff.com" target="_blank">
+                dontlookatmystuff.com
+              </StyledLink>
+              {' | '}
+              <StyledLink
+                href="https://github.com/gabrielruss/dlams"
+                target="_blank"
+              >
+                github.com/gabrielruss/dlams
+              </StyledLink>
             </p>
+            <br />
             <ul>
-              <li>Developed and maintained custom solutions in C#</li>
-              <li>Built a development infrastructure within Azure</li>
+              <li>
+                A collection tracker where users can track and share their
+                collections, with multiple collections per account, read only
+                share links, search across collections, invite only accounts,
+                and a temporary sandbox demo.
+              </li>
+              <li>
+                Built with React 19, TypeScript, Vite, Tailwind CSS, shadcn/ui,
+                TanStack Query, React Hook Form, and Zod on the frontend, and
+                FastAPI, SQLAlchemy, Alembic, and PostgreSQL on the backend.
+              </li>
+              <li>
+                Designed the API as the security boundary. It uses JWT cookie
+                auth and server side authorization for owner and read only
+                access.
+              </li>
+              <li>
+                Self hosted on a Raspberry Pi with Docker Compose and Nginx.
+                Pushes to main deploy through GitHub Actions on a self hosted
+                runner, and CI runs lint, tests (Vitest, Testing Library, axe),
+                and a build on every push.
+              </li>
             </ul>
           </ResumeSubSection>
         </ResumeSection>
@@ -356,7 +410,6 @@ const Resume = () => (
             <b>Georgia Southern University</b>
             <p>BBA in Information Systems</p>
             <p>Dec 2011</p>
-            <p>Dean’s List: Fall 2010, Spring 2011, Fall 2011</p>
           </ResumeSubSection>
         </ResumeSection>
         <Header size="medium">{`</Resume>`}</Header>
