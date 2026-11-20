@@ -127,11 +127,12 @@ const Resume = () => (
               </li>
               <li>
                 <b>Testing and delivery:</b> Jest, Vitest, React Testing
-                Library, Storybook, CI/CD, GitHub Actions, Docker, Git
+                Library, Playwright, Storybook, CI/CD, GitHub Actions, Docker,
+                Git
               </li>
               <li>
                 <b>Cloud and monitoring:</b> AWS (S3, CloudFront, Lambda),
-                Datadog
+                Datadog, Sentry
               </li>
               <li>
                 <b>AI assisted development:</b> Claude Code, GitHub Copilot,
@@ -181,8 +182,8 @@ const Resume = () => (
               <li>
                 Used an AI workflow of Emdash, git worktrees, and Claude Code to
                 deliver large and small features and bug fixes. Caught niche
-                scenarios and wrote tests so the final product was more
-                complete.
+                scenarios and wrote tests, including Playwright end to end
+                tests, so the final product was more complete.
               </li>
             </ul>
           </ResumeSubSection>
